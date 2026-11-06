@@ -196,3 +196,10 @@
   border: 1px solid rgb(255 255 255 / 0.16);
   box-shadow: 0 10px 30px -10px rgb(0 0 0 / 0.5);
 }
+@utility doc-band {
+  background: linear-gradient(90deg, rgb(226 247 71 / 0.08), transparent 40%), var(--navy);
+  border: 1px solid var(--doc-border);
+  color: var(--on-dark-soft);
+  & h3 { color: var(--on-dark) !important; }
+  & p { color: var(--on-dark-soft) !important; }
+}

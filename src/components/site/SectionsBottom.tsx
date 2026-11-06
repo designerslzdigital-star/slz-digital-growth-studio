@@ -122,13 +122,13 @@ export function After({ slug }: P) {
             </article>
           ))}
         </div>
-        <div className="mt-10 flex flex-col gap-5 rounded-[28px] border border-doc-border bg-navy bg-gradient-to-r from-lime/10 via-transparent to-transparent p-7 sm:flex-row sm:items-center md:p-9">
+        <div className="mt-10 flex flex-col gap-5 doc-band rounded-[28px] p-7 sm:flex-row sm:items-center md:p-9">
           <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-lime/10 text-lime">
             <FileText className="h-7 w-7" aria-hidden="true" />
           </span>
           <div>
             <h3 className="font-subtitle text-xl font-semibold text-on-dark md:text-2xl">{d.after.docTitle}</h3>
-            <p className="mt-2 max-w-3xl text-on-dark-mute">{d.after.docText}</p>
+            <p className="mt-2 max-w-3xl text-on-dark-soft">{d.after.docText}</p>
           </div>
         </div>
       </div>
