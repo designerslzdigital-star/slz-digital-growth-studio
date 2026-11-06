@@ -28,3 +28,10 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+- Static marketing site, no backend/DB/forms: WhatsApp link is the only conversion point (minimises attack surface).
+- All copy lives in `src/i18n/locales/*.ts` (one file per language, typed by pt-BR); components never hardcode text.
+- Language lives in the URL (`/$lang`, slugs pt-br/pt-pt/es/en); `/` redirects client-side using saved choice or browser language.
+- WhatsApp number, `[ref: …]` origin codes and content visibility flags live only in `src/config/site.ts`.
+- No measurement scripts load before cookie consent; consent hook is in `CookieBanner`.

@@ -1,0 +1,25 @@
+import { LANGS, dicts, isLangSlug, langBySlug, DEFAULT_SLUG, type LangSlug } from "./index";
+
+export function langHead(raw: string, path = "", titleOverride?: string) {
+  const slug: LangSlug = isLangSlug(raw) ? raw : DEFAULT_SLUG;
+  const l = langBySlug(slug);
+  const d = dicts[l.code];
+  const title = titleOverride ? `${titleOverride} — SLZ Digital` : d.meta.title;
+  return {
+    meta: [
+      { title },
+      { name: "description", content: d.meta.description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: d.meta.description },
+      { property: "og:type", content: "website" },
+      { property: "og:locale", content: l.code.replace("-", "_") },
+      { property: "og:url", content: `/${slug}${path}` },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [
+      { rel: "canonical", href: `/${slug}${path}` },
+      ...LANGS.map((x) => ({ rel: "alternate", hrefLang: x.code, href: `/${x.slug}${path}` })),
+      { rel: "alternate", hrefLang: "x-default", href: `/${DEFAULT_SLUG}${path}` },
+    ],
+  };
+}
