@@ -10,7 +10,7 @@ export const ANCHORS = ["solucoes", "requisitos", "pos-entrega", "diferenciais",
 
 export function Logo() {
   return (
-    <img src={logoAsset.url} alt="SLZ Digital" className="h-10 w-auto md:h-12" />
+    <img src={logoAsset.url} alt="SLZ Digital" className="h-14 w-auto md:h-16" />
   );
 }
 
@@ -74,8 +74,8 @@ export function Header({ slug }: { slug: LangSlug }) {
 
   return (
     <header className="fixed left-1/2 top-4 z-40 w-[calc(100%-24px)] max-w-6xl -translate-x-1/2">
-      <div className="pill-nav flex h-16 items-center justify-between gap-3 rounded-2xl pl-6 pr-3">
-        <Link to="/$lang" params={{ lang: slug }} aria-label="SLZ Digital" className="shrink-0">
+      <div className="pill-nav flex h-20 items-center justify-between gap-3 rounded-2xl pl-6 pr-3">
+        <Link to="/$lang" params={{ lang: slug }} aria-label="SLZ Digital" className="-my-2 shrink-0">
           <Logo />
         </Link>
         <nav aria-label={d.nav.main} className="hidden min-[1100px]:block">

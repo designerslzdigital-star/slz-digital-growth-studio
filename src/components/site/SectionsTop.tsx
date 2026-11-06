@@ -9,7 +9,7 @@ export function Hero({ slug }: P) {
   return (
     <section className="hero-bg relative flex min-h-[100svh] items-center px-5 pb-20 pt-32 text-center">
       <div className="mx-auto max-w-5xl">
-        <h1 className="font-display text-[clamp(2.4rem,7vw,5.25rem)] font-normal leading-[1.05] tracking-[-0.03em] text-hero-ink">
+        <h1 className="font-display text-[clamp(2.9rem,8.5vw,6.75rem)] font-normal leading-[1.05] tracking-[-0.03em] text-hero-ink">
           {d.hero.before} <span className="select-mark">{d.hero.mark}</span> {d.hero.after}
         </h1>
         <p className="mx-auto mt-7 max-w-2xl font-subtitle text-lg text-on-dark-soft">{d.hero.sub}</p>
