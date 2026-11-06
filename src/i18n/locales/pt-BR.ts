@@ -92,8 +92,8 @@ const ptBR = {
     title: "Depois que entra no ar, a gente não some.",
     items: [
       { t: "Acompanhamos quem vai usar", d: "Depois da entrega, a equipe acompanha quem usa o sistema no dia a dia e confere se o que está no ar é o que foi desenhado no escopo." },
-      { t: "Suporte já incluso no valor", d: "O valor do projeto já inclui um período de suporte. [DEFINIR a duração]" },
-      { t: "Quando o período acaba, a escolha é sua", d: "Seguir com a sua própria equipe cuidando do sistema ou contratar o suporte mensal da SLZ. [CONFIRMAR o que cada modelo cobre]" },
+      { t: "Suporte já incluso no valor", d: "O valor do projeto já inclui um período de suporte." },
+      { t: "Quando o período acaba, a escolha é sua", d: "Seguir com a sua própria equipe cuidando do sistema ou contratar o suporte mensal da SLZ. " },
     ],
   },
   diff: {
