@@ -28,7 +28,7 @@ if (!i18n.isInitialized) {
     fallbackLng: "pt-BR",
     interpolation: { escapeValue: false },
     react: { useSuspense: false },
-    initImmediate: false,
+    initAsync: false,
   });
 }
 

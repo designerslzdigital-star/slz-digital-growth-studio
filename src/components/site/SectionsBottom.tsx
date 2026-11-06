@@ -154,8 +154,8 @@ export function Diff({ slug }: P) {
                 <td className={`border-t border-on-dark/10 bg-navy text-center ${i === d.diff.rows.length - 1 ? "rounded-b-[20px] pb-8" : ""}`}>
                   <span className="inline-flex justify-center"><Check /><span className="sr-only">{d.diff.yes}</span></span>
                 </td>
-                <td className="border-t border-light-border text-center text-sm text-ink-soft">{d.diff[DIFF_VALS[i][0]]}</td>
-                <td className="border-t border-light-border text-center text-sm text-ink-soft">{d.diff[DIFF_VALS[i][1]]}</td>
+                <td className="border-t border-light-border text-center text-sm text-ink-soft">{d.diff[DIFF_VALS[i]![0]]}</td>
+                <td className="border-t border-light-border text-center text-sm text-ink-soft">{d.diff[DIFF_VALS[i]![1]]}</td>
               </tr>
             ))}
           </tbody>
@@ -170,8 +170,8 @@ export function Diff({ slug }: P) {
                 <div className="flex items-center justify-between gap-3 rounded-xl bg-navy px-3 py-2 text-on-dark">
                   <dt>{slzCol}</dt><dd className="flex items-center gap-1"><Check className="h-4 w-4" />{d.diff.yes}</dd>
                 </div>
-                <div className="flex justify-between gap-3 px-3"><dt className="text-ink-soft">{freeCol}</dt><dd className="text-ink">{d.diff[DIFF_VALS[i][0]]}</dd></div>
-                <div className="flex justify-between gap-3 px-3"><dt className="text-ink-soft">{otherCol}</dt><dd className="text-ink">{d.diff[DIFF_VALS[i][1]]}</dd></div>
+                <div className="flex justify-between gap-3 px-3"><dt className="text-ink-soft">{freeCol}</dt><dd className="text-ink">{d.diff[DIFF_VALS[i]![0]]}</dd></div>
+                <div className="flex justify-between gap-3 px-3"><dt className="text-ink-soft">{otherCol}</dt><dd className="text-ink">{d.diff[DIFF_VALS[i]![1]]}</dd></div>
               </dl>
             </li>
           ))}

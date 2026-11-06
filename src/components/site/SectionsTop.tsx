@@ -103,7 +103,8 @@ function IlloNodes() {
 
 export function Solutions({ slug }: P) {
   const { d, t } = useDict(slug);
-  const [sys, saas, app, integ] = d.solutions.items;
+  type Item = (typeof d.solutions.items)[number];
+  const [sys, saas, app, integ] = d.solutions.items as [Item, Item, Item, Item];
   const Card = ({ it, className, children, lime }: { it: typeof sys; className: string; children: React.ReactNode; lime?: boolean }) => (
     <article className={`${lime ? "card-dark-lime" : "card-dark"} flex flex-col justify-between rounded-[20px] p-6 md:p-8 ${className}`}>
       <div>

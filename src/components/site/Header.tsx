@@ -54,7 +54,7 @@ function LangSelect({ slug }: { slug: LangSlug }) {
                 onClick={() => {
                   saveSlug(l.slug);
                   setOpen(false);
-                  navigate({ to: "/$lang", params: { lang: l.slug }, hash: window.location.hash.slice(1) || undefined });
+                  navigate({ to: "/$lang", params: { lang: l.slug }, hash: true });
                 }}
                 className="flex min-h-11 w-full items-center gap-2 rounded-xl px-3 text-left text-sm text-on-dark hover:bg-on-dark/10 aria-selected:bg-blue-strong"
               >
