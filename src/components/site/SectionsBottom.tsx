@@ -127,7 +127,7 @@ export function After({ slug }: P) {
             <FileText className="h-7 w-7" aria-hidden="true" />
           </span>
           <div>
-            <h3 className="font-subtitle text-xl font-semibold text-on-dark md:text-2xl">{d.after.docTitle}</h3>
+            <h3 className="font-heading text-xl font-semibold text-on-dark md:text-2xl">{d.after.docTitle}</h3>
             <p className="mt-2 max-w-3xl text-on-dark-soft">{d.after.docText}</p>
           </div>
         </div>
