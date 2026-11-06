@@ -380,7 +380,7 @@ export function FloatingWa({ slug }: P) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={d.wa.floating}
-      className="fixed bottom-5 right-5 z-40 grid h-14 w-14 place-items-center rounded-full bg-whatsapp text-ink shadow-frame transition-transform hover:scale-105"
+      className="wa-pulse fixed bottom-5 right-5 z-40 grid h-14 w-14 place-items-center rounded-full bg-whatsapp text-ink shadow-frame transition-transform hover:scale-105"
     >
       <WaIcon className="h-7 w-7" />
     </a>
