@@ -141,8 +141,8 @@ export function Solutions({ slug }: P) {
               ))}
             </div>
           </article>
-          <Card it={app} className="md:col-span-5"><IlloPhone /></Card>
-          <Card it={integ} className="md:col-span-7"><IlloNodes /></Card>
+          <Card it={app} className="md:col-span-7"><IlloPhone /></Card>
+          <Card it={integ} className="md:col-span-12"><IlloNodes /></Card>
         </div>
         <div className="mt-12 flex justify-center">
           <WaButton message={d.wa.message} refCode={REFS.solucoes}>{d.wa.cta}</WaButton>

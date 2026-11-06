@@ -210,19 +210,6 @@ export function Security({ slug }: P) {
           ))}
         </ol>
 
-        <figure className="mt-10 overflow-hidden rounded-[20px] border border-on-dark/10 bg-navy font-mono text-sm">
-          <figcaption className="border-b border-on-dark/10 px-5 py-3 text-xs uppercase tracking-widest text-lime">{d.security.codeLabel}</figcaption>
-          <div className="grid md:grid-cols-2">
-            <div className="p-5">
-              <p className="text-on-dark-mute">// {d.security.bad}</p>
-              <pre className="mt-2 overflow-x-auto text-on-dark-soft"><code>{"SELECT * FROM clientes;"}</code></pre>
-            </div>
-            <div className="border-t border-on-dark/10 p-5 md:border-l md:border-t-0">
-              <p className="text-on-dark-mute">// {d.security.good}</p>
-              <pre className="mt-2 overflow-x-auto text-on-dark"><code>{"SELECT * FROM clientes\nWHERE dono_id = :usuario_atual;"}</code></pre>
-            </div>
-          </div>
-        </figure>
         <p className="mt-8 flex items-center gap-3 text-on-dark"><Check />{d.security.lgpd}</p>
       </div>
     </section>

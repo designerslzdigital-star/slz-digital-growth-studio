@@ -4,13 +4,13 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import { LANGS, langBySlug, saveSlug, useDict, type LangSlug } from "@/i18n";
 import { REFS } from "@/config/site";
 import { WaButton } from "./ui";
-import logoAsset from "@/assets/SLZ-DIGITAL_SemFundoo_1.png.asset.json";
+import logoAsset from "@/assets/slz-logo.png.asset.json";
 
 export const ANCHORS = ["solucoes", "requisitos", "pos-entrega", "diferenciais", "seguranca", "tecnologias", "global", "faq"];
 
 export function Logo() {
   return (
-    <img src={logoAsset.url} alt="SLZ Digital" className="h-14 w-auto md:h-16" />
+    <img src={logoAsset.url} alt="SLZ Digital" className="h-9 w-auto md:h-11" />
   );
 }
 
