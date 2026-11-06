@@ -40,6 +40,7 @@
   --color-lime: var(--lime);
   --color-lime-soft: var(--lime-soft);
   --color-light: var(--light);
+  --color-paper: var(--paper);
   --color-light-border: var(--light-border);
   --color-ink: var(--ink);
   --color-ink-soft: var(--ink-soft);
@@ -70,6 +71,7 @@
   --lime: #e2f747;
   --lime-soft: #f6fbc8;
   --light: #f5f8fe;
+  --paper: #fbfbfb;
   --light-border: #dae5f5;
   --ink: #0b1426;
   --ink-soft: #3a4a66;

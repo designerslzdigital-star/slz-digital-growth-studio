@@ -124,10 +124,10 @@ export function Solutions({ slug }: P) {
     </article>
   );
   return (
-    <section id="solucoes" className="bg-navy-deep px-5 py-20 md:py-28">
+    <section id="solucoes" className="bg-paper px-5 py-20 md:py-28">
       <div className="mx-auto max-w-6xl">
-        <h2 className="text-3xl font-bold text-on-dark md:text-5xl">{d.solutions.title}</h2>
-        <p className="mt-4 font-mono text-sm text-on-dark-mute">{d.solutions.who}</p>
+        <h2 className="text-3xl font-bold text-ink md:text-5xl">{d.solutions.title}</h2>
+        <p className="mt-4 font-mono text-sm text-ink-soft">{d.solutions.who}</p>
         <div className="mt-10 grid gap-4 md:grid-cols-12">
           <Card it={sys} className="md:col-span-7"><IlloTable /></Card>
           <Card it={saas} className="md:col-span-5" lime><IlloBars /></Card>
