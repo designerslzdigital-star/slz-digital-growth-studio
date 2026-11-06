@@ -4,6 +4,7 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import { LANGS, langBySlug, saveSlug, useDict, type LangSlug } from "@/i18n";
 import { REFS } from "@/config/site";
 import { WaButton } from "./ui";
+import { Flag } from "./Flag";
 import logoAsset from "@/assets/slz-logo.png.asset.json";
 
 export const ANCHORS = ["solucoes", "requisitos", "pos-entrega", "diferenciais", "seguranca", "tecnologias", "global", "faq"];
@@ -39,8 +40,8 @@ function LangSelect({ slug }: { slug: LangSlug }) {
         onClick={() => setOpen((o) => !o)}
         className="flex min-h-11 items-center gap-1.5 rounded-xl border border-on-dark/15 bg-on-dark/5 px-3 text-sm text-on-dark hover:bg-on-dark/10"
       >
-        <span aria-hidden="true">{cur.flag}</span>
-        <span className="sr-only">{cur.name}</span>
+        <Flag slug={cur.slug} />
+        <span className="sr-only min-[1280px]:not-sr-only">{cur.name}</span>
         <ChevronDown className="h-4 w-4" aria-hidden="true" />
       </button>
       {open && (
@@ -57,7 +58,7 @@ function LangSelect({ slug }: { slug: LangSlug }) {
                 }}
                 className="flex min-h-11 w-full items-center gap-2 rounded-xl px-3 text-left text-sm text-on-dark hover:bg-on-dark/10 aria-selected:bg-blue-strong"
               >
-                <span aria-hidden="true">{l.flag}</span>
+                <Flag slug={l.slug} />
                 {l.name}
               </button>
             </li>

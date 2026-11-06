@@ -89,6 +89,8 @@ const ptBR = {
     diagCta: "Conte sua ideia, mesmo incompleta",
   },
   after: {
+    docTitle: 'Tudo o que a gente constrói fica documentado.',
+    docText: 'Do levantamento de requisitos à entrega, o que foi decidido e construído fica registrado. Assim, o seu sistema não depende da memória de uma pessoa só.',
     title: "Depois que entra no ar, a gente não some.",
     items: [
       { t: "Acompanhamos quem vai usar", d: "Depois da entrega, a equipe acompanha quem usa o sistema no dia a dia e confere se o que está no ar é o que foi desenhado no escopo." },

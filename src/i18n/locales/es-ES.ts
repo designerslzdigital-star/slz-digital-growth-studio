@@ -90,6 +90,8 @@ const esES: Dict = {
     diagCta: "Cuéntanos tu idea, aunque esté incompleta",
   },
   after: {
+    docTitle: 'Todo lo que construimos queda documentado.',
+    docText: 'Desde el levantamiento de requisitos hasta la entrega, lo que se decide y se construye queda registrado. Así, tu sistema no depende de la memoria de una sola persona.',
     title: "Después del lanzamiento, no desaparecemos.",
     items: [
       { t: "Acompañamos a quien lo usa", d: "Tras la entrega, el equipo acompaña a los usuarios en el día a día y comprueba que lo publicado es lo que se diseñó en el alcance." },

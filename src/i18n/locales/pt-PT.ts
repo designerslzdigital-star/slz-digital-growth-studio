@@ -90,6 +90,8 @@ const ptPT: Dict = {
     diagCta: "Conte-nos a ideia, mesmo incompleta",
   },
   after: {
+    docTitle: 'Tudo o que construímos fica documentado.',
+    docText: 'Do levantamento de requisitos à entrega, o que foi decidido e construído fica registado. Assim, o seu sistema não depende da memória de uma só pessoa.',
     title: "Depois de publicado, não desaparecemos.",
     items: [
       { t: "Acompanhamos quem vai utilizar", d: "Depois da entrega, a equipa acompanha os utilizadores no dia a dia e confirma se o que está publicado corresponde ao âmbito desenhado." },

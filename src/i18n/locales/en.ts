@@ -90,6 +90,8 @@ const en: Dict = {
     diagCta: "Tell us your idea, even if it's incomplete",
   },
   after: {
+    docTitle: 'Everything we build is documented.',
+    docText: "From requirements to delivery, what was decided and built is recorded. That way, your system doesn't depend on one person's memory.",
     title: "After launch, we don't disappear.",
     items: [
       { t: "We support the people using it", d: "After delivery, the team follows the day-to-day users and checks that what's live matches what was designed in the scope." },

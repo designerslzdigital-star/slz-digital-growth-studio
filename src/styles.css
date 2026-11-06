@@ -55,10 +55,12 @@
   --font-subtitle: "DM Sans", system-ui, sans-serif;
   --font-sans: "Poppins", system-ui, sans-serif;
   --color-card-ink: var(--card-ink);
+  --color-doc-border: var(--doc-border);
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 }
 
 :root {
+  --doc-border: #24407A;
   --radius: 0.75rem;
   --navy: #0b1426;
   --navy-deep: #060c1a;

@@ -5,7 +5,7 @@ import oracle from "@/assets/Oracle-Logo.png.asset.json";
 const PARTNERS: [string, string][] = [["Google Cloud", gcp.url], ["AWS", aws.url], ["Microsoft Azure", azure.url], ["Oracle", oracle.url]];
 import { useEffect, useRef, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Plus } from "lucide-react";
+import { FileText, Plus } from "lucide-react";
 import { useDict, type LangSlug } from "@/i18n";
 import { REFS } from "@/config/site";
 import { Check, Eyebrow, WaButton, WaIcon } from "./ui";
@@ -121,6 +121,15 @@ export function After({ slug }: P) {
               </div>
             </article>
           ))}
+        </div>
+        <div className="mt-10 flex flex-col gap-5 rounded-[28px] border border-doc-border bg-navy bg-gradient-to-r from-lime/10 via-transparent to-transparent p-7 sm:flex-row sm:items-center md:p-9">
+          <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-lime/10 text-lime">
+            <FileText className="h-7 w-7" aria-hidden="true" />
+          </span>
+          <div>
+            <h3 className="font-subtitle text-xl font-semibold text-on-dark md:text-2xl">{d.after.docTitle}</h3>
+            <p className="mt-2 max-w-3xl text-on-dark-mute">{d.after.docText}</p>
+          </div>
         </div>
       </div>
     </section>
