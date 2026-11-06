@@ -20,7 +20,7 @@ const ptBR = {
     before: "SaaS, sistemas e aplicativos feitos do jeito que o",
     mark: "seu negócio",
     after: "precisa.",
-    sub: "Desenvolvimento de software sob medida, com equipe e parceiros globais e cibersegurança desde a primeira linha.",
+    sub: "Automatize processos, reduza custos e desenvolva soluções digitais com potencial para criar novas fontes de faturamento para o seu negócio.",
     note: "O primeiro passo é uma conversa para entender o que você precisa.",
   },
   hook: { label: "Mito ou fato?", myth: "Se funciona, está seguro.", link: "Ver o fato" },
