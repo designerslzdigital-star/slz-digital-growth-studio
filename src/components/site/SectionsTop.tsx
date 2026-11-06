@@ -59,12 +59,18 @@ export function Pain({ slug }: P) {
 
 function IlloTable() {
   return (
-    <div aria-hidden="true" className="mt-8 space-y-2">
-      {[0, 1, 2, 3].map((r) => (
-        <div key={r} className="flex gap-2">
-          <div className="h-3 w-1/4 rounded bg-blue/40" />
-          <div className="h-3 flex-1 rounded bg-on-dark/10" />
-          <div className="h-3 w-1/6 rounded bg-on-dark/15" />
+    <div aria-hidden="true" className="mt-6 max-w-md overflow-hidden rounded-xl border border-on-dark/15 font-mono text-[11px] text-on-dark-soft">
+      <div className="grid grid-cols-[28px_1fr_1fr_1fr] bg-on-dark/10 text-on-dark-mute">
+        {["", "A", "B", "C"].map((h, i) => <div key={i} className="border-r border-on-dark/10 px-2 py-1 text-center last:border-r-0">{h}</div>)}
+      </div>
+      {[["Pedido", "Cliente", "Status"], ["#1042", "Loja Sul", "ok"], ["#1043", "Atacado", "pend"], ["#1044", "Filial 2", "ok"], ["#1045", "Loja Norte", "pend"]].map((row, r) => (
+        <div key={r} className={`grid grid-cols-[28px_1fr_1fr_1fr] border-t border-on-dark/10 ${r === 0 ? "font-semibold text-on-dark" : ""}`}>
+          <div className="border-r border-on-dark/10 bg-on-dark/5 px-2 py-1 text-center text-on-dark-mute">{r + 1}</div>
+          {row.map((c, i) => (
+            <div key={i} className="truncate border-r border-on-dark/10 px-2 py-1 last:border-r-0">
+              {r > 0 && i === 2 ? <span className={`rounded px-1.5 py-0.5 ${c === "ok" ? "bg-blue/30 text-on-dark" : "bg-lime/30 text-on-dark"}`}>{c === "ok" ? "✓" : "…"}</span> : c}
+            </div>
+          ))}
         </div>
       ))}
     </div>
@@ -123,7 +129,7 @@ export function Solutions({ slug }: P) {
         <h2 className="text-3xl font-bold text-on-dark md:text-5xl">{d.solutions.title}</h2>
         <p className="mt-4 font-mono text-sm text-on-dark-mute">{d.solutions.who}</p>
         <div className="mt-10 grid gap-4 md:grid-cols-12">
-          <Card it={sys} className="md:col-span-7 md:row-span-2"><IlloTable /></Card>
+          <Card it={sys} className="md:col-span-7"><IlloTable /></Card>
           <Card it={saas} className="md:col-span-5" lime><IlloBars /></Card>
           <article className="card-dark rounded-[20px] p-6 md:col-span-5 md:p-8">
             <h3 className="text-2xl font-semibold text-on-dark">{d.solutions.pickTitle}</h3>

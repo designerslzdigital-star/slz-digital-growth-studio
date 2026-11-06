@@ -1,3 +1,8 @@
+import gcp from "@/assets/Google-Cloud-Simbolio.jpg.asset.json";
+import aws from "@/assets/Amazon_Web_Services_Logo.svg.webp.asset.json";
+import azure from "@/assets/lg-66d961335f8b5-Microsoft-Azure.webp.asset.json";
+import oracle from "@/assets/Oracle-Logo.png.asset.json";
+const PARTNERS: [string, string][] = [["Google Cloud", gcp.url], ["AWS", aws.url], ["Microsoft Azure", azure.url], ["Oracle", oracle.url]];
 import { useEffect, useRef, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Plus } from "lucide-react";
@@ -268,8 +273,12 @@ export function Global({ slug }: P) {
           </div>
           <div className="card-dark rounded-[20px] p-6">
             <h3 className="text-xl font-semibold text-on-dark">{d.global.partnersTitle}</h3>
-            <ul className="mt-4 space-y-2 text-on-dark-soft">
-              {["Google Cloud", "AWS", "Microsoft Azure", "Oracle"].map((x) => <li key={x}>{x}</li>)}
+            <ul className="mt-4 grid grid-cols-2 gap-3">
+              {PARTNERS.map(([name, src]) => (
+                <li key={name} className="flex h-20 items-center justify-center rounded-2xl bg-white p-3">
+                  <img src={src} alt={name} loading="lazy" className="max-h-full max-w-full object-contain" />
+                </li>
+              ))}
             </ul>
           </div>
         </div>
