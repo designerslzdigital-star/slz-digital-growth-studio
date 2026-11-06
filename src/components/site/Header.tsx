@@ -9,8 +9,8 @@ export const ANCHORS = ["solucoes", "requisitos", "pos-entrega", "diferenciais",
 
 export function Logo() {
   return (
-    <span className="font-heading text-lg font-bold tracking-tight text-on-dark">
-      SLZ<span className="text-lime">.</span>digital
+    <span className="font-heading text-xl font-bold tracking-tight text-on-dark">
+      SLZ Digital
     </span>
   );
 }
@@ -38,10 +38,10 @@ function LangSelect({ slug }: { slug: LangSlug }) {
         aria-haspopup="listbox"
         aria-expanded={open}
         onClick={() => setOpen((o) => !o)}
-        className="flex min-h-11 items-center gap-1.5 rounded-full border border-on-dark/15 bg-on-dark/5 px-3 text-sm text-on-dark hover:bg-on-dark/10"
+        className="flex min-h-11 items-center gap-1.5 rounded-xl border border-on-dark/15 bg-on-dark/5 px-3 text-sm text-on-dark hover:bg-on-dark/10"
       >
         <span aria-hidden="true">{cur.flag}</span>
-        <span className="hidden sm:inline">{cur.name}</span>
+        <span className="sr-only">{cur.name}</span>
         <ChevronDown className="h-4 w-4" aria-hidden="true" />
       </button>
       {open && (
@@ -75,7 +75,7 @@ export function Header({ slug }: { slug: LangSlug }) {
 
   return (
     <header className="fixed left-1/2 top-4 z-40 w-[calc(100%-24px)] max-w-6xl -translate-x-1/2">
-      <div className="pill-nav flex h-14 items-center justify-between gap-3 rounded-full pl-5 pr-2">
+      <div className="pill-nav flex h-16 items-center justify-between gap-3 rounded-2xl pl-6 pr-3">
         <Link to="/$lang" params={{ lang: slug }} aria-label="SLZ Digital" className="shrink-0">
           <Logo />
         </Link>
@@ -83,7 +83,7 @@ export function Header({ slug }: { slug: LangSlug }) {
           <ul className="flex items-center gap-1">
             {d.nav.items.map((label, i) => (
               <li key={ANCHORS[i]}>
-                <a href={`#${ANCHORS[i]}`} className="rounded-full px-2.5 py-2 text-sm text-on-dark-soft hover:text-on-dark">
+                <a href={`#${ANCHORS[i]}`} className="rounded-full px-2.5 py-2 font-subtitle text-sm font-medium text-on-dark hover:text-lime">
                   {label}
                 </a>
               </li>
@@ -92,7 +92,7 @@ export function Header({ slug }: { slug: LangSlug }) {
         </nav>
         <div className="flex items-center gap-2">
           <LangSelect slug={slug} />
-          <WaButton message={d.wa.message} refCode={REFS.header} variant="limeOutline" className="hidden min-[820px]:inline-flex">
+          <WaButton message={d.wa.message} refCode={REFS.header} variant="limeOutline" className="hidden">
             WhatsApp
           </WaButton>
           <button

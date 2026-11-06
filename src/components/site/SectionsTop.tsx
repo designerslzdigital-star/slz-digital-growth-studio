@@ -12,7 +12,7 @@ export function Hero({ slug }: P) {
         <h1 className="font-display text-[clamp(2.4rem,7vw,5.25rem)] font-normal leading-[1.05] tracking-[-0.03em] text-hero-ink">
           {d.hero.before} <span className="select-mark">{d.hero.mark}</span> {d.hero.after}
         </h1>
-        <p className="mx-auto mt-7 max-w-2xl text-lg text-on-dark-soft">{d.hero.sub}</p>
+        <p className="mx-auto mt-7 max-w-2xl font-subtitle text-lg text-on-dark-soft">{d.hero.sub}</p>
         <div className="mt-9 flex flex-col items-center gap-3">
           <WaButton message={d.wa.message} refCode={REFS.hero}>{d.wa.cta}</WaButton>
           <p className="text-sm text-on-dark-mute">{d.hero.note}</p>
@@ -38,14 +38,16 @@ export function Hook({ slug }: P) {
 export function Pain({ slug }: P) {
   const { d } = useDict(slug);
   return (
-    <section className="bg-background px-5 py-20 md:py-28">
+    <section className="pain-bg px-5 py-20 md:py-28">
       <div className="mx-auto max-w-6xl">
-        <h2 className="text-3xl font-bold text-ink md:text-5xl">{d.pain.title}</h2>
-        <div className="mt-10 grid gap-4 md:grid-cols-3">
+        <h2 className="pain-title max-w-3xl font-display text-4xl font-normal leading-[1.05] tracking-[0.02em] md:text-7xl">{d.pain.title}</h2>
+        <div className="mt-14 grid gap-8 md:grid-cols-3">
           {d.pain.cards.map((c) => (
-            <article key={c.t} className="rounded-[20px] border border-light-border bg-light p-6">
-              <h3 className="text-xl font-semibold text-ink">{c.t}</h3>
-              <p className="mt-3 text-ink-soft">{c.d}</p>
+            <article key={c.t} className="rounded-[44px] border-[3px] border-dotted border-ink-soft/60 p-3">
+              <div className="h-full rounded-[36px] bg-card-ink p-7">
+                <h3 className="text-center font-subtitle text-2xl font-normal text-on-dark">{c.t}</h3>
+                <p className="mt-4 text-on-dark-mute">{c.d}</p>
+              </div>
             </article>
           ))}
         </div>

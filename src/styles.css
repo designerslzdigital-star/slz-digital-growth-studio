@@ -50,9 +50,11 @@
   --color-success: var(--success);
   --color-whatsapp: var(--whatsapp);
 
-  --font-display: "Syne", "Familjen Grotesk", system-ui, sans-serif;
-  --font-heading: "Familjen Grotesk", system-ui, sans-serif;
-  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --font-display: "Glock Grotesk", "Syne", system-ui, sans-serif;
+  --font-heading: "Glock Grotesk", "Syne", system-ui, sans-serif;
+  --font-subtitle: "DM Sans", system-ui, sans-serif;
+  --font-sans: "Poppins", system-ui, sans-serif;
+  --color-card-ink: var(--card-ink);
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 }
 
@@ -73,6 +75,7 @@
   --on-dark-soft: #b8c4da;
   --on-dark-mute: #98a9c7;
   --hero-ink: #eef6ea;
+  --card-ink: #1c1c1c;
   --success: #16a34a;
   --whatsapp: #25d366;
 
@@ -172,11 +175,20 @@
   &::before { left: -2px; }
   &::after { right: -2px; }
 }
+@utility pain-bg {
+  background: radial-gradient(60% 50% at 100% 0%, rgb(0 0 0 / 0.1), transparent 70%), linear-gradient(90deg, #f4f4f4, #ffffff 30%, #f2f2f2 60%, #ffffff);
+}
+@utility pain-title {
+  background: linear-gradient(90deg, #27476f, #0b1426 60%, #000);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 @utility shadow-frame {
   box-shadow: var(--shadow-frame);
 }
 @utility pill-nav {
-  background: rgb(11 20 38 / 0.6);
+  background: linear-gradient(90deg, rgb(15 30 56 / 0.92), rgb(36 64 104 / 0.85) 50%, rgb(15 30 56 / 0.92));
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid rgb(255 255 255 / 0.16);
