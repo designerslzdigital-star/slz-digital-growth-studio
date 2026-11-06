@@ -74,16 +74,16 @@ export function Header({ slug }: { slug: LangSlug }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed left-1/2 top-4 z-40 w-[calc(100%-24px)] max-w-6xl -translate-x-1/2">
+    <header className="fixed left-1/2 top-4 z-40 w-[calc(100%-24px)] max-w-7xl -translate-x-1/2">
       <div className="pill-nav flex h-20 items-center justify-between gap-3 rounded-2xl pl-6 pr-3">
         <Link to="/$lang" params={{ lang: slug }} aria-label="SLZ Digital" className="-my-2 shrink-0">
           <Logo />
         </Link>
-        <nav aria-label={d.nav.main} className="hidden min-[1100px]:block">
-          <ul className="flex items-center gap-1">
+        <nav aria-label={d.nav.main} className="hidden min-w-0 flex-1 min-[1100px]:block">
+          <ul className="flex items-center justify-evenly gap-1">
             {d.nav.items.map((label, i) => (
               <li key={ANCHORS[i]}>
-                <a href={`#${ANCHORS[i]}`} className="rounded-full px-2.5 py-2 font-subtitle text-sm font-medium text-on-dark hover:text-lime">
+                <a href={`#${ANCHORS[i]}`} className="rounded-full px-2.5 py-2 font-subtitle text-sm font-medium xl:text-[15px] text-on-dark hover:text-lime">
                   {label}
                 </a>
               </li>
