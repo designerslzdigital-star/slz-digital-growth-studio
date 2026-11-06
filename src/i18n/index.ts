@@ -36,7 +36,7 @@ if (!i18n.isInitialized) {
 export function useDict(slug: LangSlug) {
   const code = langBySlug(slug).code;
   const { t } = useTranslation("translation", { lng: code });
-  const d = i18n.getResourceBundle(code, "translation") as typeof ptBR;
+  const d = dicts[code] as typeof ptBR;
   return { t, d, code };
 }
 
