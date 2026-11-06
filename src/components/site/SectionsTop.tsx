@@ -171,7 +171,7 @@ function FlowMock({ slug }: P) {
               <div key={c} className="rounded-xl bg-background p-3">
                 <p className="text-xs font-semibold text-ink-soft">{c}</p>
                 <div className="mt-2 space-y-2">
-                  {cards[i].map((x) => (
+                  {(cards[i] ?? []).map((x) => (
                     <div key={x} className="rounded-lg border border-light-border p-2">
                       <p className="text-xs font-medium text-ink">{d.proof.client} {x}</p>
                       <div className="mt-1.5 h-1.5 w-3/4 rounded bg-light-border" />
