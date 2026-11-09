@@ -129,6 +129,7 @@
     #050811 86%
   );
   --gradient-select: linear-gradient(90deg, #2563eb, #3b3ad9);
+  --selection-edge: #4c8dff;
   --glow-blue: radial-gradient(120% 80% at 100% 0%, rgb(59 130 246 / 0.28), transparent 60%);
   --glow-lime: radial-gradient(120% 80% at 100% 0%, rgb(184 242 75 / 0.18), transparent 60%);
   --shadow-frame: 0 40px 80px -20px rgb(0 0 0 / 0.6);
@@ -180,18 +181,8 @@
   background: var(--gradient-select);
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
-  position: relative;
-  padding: 0 0.12em;
-  &::before, &::after {
-    content: "";
-    position: absolute;
-    height: 1.1em;
-    width: 3px;
-    background: #4c8dff;
-    border-radius: 2px;
-  }
-  &::before { left: -2px; top: -0.08em; }
-  &::after { right: -2px; bottom: -0.08em; }
+  padding: 0.02em 0.12em;
+  border-inline: 3px solid var(--selection-edge);
 }
 @utility pain-bg {
   background: radial-gradient(60% 50% at 100% 0%, rgb(0 0 0 / 0.1), transparent 70%), linear-gradient(90deg, #f4f4f4, #ffffff 30%, #f2f2f2 60%, #ffffff);

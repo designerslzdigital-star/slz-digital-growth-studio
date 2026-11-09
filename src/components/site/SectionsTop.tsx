@@ -12,8 +12,8 @@ export function Hero({ slug }: P) {
   return (
     <section id="hero" className="hero-bg hero-section relative flex min-h-[100svh] items-center px-5 pb-20 pt-32 text-center">
       <div className="mx-auto max-w-5xl">
-        <h1 className="hero-title font-display font-normal leading-[1.05] text-hero-ink">
-          {d.hero.before} <span className="select-mark">{d.hero.mark}</span>{d.hero.after}
+        <h1 className="hero-title font-display font-normal leading-[1.3] text-balance text-hero-ink">
+          {d.hero.before} <span className="select-mark">{d.hero.mark}{d.hero.after}</span>
         </h1>
         <p className="mx-auto mt-7 max-w-2xl font-subtitle text-lg text-on-dark-soft">{d.hero.sub}</p>
         <div className="mt-9 flex flex-col items-center gap-3">
