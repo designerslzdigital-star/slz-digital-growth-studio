@@ -111,10 +111,10 @@ export function After({ slug }: P) {
         <p className="mt-4 text-ink-soft">{d.after.sub}</p>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {d.after.items.map((it, i) => (
-            <article key={it.t} className="rounded-[44px] border-[3px] border-dotted border-ink-soft/60 p-3">
-              <div className="h-full rounded-[36px] bg-card-ink p-6">
-                <span className="block text-center font-mono text-sm text-on-dark-mute">0{i + 1}</span>
-                <h3 className="mt-3 text-center font-subtitle text-2xl font-normal text-lime">{it.t}</h3>
+            <article key={it.t} className="rounded-[32px] border-2 border-dotted border-ink-soft/30 p-2 sm:rounded-[44px] sm:border-[3px] sm:border-ink-soft/60 sm:p-3">
+              <div className="h-full rounded-[26px] bg-card-ink p-6 sm:rounded-[36px]">
+                <span className="block text-center font-mono text-sm text-lime">0{i + 1}</span>
+                <h3 className="mt-3 text-center font-subtitle text-2xl font-normal text-on-dark">{it.t}</h3>
                 <p className="mt-4 text-on-dark-mute">{it.d}</p>
               </div>
             </article>

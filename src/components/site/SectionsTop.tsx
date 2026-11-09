@@ -102,7 +102,7 @@ export function Founder({ slug }: P) {
   return <section id="fundador" className="bg-navy-deep px-5 py-10 text-on-dark"><div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-[0.8fr_1.2fr]">
     <div className="founder-photo">{FOUNDER_PHOTO_URL ? <img src={FOUNDER_PHOTO_URL} alt={d.founder.photoAlt} loading="lazy" /> : <div className="flex h-full flex-col items-center justify-center p-8 text-center"><UserRound className="h-16 w-16 text-on-dark-mute" aria-hidden="true" /><ReviewNote>{d.review.photo}</ReviewNote></div>}</div>
     <div><Eyebrow className="text-on-dark-mute">{d.founder.label}</Eyebrow><h2 className="mt-4 text-3xl font-semibold md:text-[42px]">{d.founder.title} <span className="text-lime">{d.founder.mark}</span></h2>
-    <div className="mt-7 flex flex-wrap gap-4">{d.founder.years.map((year,i) => <div key={year} className="px-5 py-4"><strong className="font-result text-3xl text-lime">{year}</strong><p className="mt-1 text-sm text-on-dark-soft">{i === 0 ? d.founder.market : d.founder.abroad}</p></div>)}</div>
+    <div className="mt-7 grid grid-cols-2 gap-4">{d.founder.years.map((year,i) => <div key={year} className="py-4 sm:px-5"><strong className="font-result text-3xl text-lime">{year}</strong><p className="mt-1 text-sm text-on-dark-soft">{i === 0 ? d.founder.market : d.founder.abroad}</p></div>)}</div>
     <p className="mt-7 whitespace-pre-line text-on-dark-soft">{d.founder.text}</p><ReviewNote>{d.review.founder}</ReviewNote></div>
   </div></section>;
 }
