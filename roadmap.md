@@ -8,5 +8,6 @@
 - [x] Match the compact desktop proportions of the numbers band on mobile and reorganize Services into a readable small-screen layout; verified at 360/390px in all four languages without overflow.
 - [x] Recolor the numbers band to #254368 with light foregrounds; verified at 390px and 1440px.
 - [x] Update the green accent and derived borders/glows to the confirmed #B8F24B; verified desktop/mobile with no old green remaining.
+- [x] Reorganize security into a compact method and a distinct test offer, with wider stages and written authorization highlighted beside WhatsApp; verified all four languages at 360/390/927/1440px without horizontal overflow, with 12 tests passing.
 - [ ] Resolve dependency advisories before publication; npm audit and installed-lockfile scanner report high/moderate findings, not changed in this visual update.
 - [ ] Publication waits for real WhatsApp number, MARK description, video, founder photo, legal identity/contact, support terms, delivery definition and approval/proof of claims.

@@ -38,3 +38,4 @@ use the editor.
 - Keep section order, navigation anchors, review visibility and optional founder/video media in site configuration so all four languages share the same page structure.
 - YouTube media must load only after an explicit click; use privacy-enhanced embeds and no player or thumbnail requests before that click.
 - Cookie preferences reopen the existing consent banner without loading any measurement scripts; no analytics are currently configured.
+- Keep the security method and the security-test offer as distinct visual bands within the security section, using shared translations; this separates institutional information from the WhatsApp service offer without nested cards.
