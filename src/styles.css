@@ -286,4 +286,23 @@
 .country-3 i:last-child { display: none; }
 @media (max-width: 1059px) { .hero-title { font-size: 60px; } .solution-third { grid-column: span 6; } .solution-third:nth-child(3) { grid-column: span 12; } .test-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
 @media (max-width: 767px) { .hero-title { font-size: 44px; } .solution-third,.solution-half { grid-column: span 12; } .solution-third:nth-child(3) { grid-column: span 12; } .service-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 32px 20px; } .test-grid { grid-template-columns: 1fr; } }
-@media (max-width: 559px) { main > section:not(.hero-section):not(.numbers-band) { padding-top: 40px; padding-bottom: 40px; } .hero-title { font-size: 36px; } .hero-section { min-height: 88svh; padding-top: 130px; padding-bottom: 48px; } .solution-grid { gap: 12px; } .solution-card { padding: 22px; } .solution-title { font-size: 21px; } .numbers-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px 16px; } .proof-number { font-size: 36px; } .proof-seal { flex-wrap: wrap; font-size: 18px; overflow-wrap: normal; } }
+@media (max-width: 559px) {
+  main > section:not(.hero-section):not(.numbers-band) { padding-top: 40px; padding-bottom: 40px; }
+  .hero-title { font-size: 36px; }
+  .hero-section { min-height: 88svh; padding-top: 130px; padding-bottom: 48px; }
+  .solution-grid { gap: 12px; }
+  .solution-card { padding: 22px; }
+  .solution-title { font-size: 21px; }
+  .numbers-band { padding: 20px 12px; }
+  .numbers-grid { grid-template-columns: repeat(4,minmax(0,1fr)); gap: 8px; }
+  .numbers-grid .proof-number, .numbers-grid .proof-seal { min-height: 46px; align-items: flex-start; }
+  .numbers-grid > div > p { margin-top: 6px; font-size: 10px; line-height: 1.4; overflow-wrap: anywhere; }
+  .proof-number { font-size: clamp(18px,4.8vw,22px); line-height: 1.05; }
+  .proof-seal { flex-direction: column; flex-wrap: nowrap; gap: 5px; font-size: 12px; line-height: 1.15; overflow-wrap: anywhere; }
+  .proof-seal svg { width: 20px; height: 20px; }
+  .service-grid { grid-template-columns: minmax(0,1fr); gap: 22px; }
+  .service-grid > div { padding-top: 12px; }
+  .service-grid h3 { font-size: 12.5px; line-height: 1.4; }
+  .service-grid ul { margin-top: 10px; gap: 6px; }
+  .service-grid li { font-size: 15px; line-height: 1.45; }
+}
