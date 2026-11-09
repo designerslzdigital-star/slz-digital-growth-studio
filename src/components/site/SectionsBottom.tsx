@@ -142,7 +142,7 @@ export function Security({ slug }: P) {
       <div className="mx-auto max-w-6xl px-5 py-10 xl:px-0">
         <div className="grid items-center gap-6 lg:grid-cols-[minmax(0,1fr)_260px]">
           <div>
-            <h2 className="max-w-3xl text-3xl font-bold md:text-5xl">{d.security.title}</h2>
+            <h2 className="max-w-3xl font-display text-3xl font-normal leading-[1.05] md:text-5xl">{d.security.title}</h2>
             <p className="mt-4 max-w-2xl text-on-dark-soft">{d.security.intro}</p>
           </div>
           <div className="flex items-center gap-4 border-l-[3px] border-lime pl-4 lg:flex-col lg:items-start lg:gap-2">
@@ -167,7 +167,7 @@ export function Security({ slug }: P) {
       <div id="teste-seguranca" className="border-y border-light-border bg-light text-ink">
         <div className="mx-auto max-w-6xl px-5 py-8 xl:px-0">
           <Eyebrow className="text-blue-ink">{d.securityTest.label}</Eyebrow>
-          <h3 className="mt-3 max-w-3xl text-2xl font-semibold md:text-4xl">{d.securityTest.title}</h3>
+          <h3 className="mt-3 max-w-3xl font-display text-2xl font-normal leading-[1.05] md:text-4xl">{d.securityTest.title}</h3>
           <p className="mt-3 max-w-3xl text-ink-soft">{d.securityTest.sub}</p>
           <h4 className="mt-6 font-heading text-lg font-semibold">{d.securityTest.how}</h4>
           <ol className="test-grid mt-3">
