@@ -433,7 +433,7 @@ const esES: Dict = {
       },
       {
         "t": "Corrección",
-        "d": "[CONFIRMAR si SLZ también corrige o solo identifica, y si hay una nueva prueba después]"
+        "d": "SLZ también corrige los fallos encontrados, según la prioridad del informe y el alcance acordado contigo."
       }
     ]
   },

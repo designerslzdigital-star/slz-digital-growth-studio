@@ -433,7 +433,7 @@ const en: Dict = {
       },
       {
         "t": "Correction",
-        "d": "[CONFIRM whether SLZ also fixes issues or only identifies them, and whether there is a retest]"
+        "d": "SLZ also fixes the flaws found, following the report’s priorities and the scope agreed with you."
       }
     ]
   },

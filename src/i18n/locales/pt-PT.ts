@@ -433,7 +433,7 @@ const ptPT: Dict = {
       },
       {
         "t": "Correção",
-        "d": "[CONFIRMAR se a SLZ também corrige ou apenas identifica, e se há um novo teste depois]"
+        "d": "A SLZ também corrige as falhas encontradas, seguindo a prioridade do relatório e o âmbito acordado consigo."
       }
     ]
   },

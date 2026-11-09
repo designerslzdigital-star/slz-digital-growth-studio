@@ -431,7 +431,7 @@ const ptBR = {
       },
       {
         "t": "Correção",
-        "d": "[CONFIRMAR se a SLZ também corrige ou só aponta, e se há novo teste depois]"
+        "d": "A SLZ também corrige as falhas encontradas, seguindo a prioridade do relatório e o escopo combinado com você."
       }
     ]
   },
