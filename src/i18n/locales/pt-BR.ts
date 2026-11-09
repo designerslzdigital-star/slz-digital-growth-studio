@@ -396,7 +396,7 @@ const ptBR = {
     "market": "de mercado",
     "abroad": "de experiência no exterior",
     "text": "Diego Brasil é administrador de empresas e viveu cinco anos no exterior, onde atuou em multinacionais como a PwC e a Tata Consultancy Services, uma das maiores companhias de tecnologia do mundo. É dessa vivência que vem o método de condução de projeto adotado na SLZ: levantamento de requisitos antes do código, decisões registradas em documento e segurança tratada como etapa do processo, não como correção posterior.\n\nA SLZ Digital nasceu no marketing digital. Ao longo de nove anos atendendo empresas de pequeno, médio e grande porte, um padrão se repetiu: a campanha gerava demanda, mas a operação do cliente não tinha estrutura para absorvê-la. Faltavam processos definidos, faltava equipe qualificada para assumir a rotina, e os empresários concentravam todas as decisões, sem tempo para profissionalizar a gestão. O desenvolvimento de software surgiu como resposta a esse cenário — aplicado primeiro na própria operação da SLZ e, em seguida, nos clientes que enfrentavam o mesmo problema.",
-    "cta": "Falar com o Diego no WhatsApp",
+    "cta": "Falar com o Diego Brasil no WhatsApp",
     "message": "Olá! Vim pelo site e queria falar com o Diego sobre um projeto.",
     "photoAlt": "Foto do Diego",
     "years": [
