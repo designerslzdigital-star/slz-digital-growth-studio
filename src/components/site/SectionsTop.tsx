@@ -38,7 +38,7 @@ export function Numbers({ slug }: P) {
 export function Pain({ slug }: P) {
   const { d } = useDict(slug);
   return (
-    <section id="dor" className="pain-bg px-5 py-20 md:py-28">
+    <section id="dor" className="pain-bg px-5 py-14 md:py-20">
       <div className="mx-auto max-w-6xl">
         <h2 className="pain-title max-w-3xl font-display text-4xl font-normal leading-[1.05] tracking-[0.02em] md:text-7xl">{d.pain.title}</h2>
         <p className="mt-4 max-w-3xl text-ink-soft">{d.pain.sub}</p>
@@ -60,7 +60,7 @@ export function Pain({ slug }: P) {
 
 export function Solutions({ slug }: P) {
   const { d } = useDict(slug);
-  return <section id="solucoes" className="bg-light px-5 py-20 md:py-28"><div className="mx-auto max-w-6xl">
+  return <section id="solucoes" className="bg-light px-5 py-14 md:py-20"><div className="mx-auto max-w-6xl">
     <h2 className="text-3xl font-bold text-ink md:text-5xl">{d.solutions.title}<span className="sr-only"> — {d.solutions.seo}</span></h2>
     <p className="mt-4 max-w-3xl text-ink-soft">{d.solutions.sub}</p>
     <ReviewNote>{d.review.fast}</ReviewNote>
@@ -78,7 +78,7 @@ export function Solutions({ slug }: P) {
 
 export function Services({ slug }: P) {
   const { d } = useDict(slug);
-  return <section id="servicos" className="bg-navy px-5 py-20 text-on-dark md:py-28"><div className="mx-auto max-w-6xl">
+  return <section id="servicos" className="bg-navy px-5 py-14 text-on-dark md:py-20"><div className="mx-auto max-w-6xl">
     <h2 className="text-4xl font-semibold text-lime md:text-[56px]">{d.services.title}</h2><p className="mt-4 text-on-dark-soft">{d.services.sub}</p>
     <div className="service-grid mt-10 border-t border-on-dark/15 pt-10">{d.services.groups.map(g => <div key={g.label} className="min-w-0 border-t-2 border-lime pt-4"><h3 className="font-mono text-[13px] font-normal uppercase text-on-dark">{g.label}</h3><ul className="mt-4 space-y-3">{g.items.map(item => <li key={item} className="flex gap-2.5 text-[15.5px] text-catalog"><span className="mt-2 h-[7px] w-[7px] shrink-0 rounded-full bg-lime" />{item}</li>)}</ul></div>)}</div>
     <WaButton className="mt-10" message={d.services.message} refCode={REFS.servicos}>{d.services.cta}</WaButton><ReviewNote>{d.review.services}</ReviewNote>
@@ -89,7 +89,7 @@ export function Proof({ slug }: P) {
   const { d } = useDict(slug);
   const [playing,setPlaying]=useState(false);
   return <>
-    <section id="prova" className="grid-mesh bg-navy px-5 py-20 text-on-dark md:py-28"><div className="mx-auto max-w-6xl">
+    <section id="prova" className="grid-mesh bg-navy px-5 py-14 text-on-dark md:py-20"><div className="mx-auto max-w-6xl">
       <h2 className="text-3xl font-bold md:text-5xl">{d.proof.title}</h2><p className="mt-4 max-w-3xl text-lg text-on-dark-soft">{d.proof.sub}</p>
       <div className="mt-12 grid items-center gap-10 lg:grid-cols-[1fr_1.4fr]"><div><h3 className="text-3xl font-semibold text-lime md:text-[40px]">{d.proof.caseTitle}</h3>
       <ul className="mt-8 space-y-6">{d.proof.systems.map((s,i) => <li key={s.name} className="border-l-[3px] border-lime pl-5"><h4 className="font-heading text-xl font-semibold">{s.name}</h4>{i === 1 ? <ReviewNote>{s.text}</ReviewNote> : <p className="mt-2 text-on-dark-soft">{s.text}</p>}</li>)}</ul><ReviewNote>{d.review.video}</ReviewNote></div>
@@ -101,7 +101,7 @@ export function Proof({ slug }: P) {
 
 export function Founder({ slug }: P) {
   const { d } = useDict(slug);
-  return <section id="fundador" className="bg-navy-deep px-5 py-20 text-on-dark md:py-28"><div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-[0.8fr_1.2fr]">
+  return <section id="fundador" className="bg-navy-deep px-5 py-14 text-on-dark md:py-20"><div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-[0.8fr_1.2fr]">
     <div className="founder-photo">{FOUNDER_PHOTO_URL ? <img src={FOUNDER_PHOTO_URL} alt={d.founder.photoAlt} loading="lazy" /> : <div className="flex h-full flex-col items-center justify-center p-8 text-center"><UserRound className="h-16 w-16 text-on-dark-mute" aria-hidden="true" /><ReviewNote>{d.review.photo}</ReviewNote></div>}</div>
     <div><Eyebrow className="text-on-dark-mute">{d.founder.label}</Eyebrow><h2 className="mt-4 text-3xl font-semibold md:text-[42px]">{d.founder.title} <span className="text-lime">{d.founder.mark}</span></h2>
     <div className="mt-7 flex flex-wrap gap-4">{d.founder.years.map((year,i) => <div key={year} className="border border-doc-border px-5 py-4"><strong className="font-result text-3xl text-lime">{year}</strong><p className="mt-1 text-sm text-on-dark-soft">{i === 0 ? d.founder.market : d.founder.abroad}</p></div>)}</div>

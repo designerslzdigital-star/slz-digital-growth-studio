@@ -165,7 +165,7 @@ const ptBR = {
       },
       {
         "t": "Suporte já incluso no valor",
-        "d": "O valor do projeto já inclui um período de suporte. Você não paga a mais para resolver o que aparecer nesse período."
+        "d": "O valor do projeto já inclui de 60 a 90 dias de suporte, conforme o projeto. Você não paga a mais para resolver o que aparecer nesse período."
       },
       {
         "t": "Quando o período acaba, a escolha é sua",
@@ -245,7 +245,7 @@ const ptBR = {
       },
       {
         "q": "Depois da entrega, tem suporte?",
-        "a": "Tem, e ele já vem incluso no valor do projeto por um período. Nesse tempo a gente também acompanha a equipe que vai usar o sistema e confere se o que está no ar é o que foi desenhado no escopo. Quando o período acaba, você escolhe: sua equipe assume ou você contrata o nosso suporte mensal. [DEFINIR a duração do período incluso]",
+        "a": "Tem, e ele já vem incluso no valor do projeto por 60 a 90 dias, conforme o projeto. Nesse tempo a gente também acompanha a equipe que vai usar o sistema e confere se o que está no ar é o que foi desenhado no escopo. Depois, você pode contratar o suporte mensal, com acesso remoto, ajustes do dia a dia, reunião mensal por videochamada e pequenas melhorias.",
         "draft": false
       },
       {

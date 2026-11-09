@@ -167,7 +167,7 @@ const esES: Dict = {
       },
       {
         "t": "Soporte incluido en el precio",
-        "d": "El precio del proyecto incluye un periodo de soporte. No pagas más por resolver lo que surja durante ese periodo."
+        "d": "El precio del proyecto incluye de 60 a 90 días de soporte, según el proyecto. No pagas más por resolver lo que surja durante ese periodo."
       },
       {
         "t": "Cuando termina el periodo, tú eliges",
@@ -247,7 +247,7 @@ const esES: Dict = {
       },
       {
         "q": "¿Hay soporte después de la entrega?",
-        "a": "Sí, y está incluido en el precio del proyecto durante un periodo. También acompañamos al equipo que usará el sistema y comprobamos que lo publicado coincide con el alcance definido. Cuando termina el periodo, eliges: tu equipo asume el cuidado o contratas nuestro soporte mensual. [DEFINIR la duración del periodo incluido]",
+        "a": "Sí, y está incluido en el precio del proyecto durante 60 a 90 días, según el proyecto. También acompañamos al equipo que usará el sistema y comprobamos que lo publicado coincide con el alcance definido. Después, puedes contratar el soporte mensual, con acceso remoto, ajustes del día a día, reunión mensual por videollamada y pequeñas mejoras.",
         "draft": false
       },
       {

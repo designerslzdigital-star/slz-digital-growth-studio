@@ -167,7 +167,7 @@ const ptPT: Dict = {
       },
       {
         "t": "Suporte já incluído no valor",
-        "d": "O valor do projeto já inclui um período de suporte. Não paga mais para resolver o que surgir nesse período."
+        "d": "O valor do projeto já inclui 60 a 90 dias de suporte, consoante o projeto. Não paga mais para resolver o que surgir nesse período."
       },
       {
         "t": "Quando o período termina, a escolha é sua",
@@ -247,7 +247,7 @@ const ptPT: Dict = {
       },
       {
         "q": "Há suporte depois da entrega?",
-        "a": "Há, e já está incluído no valor do projeto durante um período. Acompanhamos também a equipa que vai utilizar o sistema e confirmamos se o que está publicado corresponde ao âmbito definido. Quando o período termina, escolhe: a sua equipa assume ou contrata o nosso suporte mensal. [DEFINIR a duração do período incluído]",
+        "a": "Há, e já está incluído no valor do projeto durante 60 a 90 dias, consoante o projeto. Acompanhamos também a equipa que vai utilizar o sistema e confirmamos se o que está publicado corresponde ao âmbito definido. Depois, pode contratar o suporte mensal, com acesso remoto, ajustes do dia a dia, reunião mensal por videochamada e pequenas melhorias.",
         "draft": false
       },
       {

@@ -167,7 +167,7 @@ const en: Dict = {
       },
       {
         "t": "Support included in the price",
-        "d": "The project price includes a support period. You do not pay extra to resolve issues that appear during that period."
+        "d": "The project price includes 60 to 90 days of support, depending on the project. You do not pay extra to resolve issues that appear during that period."
       },
       {
         "t": "When the period ends, you choose",
@@ -247,7 +247,7 @@ const en: Dict = {
       },
       {
         "q": "Is there support after delivery?",
-        "a": "Yes, and it is included in the project price for a period. We also support the team using the system and check that what is live matches the agreed scope. When the period ends, you choose: your team takes over or you hire our monthly support. [DEFINE the included support period]",
+        "a": "Yes, and it is included in the project price for 60 to 90 days, depending on the project. We also support the team using the system and check that what is live matches the agreed scope. After that, you can hire monthly support, with remote access, day-to-day adjustments, a monthly video call and small improvements.",
         "draft": false
       },
       {
