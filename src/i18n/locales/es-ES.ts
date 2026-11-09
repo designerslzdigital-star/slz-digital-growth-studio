@@ -222,28 +222,28 @@ const esES: Dict = {
     "items": [
       {
         "q": "¿Cuánto tarda un proyecto?",
-        "a": "[Respuesta de SLZ: intervalo por tamaño del proyecto, sin prometer lo que el equipo no cumple]",
+        "a": "Depende del tamaño y la complejidad del sistema. El plazo se define después del levantamiento de requisitos, junto con el alcance y el presupuesto, y queda registrado en el documento del proyecto antes de escribir código.",
         "draft": false
       },
       {
         "q": "¿Cómo llegáis al presupuesto?",
         "a": "El presupuesto se prepara después del análisis de requisitos. Antes de eso, cualquier cifra sería una suposición. En la conversación inicial entendemos qué debe hacer el sistema, lo convertimos en alcance y solo entonces presentamos el precio y el plazo.",
-        "draft": true
+        "draft": false
       },
       {
         "q": "Solo tengo una idea, aún no sé qué necesito. ¿Sirve?",
         "a": "Sí, y es el comienzo más habitual. El análisis de requisitos existe para eso: hablamos sobre tu operación y convertimos la idea en un documento con lo que hará el software.",
-        "draft": true
+        "draft": false
       },
       {
         "q": "¿Puede cambiar el alcance a mitad del proyecto?",
         "a": "Sí, porque los proyectos de software evolucionan. Cuando surge un cambio, evaluamos su impacto en plazo y coste y lo presentamos antes de continuar. Nada se incorpora sin que sepas lo que cambia.",
-        "draft": true
+        "draft": false
       },
       {
         "q": "¿Usáis IA para escribir el código?",
         "a": "Usamos IA como herramienta, como casi todo el mundo hoy. La diferencia está en lo que viene después: los programadores revisan cada fragmento y nuestro equipo de ciberseguridad lo comprueba antes de publicarlo. La IA acelera, pero no asume la responsabilidad. El problema más recurrente en proyectos hechos con herramientas de IA es el acceso a datos: quién puede ver qué. Es lo primero que revisamos.",
-        "draft": true
+        "draft": false
       },
       {
         "q": "¿Hay soporte después de la entrega?",
@@ -252,18 +252,18 @@ const esES: Dict = {
       },
       {
         "q": "¿Cómo tratáis los datos personales y la LGPD?",
-        "a": "[Respuesta de SLZ, revisada por un abogado. Sin prometer cumplimiento total]",
+        "a": "Tratamos los datos personales de los proyectos siguiendo las buenas prácticas de la LGPD y el RGPD: definimos qué datos recoge el sistema, quién puede acceder a cada uno y durante cuánto tiempo se guardan. Esas decisiones quedan en el documento del proyecto. El cumplimiento total de tu empresa depende también de tus procesos internos y de tu asesoría jurídica.",
         "draft": false
       },
       {
         "q": "Si el sistema funciona, ¿ya es seguro?",
         "a": "Funcionar y ser seguro son cosas diferentes. En un estudio presentado en ICML 2026, más del 70% del código generado por agentes de IA que superaba las pruebas aún tenía fallos explotables. Por eso la revisión de seguridad es una etapa separada de la prueba funcional.",
-        "draft": true
+        "draft": false
       },
       {
         "q": "Mi sistema es pequeño. ¿Alguien intentará atacarlo?",
         "a": "Los ataques automáticos recorren internet buscando puertas abiertas, sin elegir el objetivo. El tamaño de la empresa no protege. En 42 empresas brasileñas que sufrieron una filtración, el coste medio fue de R$ 7,44 millones.",
-        "draft": true
+        "draft": false
       }
     ]
   },
@@ -272,7 +272,10 @@ const esES: Dict = {
     "sub": "La conversación empieza en WhatsApp."
   },
   "footer": {
-    "location": "São Luís, Maranhão, Brasil · CNPJ 29.746.940/0001-06",
+    "location": "São Luís (MA) y São Paulo (SP), Brasil · CNPJ 29.746.940/0001-06",
+    "contactTitle": "Contacto",
+    "emailLabel": "Correo",
+    "phoneLabel": "Teléfono",
     "privacy": "Política de privacidad",
     "terms": "Términos",
     "company": "[RAZÓN SOCIAL]",

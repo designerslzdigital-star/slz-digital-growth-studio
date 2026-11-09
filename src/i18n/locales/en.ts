@@ -222,28 +222,28 @@ const en: Dict = {
     "items": [
       {
         "q": "How long does a project take?",
-        "a": "[SLZ answer: timeline range by project size, without promising what the team cannot deliver]",
+        "a": "It depends on the size and complexity of the system. The timeline is set after requirements gathering, together with the scope and the quote, and is recorded in the project document before any code is written.",
         "draft": false
       },
       {
         "q": "How do you arrive at a quote?",
         "a": "The quote comes after requirements gathering. Before that, any figure would be a guess. In the first conversation we understand what the system needs to do, turn that into a scope and only then present the price and timeline.",
-        "draft": true
+        "draft": false
       },
       {
         "q": "I only have an idea and do not yet know what I need. Is that enough?",
         "a": "Yes, and it is the most common starting point. Requirements gathering exists for this: we discuss your operation and turn the idea into a document describing what the software will do.",
-        "draft": true
+        "draft": false
       },
       {
         "q": "Can the scope change mid-project?",
         "a": "Yes, because software projects evolve. When a change comes up, we assess its impact on time and cost and present it before proceeding. Nothing is added without you knowing what changes.",
-        "draft": true
+        "draft": false
       },
       {
         "q": "Do you use AI to write code?",
         "a": "We use AI as a tool, like almost everyone today. The difference is what comes next: developers review every piece and our cybersecurity team checks it before it goes live. AI speeds things up, but does not take responsibility. The most recurring issue in projects built with AI tools is data access: who can see what. That is the first thing we review.",
-        "draft": true
+        "draft": false
       },
       {
         "q": "Is there support after delivery?",
@@ -252,18 +252,18 @@ const en: Dict = {
       },
       {
         "q": "How do you handle personal data and LGPD?",
-        "a": "[SLZ answer, reviewed by a lawyer. No promise of total compliance]",
+        "a": "We handle personal data in our projects following LGPD and GDPR good practices: we map which data the system collects, who can access each item and how long it is kept. These decisions go into the project document. Full compliance for your company also depends on your internal processes and your legal counsel.",
         "draft": false
       },
       {
         "q": "If the system works, is it already secure?",
         "a": "Working and being secure are different things. In a study presented at ICML 2026, over 70% of AI-agent-generated code that passed functional tests still had exploitable flaws. That is why security review is separate from functional testing.",
-        "draft": true
+        "draft": false
       },
       {
         "q": "My system is small. Will someone really try to attack it?",
         "a": "Automated attacks scan the internet for open doors without choosing a target. Company size does not protect you. Among 42 Brazilian companies that suffered a breach, the average cost was R$ 7.44 million.",
-        "draft": true
+        "draft": false
       }
     ]
   },
@@ -272,7 +272,10 @@ const en: Dict = {
     "sub": "The conversation starts on WhatsApp."
   },
   "footer": {
-    "location": "São Luís, Maranhão, Brazil · CNPJ 29.746.940/0001-06",
+    "location": "São Luís (MA) and São Paulo (SP), Brazil · CNPJ 29.746.940/0001-06",
+    "contactTitle": "Contact",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
     "privacy": "Privacy Policy",
     "terms": "Terms",
     "company": "[LEGAL NAME]",

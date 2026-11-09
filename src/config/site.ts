@@ -39,3 +39,9 @@ export function whatsappUrl(message: string, ref: string) {
   const text = `${message} [ref: ${ref}]`;
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
 }
+
+// Contact details shown in the footer. Replace placeholders with real data before publishing.
+export const CONTACT = {
+  email: "[E-MAIL DE CONTATO]",
+  phones: ["[TELEFONE 1]", "[TELEFONE 2]"],
+};

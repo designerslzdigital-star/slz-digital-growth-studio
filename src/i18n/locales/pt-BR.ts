@@ -220,28 +220,28 @@ const ptBR = {
     "items": [
       {
         "q": "Quanto tempo leva um projeto?",
-        "a": "[Resposta da SLZ: faixa de prazo por porte de projeto, sem prometer o que o time não cumpre]",
+        "a": "Varia conforme o tamanho e a complexidade do sistema. O prazo é definido depois do levantamento de requisitos, junto com o escopo e o orçamento, e fica registrado no documento do projeto antes de qualquer linha de código.",
         "draft": false
       },
       {
         "q": "Como vocês chegam ao orçamento?",
         "a": "O orçamento sai depois do levantamento de requisitos. Antes disso, qualquer número seria chute. Na conversa inicial a gente entende o que o sistema precisa fazer, transforma isso em escopo e só então apresenta o valor e o prazo.",
-        "draft": true
+        "draft": false
       },
       {
         "q": "Eu só tenho uma ideia, ainda não sei o que preciso. Serve?",
         "a": "Serve, e é o começo mais comum. O levantamento de requisitos existe para isso: a gente conversa sobre a sua operação e transforma a ideia em um documento com o que o software vai fazer.",
-        "draft": true
+        "draft": false
       },
       {
         "q": "O escopo pode mudar no meio do projeto?",
         "a": "Pode, porque projeto de software muda mesmo. Quando surge uma mudança, a gente avalia o impacto em prazo e custo e apresenta isso antes de seguir. Nada entra sem você saber o que muda.",
-        "draft": true
+        "draft": false
       },
       {
         "q": "Vocês usam IA para escrever o código?",
         "a": "Usamos IA como ferramenta, como quase todo mundo hoje. A diferença está no que vem depois: cada trecho é revisado por programadores e passa pela nossa equipe de cibersegurança antes de ir para o ar. IA acelera, mas não assina embaixo. O ponto que mais se repete em projeto feito com construtor de IA é o acesso aos dados: quem consegue ver o quê. É o primeiro item que a gente revisa.",
-        "draft": true
+        "draft": false
       },
       {
         "q": "Depois da entrega, tem suporte?",
@@ -250,18 +250,18 @@ const ptBR = {
       },
       {
         "q": "Como vocês tratam dados pessoais e a LGPD?",
-        "a": "[Resposta da SLZ, revisada por advogado. Sem prometer conformidade total]",
+        "a": "Tratamos os dados pessoais dos projetos seguindo as boas práticas da LGPD: levantamos quais dados o sistema coleta, quem pode acessar cada um e por quanto tempo ficam guardados. Essas decisões entram no documento do projeto. A adequação completa da sua empresa à lei depende também dos seus processos internos e da orientação do seu jurídico.",
         "draft": false
       },
       {
         "q": "Se o sistema funciona, ele já está seguro?",
         "a": "Funcionar e ser seguro são coisas diferentes. Em um estudo apresentado no ICML 2026, mais de 70% do código gerado por agentes de IA que passava nos testes ainda tinha falhas exploráveis. Por isso a revisão de segurança é uma etapa separada do teste de funcionamento.",
-        "draft": true
+        "draft": false
       },
       {
         "q": "Meu sistema é pequeno. Alguém vai mesmo tentar atacar?",
         "a": "Ataques automáticos varrem a internet atrás de portas abertas, sem escolher o alvo. O tamanho da empresa não protege. Em 42 empresas brasileiras que sofreram vazamento, o custo médio foi de R$ 7,44 milhões.",
-        "draft": true
+        "draft": false
       }
     ]
   },
@@ -270,7 +270,10 @@ const ptBR = {
     "sub": "A conversa começa no WhatsApp."
   },
   "footer": {
-    "location": "São Luís, Maranhão, Brasil · CNPJ 29.746.940/0001-06",
+    "location": "São Luís (MA) e São Paulo (SP), Brasil · CNPJ 29.746.940/0001-06",
+    "contactTitle": "Contato",
+    "emailLabel": "E-mail",
+    "phoneLabel": "Telefone",
     "privacy": "Política de Privacidade",
     "terms": "Termos",
     "company": "[RAZÃO SOCIAL]",

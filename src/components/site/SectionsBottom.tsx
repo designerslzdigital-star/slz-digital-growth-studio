@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { FileText, Plus, ShieldCheck } from "lucide-react";
+import { FileText, Mail, MapPin, Phone, Plus, ShieldCheck } from "lucide-react";
 import { useDict, type LangSlug } from "@/i18n";
-import { REFS, SOURCE_URLS } from "@/config/site";
+import { CONTACT, REFS, SOURCE_URLS } from "@/config/site";
 import { Button } from "@/components/ui/button";
 import { Check, Eyebrow, ReviewNote, WaButton, WaIcon } from "./ui";
 import { WorldMap } from "./WorldMap";
@@ -257,7 +257,11 @@ export function Footer({ slug }: P) {
   const { d } = useDict(slug);
   return <footer id="rodape" className="bg-navy-deep px-5 pb-28 pt-12 text-sm text-on-dark-mute"><div className="mx-auto max-w-6xl">
     <div className="border-y border-doc-border py-7"><Eyebrow className="text-on-dark">{d.footer.dataLabel}</Eyebrow><p className="mt-4 max-w-4xl">{d.footer.dataText}</p><ReviewNote>{d.review.privacy}</ReviewNote></div>
-    <div className="mt-8 flex flex-col justify-between gap-6 md:flex-row"><div><Logo /><p className="mt-3">{d.footer.location} · {d.footer.company}</p></div><nav className="flex flex-wrap items-start gap-x-6 gap-y-3">
+    <div className="mt-8 flex flex-col justify-between gap-6 md:flex-row"><div><Logo /><p className="mt-3">{d.footer.location} · {d.footer.company}</p></div><div><Eyebrow className="text-on-dark">{d.footer.contactTitle}</Eyebrow><ul className="mt-3 space-y-2">
+      <li className="flex items-center gap-2"><Mail className="h-4 w-4 shrink-0 text-lime" aria-hidden="true" /><span className="sr-only">{d.footer.emailLabel}: </span><a href={CONTACT.email.startsWith("[") ? undefined : `mailto:${CONTACT.email}`} className="inline-flex min-h-11 items-center hover:text-on-dark">{CONTACT.email}</a></li>
+      {CONTACT.phones.map((ph) => <li key={ph} className="flex items-center gap-2"><Phone className="h-4 w-4 shrink-0 text-lime" aria-hidden="true" /><span className="sr-only">{d.footer.phoneLabel}: </span><a href={ph.startsWith("[") ? undefined : `tel:${ph.replace(/[^+\d]/g, "")}`} className="inline-flex min-h-11 items-center hover:text-on-dark">{ph}</a></li>)}
+      <li className="flex items-center gap-2"><MapPin className="h-4 w-4 shrink-0 text-lime" aria-hidden="true" /><span>São Luís (MA) · São Paulo (SP)</span></li>
+    </ul></div><nav className="flex flex-wrap items-start gap-x-6 gap-y-3">
       <Link to="/$lang/privacidade" params={{lang:slug}} className="inline-flex min-h-11 items-center hover:text-on-dark">{d.footer.privacy}</Link><Link to="/$lang/termos" params={{lang:slug}} className="inline-flex min-h-11 items-center hover:text-on-dark">{d.footer.terms}</Link><Button variant="ghost" onClick={() => window.dispatchEvent(new Event('slz-cookie-preferences'))} className="min-h-11 whitespace-normal p-0 text-on-dark-mute hover:text-on-dark">{d.footer.preferences}</Button>
     </nav></div><p className="mt-8">© {new Date().getFullYear()} {d.footer.brand}. {d.footer.rights}</p>
   </div></footer>;
