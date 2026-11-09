@@ -6,7 +6,7 @@ import { NAV_ANCHORS, REFS } from "@/config/site";
 import { WaButton } from "./ui";
 import { Flag } from "./Flag";
 import { Button } from "@/components/ui/button";
-import logoAsset from "@/assets/slz-logo.png.asset.json";
+import logoAsset from "@/assets/slz-digital-software-logo.png.asset.json";
 
 export const ANCHORS = NAV_ANCHORS;
 
