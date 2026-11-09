@@ -15,8 +15,8 @@ describe("WhatsApp links", () => {
   it.each([["servicos", REFS.servicos], ["fundador", REFS.fundador], ["teste-seguranca", REFS.testeSeguranca]])("preserves the %s origin", (origin, ref) => {
     expect(new URL(whatsappUrl("Projeto", ref)).searchParams.get("text")).toBe(`Projeto [ref: ${origin}]`);
   });
-  it("keeps the requested fourteen blocks in order", () => {
-    expect(SECTION_ORDER).toEqual(["hero", "numeros", "dor", "solucoes", "servicos", "prova", "fundador", "requisitos", "pos-entrega", "seguranca", "global", "faq", "cta-final", "rodape"]);
+  it("keeps the remaining blocks in order without the removed final CTA", () => {
+    expect(SECTION_ORDER).toEqual(["hero", "numeros", "dor", "solucoes", "servicos", "prova", "fundador", "requisitos", "pos-entrega", "seguranca", "global", "faq", "rodape"]);
   });
   it("uses only the eight approved menu destinations", () => {
     expect(NAV_ANCHORS).toEqual(["solucoes", "servicos", "fundador", "requisitos", "pos-entrega", "seguranca", "global", "faq"]);

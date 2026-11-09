@@ -3,7 +3,7 @@ import type { LangSlug } from "@/i18n";
 import { langHead } from "@/i18n/head";
 import { Header } from "@/components/site/Header";
 import { Founder, Hero, Numbers, Pain, Proof, Services, Solutions } from "@/components/site/SectionsTop";
-import { After, CookieBanner, Faq, FinalCta, FloatingWa, Footer, Global, Security, Steps } from "@/components/site/SectionsBottom";
+import { After, CookieBanner, Faq, FloatingWa, Footer, Global, Security, Steps } from "@/components/site/SectionsBottom";
 
 export const Route = createFileRoute("/$lang/")({
   staticData: { sitemap: true },
@@ -29,7 +29,6 @@ function Home() {
         <Security slug={slug} />
         <Global slug={slug} />
         <Faq slug={slug} />
-        <FinalCta slug={slug} />
       </main>
       <Footer slug={slug} />
       <FloatingWa slug={slug} />

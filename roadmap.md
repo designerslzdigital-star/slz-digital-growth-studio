@@ -1,4 +1,5 @@
 # SLZ Digital update
+- [x] Remove the final CTA band, founder WhatsApp button and solution-card links; show the numbers band only from 1024px; verified all four languages at 390/927/1024/1440px, with 12 tests passing.
 - [x] Update four-language copy, WhatsApp messages, navigation and metadata.
 - [x] Reorganize the page, preserve approved designs, remove superseded sections and add services, proof, founder and security test.
 - [x] Replace the map and add cookie preferences and data-protection footer.

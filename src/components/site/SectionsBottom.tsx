@@ -238,21 +238,6 @@ export function Faq({ slug }: P) {
   );
 }
 
-export function FinalCta({ slug }: P) {
-  const { d } = useDict(slug);
-  return (
-    <section id="cta-final" className="bg-blue-strong px-5 py-10">
-      <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 md:flex-row md:items-center">
-        <div>
-          <h2 className="text-3xl font-bold text-on-dark md:text-5xl">{d.final.title}</h2>
-          <p className="mt-2 text-on-dark">{d.final.sub}</p>
-        </div>
-        <WaButton message={d.wa.message} refCode={REFS.ctaFinal}>{d.wa.cta}</WaButton>
-      </div>
-    </section>
-  );
-}
-
 export function Footer({ slug }: P) {
   const { d } = useDict(slug);
   return <footer id="rodape" className="bg-navy-deep px-5 pb-28 pt-12 text-sm text-on-dark-mute"><div className="mx-auto max-w-6xl">

@@ -31,7 +31,7 @@ export const SOURCE_URLS = {
   law: "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2018/lei/l13709.htm",
 } as const;
 
-export const SECTION_ORDER = ["hero", "numeros", "dor", "solucoes", "servicos", "prova", "fundador", "requisitos", "pos-entrega", "seguranca", "global", "faq", "cta-final", "rodape"] as const;
+export const SECTION_ORDER = ["hero", "numeros", "dor", "solucoes", "servicos", "prova", "fundador", "requisitos", "pos-entrega", "seguranca", "global", "faq", "rodape"] as const;
 export const NAV_ANCHORS = ["solucoes", "servicos", "fundador", "requisitos", "pos-entrega", "seguranca", "global", "faq"] as const;
 export const HEADER_BREAKPOINTS = { languageName: 1400, whatsapp: 1220, desktopMenu: 1060 } as const;
 
