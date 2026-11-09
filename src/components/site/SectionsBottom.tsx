@@ -167,7 +167,7 @@ export function Security({ slug }: P) {
       <div id="teste-seguranca" className="border-y border-light-border bg-light text-ink">
         <div className="mx-auto max-w-6xl px-5 py-8 xl:px-0">
           <Eyebrow className="text-blue-ink">{d.securityTest.label}</Eyebrow>
-          <h3 className="mt-3 max-w-3xl text-3xl font-bold text-ink md:text-5xl">{d.securityTest.title}</h3>
+          <h3 className="mt-3 max-w-3xl font-display text-3xl font-normal leading-[1.05] text-ink md:text-5xl">{d.securityTest.title}</h3>
           <p className="mt-3 max-w-3xl text-ink-soft">{d.securityTest.sub}</p>
           <h4 className="mt-6 font-heading text-lg font-semibold">{d.securityTest.how}</h4>
           <ol className="test-grid mt-3">
