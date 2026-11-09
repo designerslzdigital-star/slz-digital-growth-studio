@@ -1,3 +1,4 @@
+import founderPhoto from "@/assets/diego-founder.jpg.asset.json";
 // Single source for contact config and WhatsApp origin codes.
 // [PLACEHOLDER] Replace with the real number: country code + digits only, e.g. 5598XXXXXXXXX.
 export const WHATSAPP_NUMBER = "5500000000000";
@@ -21,9 +22,9 @@ export const SHOW_TEAM = false;
 export const SHOW_RESULTS = false;
 
 // Preview reminders are deliberately visible until every claim is approved.
-export const SHOW_REVIEW_NOTES = true;
+export const SHOW_REVIEW_NOTES = false;
 export const SYSTEMS_VIDEO_ID: string | null = null;
-export const FOUNDER_PHOTO_URL: string | null = null;
+export const FOUNDER_PHOTO_URL: string | null = founderPhoto.url;
 export const SOURCE_URLS = {
   study: "https://proceedings.mlr.press/v306/zhao26ax.html",
   report: "https://www.xataka.com.br/diversos/vazamento-dados-custa-r-7-44-milhoes-em-media-no-brasil-recorde",
