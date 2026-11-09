@@ -64,7 +64,7 @@ const ptBR = {
       {
         "tag": "CRM e atendimento com IA",
         "t": "A IA atende e o CRM registra tudo sozinho.",
-        "d": "Não é bot de menu com \"digite 1\": a IA conversa, entende o que o cliente quer e responde.  \n\n\nCada atendimento já vira registro, com histórico, responsável e o estágio da venda. Você para de perder negócio porque a mensagem ficou no celular de alguém.",
+        "d": "Não é bot de menu com \"digite 1\": a IA conversa, entende o que o cliente quer e responde.  \nCada atendimento já vira registro, com histórico, responsável e o estágio da venda. Você para de perder negócio porque a mensagem ficou no celular de alguém.",
         "message": "Olá! Quero conversar sobre CRM e atendimento com IA no WhatsApp."
       },
       {
@@ -82,7 +82,7 @@ const ptBR = {
       {
         "tag": "Sistemas ERP",
         "t": "Um número só, em que todo mundo confia.",
-        "d": "Quando cada setor controla do seu jeito, o estoque briga com o financeiro.\n O ERP coloca vendas, estoque e financeiro na mesma base.",
+        "d": "Quando cada setor controla do seu jeito, o estoque briga com o financeiro.\nO ERP coloca vendas, estoque e financeiro na mesma base.",
         "message": "Olá! Quero conversar sobre um ERP."
       },
       {
@@ -397,7 +397,7 @@ const ptBR = {
     "mark": "experiência internacional",
     "market": "de mercado",
     "abroad": "de experiência no exterior",
-    "text": "Diego Brasil é administrador de empresas e viveu cinco anos no exterior, onde atuou em multinacionais como a PwC e a Tata Consultancy Services, uma das maiores companhias de tecnologia do mundo. É dessa vivência que vem o método de condução de projeto adotado na SLZ: levantamento de requisitos antes do código, decisões registradas em documento e segurança tratada como etapa do processo, não como correção posterior.   \nA SLZ Digital nasceu no marketing digital. Ao longo de nove anos atendendo empresas de pequeno, médio e grande porte, um padrão se repetiu: a campanha gerava demanda, mas a operação do cliente não tinha estrutura para absorvê-la. Faltavam processos definidos, faltava equipe qualificada para assumir a rotina, e os empresários concentravam todas as decisões, sem tempo para profissionalizar a gestão. O desenvolvimento de software surgiu como resposta a esse cenário — aplicado primeiro na própria operação da SLZ e, em seguida, nos clientes que enfrentavam o mesmo problema.",
+    "text": "Diego Brasil é administrador de empresas e viveu cinco anos no exterior, onde atuou em multinacionais como a PwC e a Tata Consultancy Services, uma das maiores companhias de tecnologia do mundo. É dessa vivência que vem o método de condução de projeto adotado na SLZ: levantamento de requisitos antes do código, decisões registradas em documento e segurança tratada como etapa do processo, não como correção posterior.\n   \nA SLZ Digital nasceu no marketing digital. Ao longo de nove anos atendendo empresas de pequeno, médio e grande porte, um padrão se repetiu: a campanha gerava demanda, mas a operação do cliente não tinha estrutura para absorvê-la. Faltavam processos definidos, faltava equipe qualificada para assumir a rotina, e os empresários concentravam todas as decisões, sem tempo para profissionalizar a gestão. O desenvolvimento de software surgiu como resposta a esse cenário — aplicado primeiro na própria operação da SLZ e, em seguida, nos clientes que enfrentavam o mesmo problema.",
     "cta": "Falar com o Diego Brasil no WhatsApp",
     "message": "Olá! Vim pelo site e queria falar com o Diego sobre um projeto.",
     "photoAlt": "Foto do Diego",
