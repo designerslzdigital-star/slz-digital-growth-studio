@@ -49,12 +49,12 @@ export function Steps({ slug }: P) {
   }, [d.steps.items.length]);
 
   return (
-    <section id="requisitos" className="bg-background px-5 py-14 md:py-20">
+    <section id="requisitos" className="bg-background px-5 py-10">
       <div className="mx-auto max-w-4xl">
         <h2 className="text-3xl font-bold text-ink md:text-5xl">{d.steps.title}</h2>
         <p className="mt-4 max-w-2xl text-lg text-ink-soft">{d.steps.sub}</p>
 
-        <ol ref={ref} className="relative mt-14 space-y-12 md:space-y-16">
+        <ol ref={ref} className="relative mt-8 space-y-8 md:space-y-10">
           <span aria-hidden="true" className="absolute bottom-0 left-[21px] top-0 w-0 border-l-2 border-dashed border-light-border md:left-[27px]" />
           <span
             aria-hidden="true"
@@ -91,7 +91,7 @@ export function Steps({ slug }: P) {
           })}
         </ol>
 
-        <div className="card-dark mt-16 rounded-[20px] p-8 md:p-10">
+        <div className="card-dark mt-10 rounded-[20px] p-6 md:p-8">
           <h3 className="text-2xl font-semibold text-on-dark md:text-3xl">{d.steps.diagTitle}</h3>
           <p className="mt-3 max-w-2xl text-on-dark-soft">{d.steps.diagText}</p>
           <WaButton className="mt-6" message={d.steps.message} refCode={REFS.diagnostico}>{d.steps.diagCta}</WaButton>
@@ -105,14 +105,14 @@ export function Steps({ slug }: P) {
 export function After({ slug }: P) {
   const { d } = useDict(slug);
   return (
-    <section id="pos-entrega" className="pain-bg px-5 py-14 md:py-20">
+    <section id="pos-entrega" className="pain-bg px-5 py-10">
       <div className="mx-auto max-w-6xl">
         <h2 className="max-w-3xl text-3xl font-bold text-ink md:text-5xl">{d.after.title}</h2>
         <p className="mt-4 text-ink-soft">{d.after.sub}</p>
-        <div className="mt-14 grid gap-8 md:grid-cols-3">
+        <div className="mt-8 grid gap-6 md:grid-cols-3">
           {d.after.items.map((it, i) => (
             <article key={it.t} className="rounded-[44px] border-[3px] border-dotted border-ink-soft/60 p-3">
-              <div className="h-full rounded-[36px] bg-card-ink p-7">
+              <div className="h-full rounded-[36px] bg-card-ink p-6">
                 <span className="block text-center font-mono text-sm text-on-dark-mute">0{i + 1}</span>
                 <h3 className="mt-3 text-center font-subtitle text-2xl font-normal text-lime">{it.t}</h3>
                 <p className="mt-4 text-on-dark-mute">{it.d}</p>
@@ -120,7 +120,7 @@ export function After({ slug }: P) {
             </article>
           ))}
         </div>
-        <div className="mt-10 flex flex-col gap-5 doc-band rounded-[28px] p-7 sm:flex-row sm:items-center md:p-9">
+        <div className="doc-band mt-8 flex flex-col gap-4 rounded-[28px] p-6 sm:flex-row sm:items-center md:p-7">
           <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-lime/10 text-lime">
             <FileText className="h-7 w-7" aria-hidden="true" />
           </span>
@@ -137,42 +137,42 @@ export function After({ slug }: P) {
 
 export function Security({ slug }: P) {
   const { d } = useDict(slug);
-  return <section id="seguranca" className="bg-navy px-5 py-14 text-on-dark md:py-20"><div className="mx-auto max-w-6xl">
+  return <section id="seguranca" className="bg-navy px-5 py-10 text-on-dark"><div className="mx-auto max-w-6xl">
     <div className="grid gap-8 lg:grid-cols-[1.5fr_1fr] lg:items-end">
       <div><h2 className="max-w-3xl text-3xl font-bold md:text-5xl">{d.security.title}</h2><p className="mt-5 max-w-2xl text-on-dark-soft">{d.security.intro}</p></div>
       <div className="border-l-[3px] border-lime pl-6"><p className="font-heading text-lg">{d.security.yearText}</p><p className="mt-1 font-result text-6xl font-bold text-lime md:text-7xl">{d.security.year}</p></div>
     </div>
     <ReviewNote>{d.review.securityYear}</ReviewNote>
-    <Eyebrow className="mt-10 text-on-dark-soft">{d.security.stageLabel}</Eyebrow>
-    <ol className="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">{d.security.stages.map((it,i) => <li key={it.t} className="border-t border-on-dark/30 pt-4"><span className="font-mono text-xs text-lime">● {String(i+1).padStart(2,'0')}</span><h3 className="mt-2 text-lg font-semibold">{it.t}</h3><p className="mt-1 text-sm text-on-dark-soft">{it.q}</p></li>)}</ol>
-    <ReviewNote>{d.security.practice}</ReviewNote><p className="mt-8 max-w-4xl border-l-4 border-lime pl-6 font-heading text-2xl">{d.security.lgpd}</p>
-    <div id="teste-seguranca" className="mt-10 border-t border-doc-border pt-10">
+    <Eyebrow className="mt-8 text-on-dark-soft">{d.security.stageLabel}</Eyebrow>
+    <ol className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">{d.security.stages.map((it,i) => <li key={it.t} className="border-t border-on-dark/30 pt-4"><span className="font-mono text-xs text-lime">● {String(i+1).padStart(2,'0')}</span><h3 className="mt-2 text-lg font-semibold">{it.t}</h3><p className="mt-1 text-sm text-on-dark-soft">{it.q}</p></li>)}</ol>
+    <ReviewNote>{d.security.practice}</ReviewNote><p className="mt-6 max-w-4xl border-l-4 border-lime pl-6 font-heading text-2xl">{d.security.lgpd}</p>
+    <div id="teste-seguranca" className="mt-8 border-t border-doc-border pt-8">
       <Eyebrow className="text-lime">{d.securityTest.label}</Eyebrow><h3 className="mt-4 max-w-4xl text-3xl font-semibold md:text-5xl">{d.securityTest.title}</h3><p className="mt-5 max-w-3xl text-on-dark-soft">{d.securityTest.sub}</p>
-      <h4 className="mt-8 font-heading text-xl">{d.securityTest.how}</h4><ol className="test-grid mt-4">{d.securityTest.steps.map((it,i) => <li key={it.t} className="test-card"><span className="font-result text-3xl font-bold text-lime">{String(i+1).padStart(2,'0')}</span><h4 className="mt-4 font-heading text-xl font-semibold text-on-dark">{it.t}</h4><p className="mt-3 text-on-dark-soft">{it.d}</p></li>)}</ol><ReviewNote>{d.review.testStages}</ReviewNote>
-      <div className="mt-8 grid gap-6 md:grid-cols-[1.4fr_1fr]"><div className="border-l-4 border-blue-strong pl-6"><h4 className="font-heading text-xl font-semibold">{d.securityTest.limitsTitle}</h4><p className="mt-3 text-on-dark-soft">{d.securityTest.limits}</p></div><div className="golden-rule border-l-4 border-lime p-6"><h4 className="font-mono text-sm uppercase text-lime">{d.securityTest.golden}</h4><p className="mt-3 font-heading text-xl text-on-dark">{d.securityTest.authorization}</p></div></div>
+      <h4 className="mt-6 font-heading text-xl">{d.securityTest.how}</h4><ol className="test-grid mt-4">{d.securityTest.steps.map((it,i) => <li key={it.t} className="test-card"><span className="font-result text-3xl font-bold text-lime">{String(i+1).padStart(2,'0')}</span><h4 className="mt-4 font-heading text-xl font-semibold text-on-dark">{it.t}</h4><p className="mt-3 text-on-dark-soft">{it.d}</p></li>)}</ol><ReviewNote>{d.review.testStages}</ReviewNote>
+      <div className="mt-6 grid gap-5 md:grid-cols-[1.4fr_1fr]"><div className="border-l-4 border-blue-strong pl-6"><h4 className="font-heading text-xl font-semibold">{d.securityTest.limitsTitle}</h4><p className="mt-3 text-on-dark-soft">{d.securityTest.limits}</p></div><div className="golden-rule border-l-4 border-lime p-6"><h4 className="font-mono text-sm uppercase text-lime">{d.securityTest.golden}</h4><p className="mt-3 font-heading text-xl text-on-dark">{d.securityTest.authorization}</p></div></div>
       <ReviewNote>{d.review.testMethod}</ReviewNote><ReviewNote>{d.review.testPlatforms}</ReviewNote>
-      <div className="mt-8 flex flex-wrap items-center justify-between gap-6"><p className="max-w-lg text-sm text-on-dark-soft">{d.securityTest.stat}</p><WaButton message={d.securityTest.message} refCode={REFS.testeSeguranca}>{d.securityTest.cta}</WaButton></div>
-      <div className="mt-8 space-y-3 text-[13px] text-on-dark-mute"><p><a href={SOURCE_URLS.report} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">{d.sources.report}</a></p><ReviewNote>{d.review.report}</ReviewNote><p><a href={SOURCE_URLS.law} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">{d.sources.law}</a></p></div>
+      <div className="mt-6 flex flex-wrap items-center justify-between gap-5"><p className="max-w-lg text-sm text-on-dark-soft">{d.securityTest.stat}</p><WaButton message={d.securityTest.message} refCode={REFS.testeSeguranca}>{d.securityTest.cta}</WaButton></div>
+      <div className="mt-6 space-y-2 text-[13px] text-on-dark-mute"><p><a href={SOURCE_URLS.report} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">{d.sources.report}</a></p><ReviewNote>{d.review.report}</ReviewNote><p><a href={SOURCE_URLS.law} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">{d.sources.law}</a></p></div>
     </div>
   </div></section>;
 }
 
 export function Global({ slug }: P) {
   const { d } = useDict(slug);
-  return <section id="global" className="bg-background px-5 py-14 md:py-20"><div className="mx-auto max-w-6xl">
+  return <section id="global" className="bg-background px-5 py-10"><div className="mx-auto max-w-6xl">
     <h2 className="max-w-3xl text-3xl font-bold text-ink md:text-5xl">{d.global.title}</h2><p className="mt-4 max-w-3xl text-lg text-ink-soft">{d.global.sub}</p>
-    <div className="mt-10"><WorldMap label={d.global.mapLabel} names={[d.global.legendBr,d.global.legendIe,d.global.legendUy]} /></div>
-    <div className="map-legend mt-8 flex flex-wrap gap-x-6 gap-y-4 text-sm text-ink-soft">{[d.global.legendBr,d.global.legendIe,d.global.legendUy,d.global.legendWorld].map((label,i) => <span key={label} className="flex items-center gap-2"><span className={`legend-dots country-${i}`} aria-hidden="true"><i /><i /></span>{label}</span>)}</div>
+    <div className="mt-8"><WorldMap label={d.global.mapLabel} names={[d.global.legendBr,d.global.legendIe,d.global.legendUy]} /></div>
+    <div className="map-legend mt-6 flex flex-wrap gap-x-6 gap-y-4 text-sm text-ink-soft">{[d.global.legendBr,d.global.legendIe,d.global.legendUy,d.global.legendWorld].map((label,i) => <span key={label} className="flex items-center gap-2"><span className={`legend-dots country-${i}`} aria-hidden="true"><i /><i /></span>{label}</span>)}</div>
   </div></section>;
 }
 
 export function Faq({ slug }: P) {
   const { d } = useDict(slug);
   return (
-    <section id="faq" className="bg-light px-5 py-14 md:py-20">
+    <section id="faq" className="bg-light px-5 py-10">
       <div className="mx-auto max-w-3xl">
         <h2 className="text-3xl font-bold text-ink md:text-5xl">{d.faq.title}</h2>
-        <div className="mt-10 divide-y divide-light-border border-y border-light-border">
+        <div className="mt-6 divide-y divide-light-border border-y border-light-border">
           {d.faq.items.map((f) => (
             <details key={f.q} className="group py-2">
               <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between gap-4 text-lg font-medium text-ink [&::-webkit-details-marker]:hidden">
@@ -195,7 +195,7 @@ export function Faq({ slug }: P) {
 export function FinalCta({ slug }: P) {
   const { d } = useDict(slug);
   return (
-    <section id="cta-final" className="bg-blue-strong px-5 py-16 md:py-14">
+    <section id="cta-final" className="bg-blue-strong px-5 py-10">
       <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 md:flex-row md:items-center">
         <div>
           <h2 className="text-3xl font-bold text-on-dark md:text-5xl">{d.final.title}</h2>
