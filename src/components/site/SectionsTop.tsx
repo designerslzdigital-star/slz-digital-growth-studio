@@ -47,7 +47,7 @@ export function Pain({ slug }: P) {
             <article key={c.t} className="rounded-[44px] border-[3px] border-dotted border-ink-soft/60 p-3">
               <div className="h-full rounded-[36px] bg-card-ink p-6">
                 <h3 className="text-center font-subtitle text-2xl font-normal text-on-dark">{c.t}</h3>
-                <p className="mt-4 text-on-dark-mute">{c.d}</p>
+                <p className="mt-4 whitespace-pre-line text-on-dark-mute">{c.d}</p>
               </div>
             </article>
           ))}
@@ -67,7 +67,7 @@ export function Solutions({ slug }: P) {
     <p className="mt-6 font-mono text-sm text-ink-soft">{d.solutions.who}</p><ReviewNote>{d.review.publicSector}</ReviewNote>
     <div className="solution-grid mt-8">{d.solutions.items.map((it,i) => <article key={it.tag} className={`solution-card card-dark ${i < 3 ? 'solution-third' : i < 5 ? 'solution-half' : 'solution-wide'}`}>
       <div className="flex flex-wrap items-center gap-3"><span className="solution-number">{String(i+1).padStart(2,'0')}</span><span className="solution-tag">{it.tag}</span></div>
-      <h3 className="solution-title mt-6 text-on-dark">{it.t}</h3><p className="mt-4 text-on-dark-soft">{it.d}</p>
+      <h3 className="solution-title mt-6 text-on-dark">{it.t}</h3><p className="mt-4 whitespace-pre-line text-on-dark-soft">{it.d}</p>
       {i === 3 && <ReviewNote>{d.review.erp}</ReviewNote>}{i === 5 && <ReviewNote>{d.review.rescue}</ReviewNote>}
     </article>)}</div>
     <div className="mt-8 flex justify-center"><WaButton message={d.wa.message} refCode={REFS.solucoes}>{d.wa.cta}</WaButton></div>
@@ -103,6 +103,6 @@ export function Founder({ slug }: P) {
     <div className="founder-photo">{FOUNDER_PHOTO_URL ? <img src={FOUNDER_PHOTO_URL} alt={d.founder.photoAlt} loading="lazy" /> : <div className="flex h-full flex-col items-center justify-center p-8 text-center"><UserRound className="h-16 w-16 text-on-dark-mute" aria-hidden="true" /><ReviewNote>{d.review.photo}</ReviewNote></div>}</div>
     <div><Eyebrow className="text-on-dark-mute">{d.founder.label}</Eyebrow><h2 className="mt-4 text-3xl font-semibold md:text-[42px]">{d.founder.title} <span className="text-lime">{d.founder.mark}</span></h2>
     <div className="mt-7 flex flex-wrap gap-4">{d.founder.years.map((year,i) => <div key={year} className="px-5 py-4"><strong className="font-result text-3xl text-lime">{year}</strong><p className="mt-1 text-sm text-on-dark-soft">{i === 0 ? d.founder.market : d.founder.abroad}</p></div>)}</div>
-    <p className="mt-7 text-on-dark-soft">{d.founder.text}</p><ReviewNote>{d.review.founder}</ReviewNote></div>
+    <p className="mt-7 whitespace-pre-line text-on-dark-soft">{d.founder.text}</p><ReviewNote>{d.review.founder}</ReviewNote></div>
   </div></section>;
 }
