@@ -64,7 +64,7 @@ const ptBR = {
       {
         "tag": "CRM e atendimento com IA",
         "t": "A IA atende e o CRM registra tudo sozinho.",
-        "d": "Não é bot de menu com \"digite 1\": a IA conversa, entende o que o cliente quer e responde. Cada atendimento já vira registro, com histórico, responsável e o estágio da venda. Você para de perder negócio porque a mensagem ficou no celular de alguém.",
+        "d": "Não é bot de menu com \"digite 1\": a IA conversa, entende o que o cliente quer e responde. \nCada atendimento já vira registro, com histórico, responsável e o estágio da venda. Você para de perder negócio porque a mensagem ficou no celular de alguém.",
         "message": "Olá! Quero conversar sobre CRM e atendimento com IA no WhatsApp."
       },
       {
@@ -82,7 +82,7 @@ const ptBR = {
       {
         "tag": "Sistemas ERP",
         "t": "Um número só, em que todo mundo confia.",
-        "d": "Quando cada setor controla do seu jeito, o estoque briga com o financeiro. O ERP coloca vendas, estoque e financeiro na mesma base.",
+        "d": "Quando cada setor controla do seu jeito, o estoque briga com o financeiro.\n O ERP coloca vendas, estoque e financeiro na mesma base.",
         "message": "Olá! Quero conversar sobre um ERP."
       },
       {
