@@ -30,28 +30,46 @@ const LAND: Poly[] = [
 function inside(p: [number, number], poly: Poly) {
   let c = false;
   for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) {
-    const [xi, yi] = poly[i]!;
-    const [xj, yj] = poly[j]!;
+    const current = poly[i];
+    const previous = poly[j];
+    if (!current || !previous) continue;
+    const [xi, yi] = current;
+    const [xj, yj] = previous;
     if (yi > p[1] !== yj > p[1] && p[0] < ((xj - xi) * (p[1] - yi)) / (yj - yi) + xi) c = !c;
   }
   return c;
 }
 
-const STEP = 3.2;
-const DOTS: { x: number; y: number; br: boolean }[] = [];
-for (let lat = 80; lat > -56; lat -= STEP) {
-  for (let lon = -170; lon < 180; lon += STEP) {
-    const br = inside([lon, lat], BRAZIL);
-    if (br || LAND.some((poly) => inside([lon, lat], poly))) DOTS.push({ x: lon + 180, y: 90 - lat, br });
+const IRELAND: Poly = [[-10.5,51.5],[-9.5,53.5],[-8.5,55.3],[-6.2,55.1],[-6,53],[-7,52],[-9,51.4]];
+const URUGUAY: Poly = [[-58.4,-30.2],[-56.9,-30.1],[-53.1,-32.7],[-53.4,-34.3],[-56.2,-35],[-58.5,-33]];
+const COUNTRIES = [BRAZIL, IRELAND, URUGUAY];
+const DOTS: { x: number; y: number; country: number; alternate: boolean }[] = [];
+for (let lat = 80, row=0; lat > -56; lat -= 2.2,row++) {
+  for (let lon = -170,col=0; lon < 180; lon += 2.2,col++) {
+    if (inside([lon,lat],IRELAND) || inside([lon,lat],URUGUAY)) continue;
+    const br=inside([lon,lat],BRAZIL);
+    if (br || LAND.some(poly => inside([lon,lat],poly))) DOTS.push({x:lon+180,y:83-lat,country:br ? 0 : -1,alternate:(row+col)%2===0});
   }
 }
-
-export function WorldMap({ label }: { label: string }) {
-  return (
-    <svg role="img" aria-label={label} viewBox="0 5 360 140" className="h-auto w-full">
-      {DOTS.map((d, i) => (
-        <circle key={i} cx={d.x} cy={d.y} r={d.br ? 1.25 : 1.05} className={d.br ? "fill-blue" : "fill-on-dark-mute/35"} />
-      ))}
-    </svg>
-  );
+for (const country of [1,2]) {
+  const poly=COUNTRIES[country];
+  if (!poly) continue;
+  const xs=poly.map(p=>p[0]),ys=poly.map(p=>p[1]);
+  for(let lat=Math.min(...ys),row=0;lat<=Math.max(...ys);lat+=.85,row++) {
+    for(let lon=Math.min(...xs),col=0;lon<=Math.max(...xs);lon+=.85,col++) {
+      if(inside([lon,lat],poly)) DOTS.push({x:lon+180,y:83-lat,country,alternate:(row+col)%2===0});
+    }
+  }
+}
+const CLASSES=[['map-br-a','map-br-b'],['map-ie-a','map-ie-b'],['map-uy-a','map-uy-b']];
+export function WorldMap({ label,names }: { label: string; names: string[] }) {
+  return <svg role="img" aria-label={label} viewBox="0 0 360 145" className="h-auto w-full">
+    {DOTS.map((d,i)=><circle key={i} cx={d.x} cy={d.y} r={d.country>0 ? 1.2 : 1} className={d.country<0 ? 'map-world' : CLASSES[d.country]?.[d.alternate ? 0 : 1]} />)}
+    <ellipse cx="127" cy="98" rx="24" ry="27" className="map-ring map-ring-br" />
+    <circle cx="172" cy="30" r="5.5" className="map-ring map-ring-ie" />
+    <circle cx="124" cy="116" r="6" className="map-ring map-ring-uy" />
+    <path d="M176 27 L190 16 H212" className="map-ring map-ring-ie" /><text x="191" y="13" className="map-country-label">{names[1]}</text>
+    <path d="M120 118 L101 133 H79" className="map-ring map-ring-uy" /><text x="79" y="141" className="map-country-label">{names[2]}</text>
+    <text x="143" y="101" className="map-country-label">{names[0]}</text>
+  </svg>;
 }

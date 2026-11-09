@@ -1,16 +1,19 @@
+import { useState } from "react";
+import { Play, ShieldCheck, UserRound } from "lucide-react";
 import { useDict, type LangSlug } from "@/i18n";
-import { REFS, SHOW_RESULTS, SHOW_TEAM, SHOW_TESTIMONIAL } from "@/config/site";
-import { Check, Eyebrow, WaButton } from "./ui";
+import { FOUNDER_PHOTO_URL, REFS, SHOW_TEAM, SHOW_TESTIMONIAL, SYSTEMS_VIDEO_ID } from "@/config/site";
+import { Eyebrow, ReviewNote, WaButton } from "./ui";
+import { Button } from "@/components/ui/button";
 
 type P = { slug: LangSlug };
 
 export function Hero({ slug }: P) {
   const { d } = useDict(slug);
   return (
-    <section className="hero-bg relative flex min-h-[100svh] items-center px-5 pb-20 pt-32 text-center">
+    <section id="hero" className="hero-bg hero-section relative flex min-h-[100svh] items-center px-5 pb-20 pt-32 text-center">
       <div className="mx-auto max-w-5xl">
-        <h1 className="font-display text-[clamp(2.9rem,8.5vw,6.75rem)] font-normal leading-[1.05] tracking-[-0.03em] text-hero-ink">
-          {d.hero.before} <span className="select-mark">{d.hero.mark}</span> {d.hero.after}
+        <h1 className="hero-title font-display font-normal leading-[1.05] text-hero-ink">
+          {d.hero.before} <span className="select-mark">{d.hero.mark}</span>{d.hero.after}
         </h1>
         <p className="mx-auto mt-7 max-w-2xl font-subtitle text-lg text-on-dark-soft">{d.hero.sub}</p>
         <div className="mt-9 flex flex-col items-center gap-3">
@@ -22,25 +25,23 @@ export function Hero({ slug }: P) {
   );
 }
 
-export function Hook({ slug }: P) {
+export function Numbers({ slug }: P) {
   const { d } = useDict(slug);
-  return (
-    <div className="bg-lime-soft px-5 py-3">
-      <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-4 gap-y-1 text-sm text-ink">
-        <span className="font-mono text-xs font-semibold uppercase tracking-widest">{d.hook.label}</span>
-        <s className="text-ink-soft">{d.hook.myth}</s>
-        <a href="#mito" className="font-semibold text-blue-ink underline underline-offset-4">{d.hook.link} →</a>
-      </div>
-    </div>
-  );
+  return <section id="numeros" className="numbers-band"><div className="mx-auto max-w-6xl">
+    <div className="numbers-grid">{d.numbers.items.map((it, i) => <div key={it.value} className="min-w-0">
+      <div className={i === 2 ? "proof-seal" : "proof-number"}>{i === 2 && <ShieldCheck aria-hidden="true" className="h-9 w-8 shrink-0" />}{it.value}</div>
+      <p className="mt-2 text-[14.5px]">{it.label}</p>
+    </div>)}</div><ReviewNote>{d.review.numbers}</ReviewNote>
+  </div></section>;
 }
 
 export function Pain({ slug }: P) {
   const { d } = useDict(slug);
   return (
-    <section className="pain-bg px-5 py-20 md:py-28">
+    <section id="dor" className="pain-bg px-5 py-20 md:py-28">
       <div className="mx-auto max-w-6xl">
         <h2 className="pain-title max-w-3xl font-display text-4xl font-normal leading-[1.05] tracking-[0.02em] md:text-7xl">{d.pain.title}</h2>
+        <p className="mt-4 max-w-3xl text-ink-soft">{d.pain.sub}</p>
         <div className="mt-14 grid gap-8 md:grid-cols-3">
           {d.pain.cards.map((c) => (
             <article key={c.t} className="rounded-[44px] border-[3px] border-dotted border-ink-soft/60 p-3">
@@ -57,175 +58,53 @@ export function Pain({ slug }: P) {
   );
 }
 
-function IlloTable() {
-  return (
-    <div aria-hidden="true" className="mt-6 max-w-md overflow-hidden rounded-xl border border-on-dark/15 font-mono text-[11px] text-on-dark-soft">
-      <div className="grid grid-cols-[28px_1fr_1fr_1fr] bg-on-dark/10 text-on-dark-mute">
-        {["", "A", "B", "C"].map((h, i) => <div key={i} className="border-r border-on-dark/10 px-2 py-1 text-center last:border-r-0">{h}</div>)}
-      </div>
-      {[["Pedido", "Cliente", "Status"], ["#1042", "Loja Sul", "ok"], ["#1043", "Atacado", "pend"], ["#1044", "Filial 2", "ok"], ["#1045", "Loja Norte", "pend"]].map((row, r) => (
-        <div key={r} className={`grid grid-cols-[28px_1fr_1fr_1fr] border-t border-on-dark/10 ${r === 0 ? "font-semibold text-on-dark" : ""}`}>
-          <div className="border-r border-on-dark/10 bg-on-dark/5 px-2 py-1 text-center text-on-dark-mute">{r + 1}</div>
-          {row.map((c, i) => (
-            <div key={i} className="truncate border-r border-on-dark/10 px-2 py-1 last:border-r-0">
-              {r > 0 && i === 2 ? <span className={`rounded px-1.5 py-0.5 ${c === "ok" ? "bg-blue/30 text-on-dark" : "bg-lime/30 text-on-dark"}`}>{c === "ok" ? "✓" : "…"}</span> : c}
-            </div>
-          ))}
-        </div>
-      ))}
-    </div>
-  );
-}
-function IlloBars() {
-  return (
-    <div aria-hidden="true" className="mt-8 flex h-20 items-end gap-2">
-      {[30, 45, 40, 60, 72, 90].map((h, i) => (
-        <div key={i} style={{ height: `${h}%` }} className="flex-1 rounded-t bg-gradient-to-t from-blue-strong to-blue" />
-      ))}
-    </div>
-  );
-}
-function IlloPhone() {
-  return (
-    <div aria-hidden="true" className="mt-8 flex justify-center">
-      <div className="h-28 w-16 rounded-2xl border-2 border-on-dark/25 p-1.5">
-        <div className="h-2 w-6 mx-auto rounded bg-on-dark/20" />
-        <div className="mt-2 h-8 rounded bg-blue/40" />
-        <div className="mt-1.5 h-3 rounded bg-on-dark/10" />
-        <div className="mt-1.5 h-3 rounded bg-lime/60" />
-      </div>
-    </div>
-  );
-}
-function IlloNodes() {
-  return (
-    <svg aria-hidden="true" viewBox="0 0 300 70" className="mt-8 h-16 w-full">
-      <path d="M30 35 H120 M150 35 L240 15 M150 35 L240 55" className="stroke-blue/60" strokeWidth="2" strokeDasharray="4 4" fill="none" />
-      <circle cx="30" cy="35" r="12" className="fill-blue-strong" />
-      <circle cx="135" cy="35" r="14" className="fill-lime" />
-      <circle cx="252" cy="15" r="10" className="fill-blue" />
-      <circle cx="252" cy="55" r="10" className="fill-blue" />
-    </svg>
-  );
-}
-
 export function Solutions({ slug }: P) {
-  const { d, t } = useDict(slug);
-  type Item = (typeof d.solutions.items)[number];
-  const [sys, saas, app, integ] = d.solutions.items as [Item, Item, Item, Item];
-  const Card = ({ it, className, children, lime }: { it: typeof sys; className: string; children: React.ReactNode; lime?: boolean }) => (
-    <article className={`${lime ? "card-dark-lime" : "card-dark"} flex flex-col justify-between rounded-[20px] p-6 md:p-8 ${className}`}>
-      <div>
-        <Eyebrow className="text-blue">{it.tag}</Eyebrow>
-        <h3 className="mt-3 text-2xl font-semibold text-on-dark md:text-3xl">{it.t}</h3>
-        <p className="mt-3 text-on-dark-soft">{it.d}</p>
-      </div>
-      {children}
-    </article>
-  );
-  return (
-    <section id="solucoes" className="bg-paper px-5 py-20 md:py-28">
-      <div className="mx-auto max-w-6xl">
-        <h2 className="text-3xl font-bold text-ink md:text-5xl">{d.solutions.title}</h2>
-        <p className="mt-4 font-mono text-sm text-ink-soft">{d.solutions.who}</p>
-        <div className="mt-10 grid gap-4 md:grid-cols-12">
-          <Card it={sys} className="md:col-span-7"><IlloTable /></Card>
-          <Card it={saas} className="md:col-span-5" lime><IlloBars /></Card>
-          <article className="card-dark rounded-[20px] p-6 md:col-span-5 md:p-8">
-            <h3 className="text-2xl font-semibold text-on-dark">{d.solutions.pickTitle}</h3>
-            <div className="mt-5 flex flex-wrap gap-2">
-              {d.solutions.picks.map((p, i) => (
-                <WaButton key={p} variant="chip" message={t("solutions.pickMsg", { item: p })} refCode={REFS.card(i + 1)}>
-                  {p}
-                </WaButton>
-              ))}
-            </div>
-          </article>
-          <Card it={app} className="md:col-span-7"><IlloPhone /></Card>
-          <Card it={integ} className="md:col-span-12"><IlloNodes /></Card>
-        </div>
-        <div className="mt-12 flex justify-center">
-          <WaButton message={d.wa.message} refCode={REFS.solucoes}>{d.wa.cta}</WaButton>
-        </div>
-      </div>
-    </section>
-  );
+  const { d } = useDict(slug);
+  return <section id="solucoes" className="bg-light px-5 py-20 md:py-28"><div className="mx-auto max-w-6xl">
+    <h2 className="text-3xl font-bold text-ink md:text-5xl">{d.solutions.title}<span className="sr-only"> — {d.solutions.seo}</span></h2>
+    <p className="mt-4 max-w-3xl text-ink-soft">{d.solutions.sub}</p>
+    <ReviewNote>{d.review.fast}</ReviewNote>
+    <p className="mt-6 font-mono text-sm text-ink-soft">{d.solutions.who}</p><ReviewNote>{d.review.publicSector}</ReviewNote>
+    <div className="solution-grid mt-8">{d.solutions.items.map((it,i) => <article key={it.tag} className={`solution-card card-dark ${i < 3 ? 'solution-third' : i < 5 ? 'solution-half' : 'solution-wide'}`}>
+      <div className="flex flex-wrap items-center gap-3"><span className="solution-number">{String(i+1).padStart(2,'0')}</span><span className="solution-tag">{it.tag}</span></div>
+      <h3 className="solution-title mt-6 text-on-dark">{it.t}</h3><p className="mt-4 text-on-dark-soft">{it.d}</p>
+      {i === 3 && <ReviewNote>{d.review.erp}</ReviewNote>}{i === 5 && <ReviewNote>{d.review.rescue}</ReviewNote>}
+      <div className="mt-auto flex flex-wrap items-center gap-x-6 pt-6"><WaButton variant="link" message={it.message} refCode={REFS.card(i+1)}>{d.solutions.link}</WaButton>
+      {i === 5 && <a href="#teste-seguranca" className="inline-flex min-h-11 items-center text-sm text-lime underline underline-offset-4">{d.solutions.testLink}</a>}</div>
+    </article>)}</div>
+    <div className="mt-12 flex justify-center"><WaButton message={d.wa.message} refCode={REFS.solucoes}>{d.wa.cta}</WaButton></div>
+  </div></section>;
 }
 
-function FlowMock({ slug }: P) {
+export function Services({ slug }: P) {
   const { d } = useDict(slug);
-  const cards = [["A", "B"], ["C"], ["B", "D"], ["A"]];
-  return (
-    <div role="img" aria-label={d.proof.frameAlt} className="shadow-frame overflow-hidden rounded-t-2xl border border-on-dark/10 border-b-0">
-      <div className="flex h-9 items-center gap-1.5 bg-navy-deep px-4">
-        <span className="h-3 w-3 rounded-full bg-on-dark/25" />
-        <span className="h-3 w-3 rounded-full bg-on-dark/25" />
-        <span className="h-3 w-3 rounded-full bg-on-dark/25" />
-      </div>
-      <div className="flex bg-light">
-        <aside className="hidden w-44 shrink-0 bg-navy p-4 text-on-dark sm:block">
-          <p className="font-heading font-bold">SLZ Flow</p>
-          <p className="text-[11px] text-on-dark-mute">by SLZ Digital</p>
-          <ul className="mt-6 space-y-2 text-sm text-on-dark-soft">
-            {d.proof.menu.map((m, i) => (
-              <li key={m} className={i === 1 ? "rounded-lg bg-blue-strong px-2 py-1 text-on-dark" : "px-2 py-1"}>{m}</li>
-            ))}
-          </ul>
-        </aside>
-        <div className="min-w-0 flex-1 p-4 md:p-6">
-          <p className="font-heading text-lg font-semibold text-ink">{d.proof.board}</p>
-          <div className="mt-4 grid grid-cols-2 gap-3 lg:grid-cols-4">
-            {d.proof.cols.map((c, i) => (
-              <div key={c} className="rounded-xl bg-background p-3">
-                <p className="text-xs font-semibold text-ink-soft">{c}</p>
-                <div className="mt-2 space-y-2">
-                  {(cards[i] ?? []).map((x) => (
-                    <div key={x} className="rounded-lg border border-light-border p-2">
-                      <p className="text-xs font-medium text-ink">{d.proof.client} {x}</p>
-                      <div className="mt-1.5 h-1.5 w-3/4 rounded bg-light-border" />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+  return <section id="servicos" className="bg-navy px-5 py-20 text-on-dark md:py-28"><div className="mx-auto max-w-6xl">
+    <h2 className="text-4xl font-semibold text-lime md:text-[56px]">{d.services.title}</h2><p className="mt-4 text-on-dark-soft">{d.services.sub}</p>
+    <div className="service-grid mt-10 border-t border-on-dark/15 pt-10">{d.services.groups.map(g => <div key={g.label} className="min-w-0 border-t-2 border-lime pt-4"><h3 className="font-mono text-[13px] font-normal uppercase text-on-dark">{g.label}</h3><ul className="mt-4 space-y-3">{g.items.map(item => <li key={item} className="flex gap-2.5 text-[15.5px] text-catalog"><span className="mt-2 h-[7px] w-[7px] shrink-0 rounded-full bg-lime" />{item}</li>)}</ul></div>)}</div>
+    <WaButton className="mt-10" message={d.services.message} refCode={REFS.servicos}>{d.services.cta}</WaButton><ReviewNote>{d.review.services}</ReviewNote>
+  </div></section>;
 }
 
 export function Proof({ slug }: P) {
   const { d } = useDict(slug);
-  return (
-    <>
-      <section id="prova" className="grid-mesh bg-navy px-5 pt-20 md:pt-28">
-        <div className="mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-on-dark md:text-5xl">{d.proof.title}</h2>
-          <p className="mt-4 max-w-2xl text-lg text-on-dark-soft">{d.proof.sub}</p>
-          <div className="mt-10 grid gap-8 md:grid-cols-2">
-            <div>
-              <h3 className="text-2xl font-semibold text-on-dark">{d.proof.caseTitle}</h3>
-              <p className="mt-3 text-on-dark-soft">{d.proof.caseText}</p>
-              {SHOW_RESULTS && <p className="mt-4 text-lime">{d.proof.results}</p>}
-            </div>
-            <ul className="space-y-3">
-              {d.proof.checks.map((c) => (
-                <li key={c} className="flex gap-3 text-on-dark"><Check />{c}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="mt-14"><FlowMock slug={slug} /></div>
-        </div>
-      </section>
-      {(SHOW_TESTIMONIAL || SHOW_TEAM) && (
-        <section className="bg-background px-5 py-12">
-          <div className="mx-auto grid max-w-6xl gap-4 md:grid-cols-2">
-            {SHOW_TESTIMONIAL && <div className="rounded-[20px] border p-6">{d.proof.testimonial}</div>}
-            {SHOW_TEAM && <div className="rounded-[20px] border p-6">{d.proof.team}</div>}
-          </div>
-        </section>
-      )}
-    </>
-  );
+  const [playing,setPlaying]=useState(false);
+  return <>
+    <section id="prova" className="grid-mesh bg-navy px-5 py-20 text-on-dark md:py-28"><div className="mx-auto max-w-6xl">
+      <h2 className="text-3xl font-bold md:text-5xl">{d.proof.title}</h2><p className="mt-4 max-w-3xl text-lg text-on-dark-soft">{d.proof.sub}</p>
+      <div className="mt-12 grid items-center gap-10 lg:grid-cols-[1fr_1.4fr]"><div><h3 className="text-3xl font-semibold text-lime md:text-[40px]">{d.proof.caseTitle}</h3>
+      <ul className="mt-8 space-y-6">{d.proof.systems.map((s,i) => <li key={s.name} className="border-l-[3px] border-lime pl-5"><h4 className="font-heading text-xl font-semibold">{s.name}</h4>{i === 1 ? <ReviewNote>{s.text}</ReviewNote> : <p className="mt-2 text-on-dark-soft">{s.text}</p>}</li>)}</ul><ReviewNote>{d.review.video}</ReviewNote></div>
+      <div className="video-frame">{playing && SYSTEMS_VIDEO_ID ? <iframe title={d.proof.videoTitle} src={`https://www.youtube-nocookie.com/embed/${SYSTEMS_VIDEO_ID}?autoplay=1`} allow="autoplay; encrypted-media; picture-in-picture" allowFullScreen /> : <div className="flex h-full flex-col items-center justify-center gap-4"><Button variant="ghost" size="icon" aria-label={d.proof.play} disabled={!SYSTEMS_VIDEO_ID} onClick={() => setPlaying(true)} className="h-16 w-16 rounded-full bg-lime text-ink disabled:opacity-100"><Play className="h-7 w-7" /></Button><p className="text-sm text-on-dark-soft">{d.proof.videoTitle}</p></div>}</div></div>
+    </div></section>
+    {(SHOW_TESTIMONIAL || SHOW_TEAM) && <div className="bg-background px-5 py-10"><div className="mx-auto max-w-6xl"><ReviewNote>{d.review.proofHidden}</ReviewNote><div className="grid gap-6 md:grid-cols-2">{SHOW_TESTIMONIAL && <p>{d.proof.testimonial}</p>}{SHOW_TEAM && <p>{d.proof.team}</p>}</div></div></div>}
+  </>;
+}
+
+export function Founder({ slug }: P) {
+  const { d } = useDict(slug);
+  return <section id="fundador" className="bg-navy-deep px-5 py-20 text-on-dark md:py-28"><div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-[0.8fr_1.2fr]">
+    <div className="founder-photo">{FOUNDER_PHOTO_URL ? <img src={FOUNDER_PHOTO_URL} alt={d.founder.photoAlt} loading="lazy" /> : <div className="flex h-full flex-col items-center justify-center p-8 text-center"><UserRound className="h-16 w-16 text-on-dark-mute" aria-hidden="true" /><ReviewNote>{d.review.photo}</ReviewNote></div>}</div>
+    <div><Eyebrow className="text-on-dark-mute">{d.founder.label}</Eyebrow><h2 className="mt-4 text-3xl font-semibold md:text-[42px]">{d.founder.title} <span className="text-lime">{d.founder.mark}</span></h2>
+    <div className="mt-7 flex flex-wrap gap-4">{d.founder.years.map((year,i) => <div key={year} className="border border-doc-border px-5 py-4"><strong className="font-result text-3xl text-lime">{year}</strong><p className="mt-1 text-sm text-on-dark-soft">{i === 0 ? d.founder.market : d.founder.abroad}</p></div>)}</div>
+    <p className="mt-7 text-on-dark-soft">{d.founder.text}</p><ReviewNote>{d.review.founder}</ReviewNote><WaButton className="mt-7" message={d.founder.message} refCode={REFS.fundador}>{d.founder.cta}</WaButton></div>
+  </div></section>;
 }

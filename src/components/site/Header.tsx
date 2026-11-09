@@ -2,12 +2,13 @@ import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "@tanstack/react-router";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { LANGS, langBySlug, saveSlug, useDict, type LangSlug } from "@/i18n";
-import { REFS } from "@/config/site";
+import { NAV_ANCHORS, REFS } from "@/config/site";
 import { WaButton } from "./ui";
 import { Flag } from "./Flag";
+import { Button } from "@/components/ui/button";
 import logoAsset from "@/assets/slz-logo.png.asset.json";
 
-export const ANCHORS = ["solucoes", "requisitos", "pos-entrega", "diferenciais", "seguranca", "tecnologias", "global", "faq"];
+export const ANCHORS = NAV_ANCHORS;
 
 export function Logo() {
   return (
@@ -32,7 +33,7 @@ function LangSelect({ slug }: { slug: LangSlug }) {
 
   return (
     <div ref={ref} className="relative" onKeyDown={(e) => e.key === "Escape" && setOpen(false)}>
-      <button
+      <Button variant="ghost"
         type="button"
         aria-label={d.lang.label}
         aria-haspopup="listbox"
@@ -41,14 +42,14 @@ function LangSelect({ slug }: { slug: LangSlug }) {
         className="flex min-h-11 items-center gap-1.5 rounded-xl border border-on-dark/15 bg-on-dark/5 px-3 text-sm text-on-dark hover:bg-on-dark/10"
       >
         <Flag slug={cur.slug} />
-        <span className="sr-only min-[1280px]:not-sr-only">{cur.name}</span>
+        <span className="sr-only min-[1400px]:not-sr-only">{cur.name}</span>
         <ChevronDown className="h-4 w-4" aria-hidden="true" />
-      </button>
+      </Button>
       {open && (
         <ul role="listbox" aria-label={d.lang.label} className="absolute right-0 mt-2 w-48 overflow-hidden rounded-2xl border border-on-dark/15 bg-navy p-1 shadow-frame">
           {LANGS.map((l) => (
             <li key={l.slug} role="option" aria-selected={l.slug === slug}>
-              <button
+              <Button variant="ghost"
                 type="button"
                 lang={l.code}
                 onClick={() => {
@@ -60,7 +61,7 @@ function LangSelect({ slug }: { slug: LangSlug }) {
               >
                 <Flag slug={l.slug} />
                 {l.name}
-              </button>
+              </Button>
             </li>
           ))}
         </ul>
@@ -74,16 +75,16 @@ export function Header({ slug }: { slug: LangSlug }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed left-1/2 top-4 z-40 w-[calc(100%-24px)] max-w-7xl -translate-x-1/2">
+    <header className="fixed inset-x-3 top-4 z-40 mx-auto max-w-[1500px]">
       <div className="pill-nav flex h-20 items-center justify-between gap-3 rounded-2xl pl-6 pr-3">
         <Link to="/$lang" params={{ lang: slug }} aria-label="SLZ Digital" className="-my-2 shrink-0">
           <Logo />
         </Link>
-        <nav aria-label={d.nav.main} className="hidden min-w-0 flex-1 min-[1100px]:block">
+        <nav aria-label={d.nav.main} className="hidden min-w-0 flex-1 min-[1060px]:block">
           <ul className="flex items-center justify-evenly gap-1">
             {d.nav.items.map((label, i) => (
               <li key={ANCHORS[i]}>
-                <a href={`#${ANCHORS[i]}`} className="rounded-full px-2.5 py-2 font-subtitle text-sm font-medium xl:text-[15px] text-on-dark hover:text-lime">
+                <a href={`#${ANCHORS[i]}`} className="inline-flex min-h-11 items-center rounded-full px-2.5 py-2 font-subtitle text-sm font-medium xl:text-[15px] text-on-dark hover:text-lime">
                   {label}
                 </a>
               </li>
@@ -92,30 +93,30 @@ export function Header({ slug }: { slug: LangSlug }) {
         </nav>
         <div className="flex items-center gap-2">
           <LangSelect slug={slug} />
-          <WaButton message={d.wa.message} refCode={REFS.header} variant="limeOutline" className="hidden">
-            WhatsApp
+          <WaButton message={d.wa.message} refCode={REFS.header} variant="limeOutline" className="hidden min-[1220px]:inline-flex">
+            {d.wa.header}
           </WaButton>
-          <button
+          <Button variant="ghost"
             type="button"
             onClick={() => setOpen(true)}
             aria-expanded={open}
-            className="flex min-h-11 items-center gap-1.5 rounded-full px-3 text-sm text-on-dark hover:bg-on-dark/10 min-[1100px]:hidden"
+            className="flex min-h-11 items-center gap-1.5 rounded-full px-3 text-sm text-on-dark hover:bg-on-dark/10 min-[1060px]:hidden"
           >
             <Menu className="h-5 w-5" aria-hidden="true" />
             {d.nav.menu}
-          </button>
+          </Button>
         </div>
       </div>
 
       {open && (
-        <div className="fixed inset-0 z-50 min-[1100px]:hidden" role="dialog" aria-modal="true" aria-label={d.nav.main}>
-          <button type="button" aria-label={d.nav.close} className="absolute inset-0 bg-navy-deep/70" onClick={() => setOpen(false)} />
-          <div className="absolute right-0 top-0 flex h-full w-[85%] max-w-sm flex-col gap-6 bg-navy p-6">
+        <div className="fixed inset-0 z-50 min-[1060px]:hidden" role="dialog" aria-modal="true" aria-label={d.nav.main} onKeyDown={(e) => e.key === "Escape" && setOpen(false)}>
+          <Button variant="ghost" type="button" aria-label={d.nav.close} className="absolute inset-0 h-full w-full bg-navy-deep/70" onClick={() => setOpen(false)} />
+          <div className="absolute right-0 top-0 flex h-full w-[85%] max-w-sm flex-col gap-6 overflow-y-auto bg-navy p-6">
             <div className="flex items-center justify-between">
               <Logo />
-              <button type="button" onClick={() => setOpen(false)} aria-label={d.nav.close} className="grid h-11 w-11 place-items-center rounded-full text-on-dark hover:bg-on-dark/10">
+              <Button variant="ghost" type="button" onClick={() => setOpen(false)} aria-label={d.nav.close} className="grid h-11 w-11 place-items-center rounded-full text-on-dark hover:bg-on-dark/10">
                 <X className="h-5 w-5" />
-              </button>
+              </Button>
             </div>
             <LangSelect slug={slug} />
             <ul className="flex flex-col">

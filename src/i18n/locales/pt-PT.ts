@@ -1,205 +1,472 @@
 import type { Dict } from "./pt-BR";
 
 const ptPT: Dict = {
-  meta: {
-    title: "SLZ Digital — Software à medida, sistemas, SaaS e aplicações",
-    description:
-      "Desenvolvimento de software à medida, com equipa e parceiros globais e cibersegurança desde a primeira linha. Conte-nos a sua ideia no WhatsApp.",
+  "meta": {
+    "title": "SLZ Digital — Software à medida, sistemas, SaaS e aplicações",
+    "description": "SaaS, sistemas e aplicações à medida: requisitos antes do código, segurança desde o desenho e documentação do início à entrega. Fale com a SLZ Digital."
   },
-  wa: {
-    message: "Olá! Cheguei através do site da SLZ Digital e gostaria de falar sobre o meu projeto de software.",
-    cta: "Conte-nos a sua ideia no WhatsApp",
-    floating: "Abrir conversa no WhatsApp",
+  "wa": {
+    "message": "Olá! Cheguei através do site da SLZ Digital e gostaria de falar sobre o meu projeto de software.",
+    "cta": "Conte-nos a sua ideia no WhatsApp",
+    "floating": "Abrir conversa no WhatsApp",
+    "header": "WhatsApp"
   },
-  lang: { label: "Escolher idioma" },
-  nav: {
-    menu: "Menu",
-    close: "Fechar menu",
-    main: "Navegação principal",
-    items: ["Soluções", "Como começamos", "Depois de publicado", "Diferenciais", "Segurança", "Tecnologias", "Global", "FAQ"],
+  "lang": {
+    "label": "Escolher idioma"
   },
-  hero: {
-    before: "SaaS, sistemas e aplicações feitos à medida do que o",
-    mark: "seu negócio",
-    after: "precisa.",
-    sub: "Desenvolvimento de software à medida, com equipa e parceiros globais e cibersegurança desde a primeira linha.",
-    note: "O primeiro passo é uma conversa para percebermos aquilo de que precisa.",
+  "nav": {
+    "menu": "Menu",
+    "close": "Fechar menu",
+    "main": "Navegação principal",
+    "items": [
+      "Soluções",
+      "Serviços",
+      "Fundador",
+      "Como começamos",
+      "Depois de publicado",
+      "Segurança",
+      "Global",
+      "FAQ"
+    ]
   },
-  hook: { label: "Mito ou facto?", myth: "Se funciona, está seguro.", link: "Ver o facto" },
-  pain: {
-    title: "Já tentou antes e correu mal?",
-    cards: [
-      { t: "Desapareceram a meio do caminho.", d: "O projeto começou, os prazos passaram e ninguém voltou a dar notícias." },
-      { t: "Entregaram e nunca mais responderam.", d: "O sistema foi publicado e, ao primeiro problema, não havia a quem ligar." },
-      { t: "Só o fornecedor percebia o sistema.", d: "Nada documentado, e qualquer ajuste dependia de uma única pessoa." },
+  "hero": {
+    "before": "Construímos o seu sistema. E",
+    "mark": "protegemo-lo desde a primeira linha",
+    "after": ".",
+    "sub": "Levantamento de requisitos antes do código, equipa de cibersegurança desde 1994 e o projeto documentado do início à entrega.",
+    "note": "O primeiro passo é uma conversa para percebermos aquilo de que precisa."
+  },
+  "pain": {
+    "title": "Já tentou antes e correu mal?",
+    "cards": [
+      {
+        "t": "Desapareceram a meio do caminho.",
+        "d": "O projeto ficou a meio e o dinheiro já tinha sido pago."
+      },
+      {
+        "t": "Entregaram e nunca mais responderam.",
+        "d": "Surgiu o primeiro problema e não havia ninguém do outro lado."
+      },
+      {
+        "t": "Só o fornecedor percebia o sistema.",
+        "d": "Qualquer alteração dependia dele, e mudar de fornecedor tornou-se um problema maior do que o original."
+      }
     ],
-    close: "Desenhámos a nossa forma de trabalhar para que nada disto aconteça.",
+    "close": "Desenhámos a nossa forma de trabalhar para que nada disto aconteça.",
+    "sub": "As três histórias que mais ouvimos de quem já contratou software."
   },
-  solutions: {
-    title: "O que construímos",
-    who: "Para quem: Empresários · Empresas · Setor público",
-    items: [
-      { tag: "Sistemas à medida", t: "Chega de gerir a empresa em folhas de cálculo.", d: "Um sistema feito para a forma como a sua operação funciona." },
-      { tag: "SaaS", t: "A sua ideia a tornar-se um produto por subscrição.", d: "Do primeiro esboço à plataforma com utilizadores e planos." },
-      { tag: "Aplicações", t: "O seu cliente à distância de um toque.", d: "Apps para Android e iPhone, ligadas ao seu sistema." },
-      { tag: "Integrações e automações", t: "Chega de escrever a mesma coisa duas vezes.", d: "Os seus sistemas a comunicar entre si, sem trabalho manual." },
+  "solutions": {
+    "title": "Soluções com entrega rápida",
+    "sub": "Âmbito fechado e entrega por fases: vê o sistema a funcionar antes de o projeto terminar.",
+    "seo": "SaaS, sistema e aplicação: soluções para o seu negócio.",
+    "who": "Para quem: Empresários · Empresas · Setor público",
+    "link": "Falar sobre isto →",
+    "testLink": "Ver como funciona →",
+    "items": [
+      {
+        "tag": "CRM e atendimento com IA",
+        "t": "A IA atende e o CRM regista tudo sozinho.",
+        "d": "Não é um bot de menu com “marque 1”: a IA conversa, percebe o que o cliente pretende e responde. Cada atendimento fica registado, com histórico, responsável e fase da venda. Deixa de perder negócios porque a mensagem ficou no telemóvel de alguém.",
+        "message": "Olá! Gostaria de falar sobre CRM e atendimento com IA no WhatsApp."
+      },
+      {
+        "tag": "Dashboards e métricas",
+        "t": "Os seus números prontos antes de os pedir.",
+        "d": "Em vez de alguém preparar o relatório todas as segundas-feiras, o painel atualiza-se sozinho. Abre e decide.",
+        "message": "Olá! Gostaria de falar sobre dashboards e métricas."
+      },
+      {
+        "tag": "Automação de processos",
+        "t": "A tarefa repetitiva sai das mãos da sua equipa.",
+        "d": "Automatizamos o que se repete. As horas gastas nisso voltam para o que gera receita.",
+        "message": "Olá! Gostaria de falar sobre automatizar processos."
+      },
+      {
+        "tag": "Sistemas ERP",
+        "t": "Um único número, em que todos confiam.",
+        "d": "Quando cada departamento controla à sua maneira, o stock não bate certo com as finanças. O ERP reúne vendas, stock e finanças na mesma base.",
+        "message": "Olá! Gostaria de falar sobre um ERP."
+      },
+      {
+        "tag": "Integração de sistemas",
+        "t": "O dado entra uma vez e aparece onde é preciso.",
+        "d": "Chega de introduzir a mesma venda no sistema, na folha de cálculo e nas finanças. Ligamos tudo e acaba o trabalho duplicado.",
+        "message": "Olá! Gostaria de falar sobre integrar sistemas."
+      },
+      {
+        "tag": "Recuperação de sistemas feitos por IA",
+        "t": "O seu sistema feito por IA, revisto por quem percebe de segurança.",
+        "d": "Foi publicado com falhas ou ficou a meio porque ninguém sabe como continuar? Analisamos o que existe, mostramos os riscos e entregamos um plano de correção por prioridade.",
+        "message": "Olá! Gostaria de falar sobre recuperar um sistema feito por IA."
+      }
+    ]
+  },
+  "proof": {
+    "title": "O primeiro caso é o nosso.",
+    "sub": "Antes de vender software a alguém, construímos os sistemas que gerem a nossa própria agência.",
+    "caseTitle": "Conheça os nossos sistemas por dentro.",
+    "systems": [
+      {
+        "name": "SLZ Flow",
+        "text": "O sistema que a nossa equipa construiu e utiliza todos os dias para gerir a agência: pedidos por departamento, prazo, responsável e aprovação no mesmo sítio."
+      },
+      {
+        "name": "MARK",
+        "text": "[DESCREVER o MARK numa frase: o que faz e para quem é.]"
+      }
     ],
-    pickTitle: "O que precisa de construir?",
-    picks: [
-      "Um SaaS",
-      "Um sistema para a minha empresa",
-      "Uma aplicação",
-      "Integrar ou automatizar sistemas",
-      "Tenho uma ideia, mas não sei por onde começar",
+    "play": "Reproduzir vídeo dos sistemas",
+    "videoTitle": "Vídeo dos sistemas",
+    "testimonial": "Testemunho",
+    "team": "Equipa"
+  },
+  "steps": {
+    "title": "Do levantamento de requisitos à entrega, acompanha cada passo.",
+    "sub": "Muitas pessoas sabem o que querem, mas não sabem como transformar isso em software. Por isso programar é apenas uma parte do trabalho: antes de escrever a primeira linha, percebemos o seu negócio e definimos o que será construído.",
+    "deliveryLabel": "Entrega",
+    "items": [
+      {
+        "eyebrow": "Levantamento de requisitos",
+        "t": "Percebemos o seu negócio",
+        "d": "Conversamos sobre a operação, os problemas reais e o que o sistema precisa de resolver. Quem o vai utilizar, que dados guarda e a que se liga.",
+        "e": "documento de requisitos"
+      },
+      {
+        "eyebrow": "Âmbito e riscos",
+        "t": "Definimos o que entra e o que fica de fora",
+        "d": "Transformamos os requisitos num âmbito claro e identificamos os riscos, incluindo os de segurança e privacidade.",
+        "e": "âmbito definido e riscos mapeados"
+      },
+      {
+        "eyebrow": "Construção",
+        "t": "Construímos por fases, com segurança em cada uma",
+        "d": "A equipa desenvolve em ciclos curtos, com a cibersegurança a acompanhar o código.",
+        "e": "versões a funcionar para testar"
+      },
+      {
+        "eyebrow": "Lançamento",
+        "t": "Publicamos com segurança",
+        "d": "Publicamos o sistema e verificamos acessos, chaves e proteção dos dados antes de o disponibilizar.",
+        "e": "sistema publicado"
+      }
     ],
-    pickMsg: "Olá! Cheguei através do site da SLZ Digital. Preciso de: {{item}}.",
+    "postit": "Quero um sistema para controlar o meu stock.",
+    "diagTitle": "Primeiro passo: uma conversa de diagnóstico",
+    "diagText": "Conta-nos a ideia, mesmo incompleta, e ajudamos a organizar o que o software precisa de fazer.",
+    "diagCta": "Conte-nos a ideia, mesmo incompleta",
+    "message": "Olá! Tenho uma ideia, mas ainda não sei como transformá-la em software."
   },
-  proof: {
-    title: "O primeiro caso é o nosso.",
-    sub: "Antes de vender software a alguém, construímos o sistema que gere a nossa própria agência.",
-    caseTitle: "SLZ Flow: o sistema que organiza a agência",
-    caseText: "A agência trabalhava com folhas de cálculo, grupo de WhatsApp e pasta partilhada. Hoje tudo passa pelo Flow.",
-    checks: [
-      "Quadro por setor: audiovisual, criação e design, pedidos gerais",
-      "Tarefas por cliente com prazo, responsável e tempo de execução",
-      "Fluxo de aprovação: para aprovação, em alterações, aprovado",
-      "Agenda, pedidos de suporte, contratos e relatórios no mesmo sítio",
+  "after": {
+    "docTitle": "Tudo o que construímos fica documentado.",
+    "docText": "Do levantamento de requisitos à entrega, o que foi decidido e construído fica registado. Assim, o seu sistema não depende da memória de uma só pessoa.",
+    "title": "Depois de publicado, não desaparecemos.",
+    "items": [
+      {
+        "t": "Acompanhamos quem vai utilizar",
+        "d": "Depois da entrega, acompanhamos a equipa que vai utilizar o sistema no dia a dia e verificamos se o que está publicado corresponde ao âmbito definido."
+      },
+      {
+        "t": "Suporte já incluído no valor",
+        "d": "O valor do projeto já inclui um período de suporte. Não paga mais para resolver o que surgir nesse período."
+      },
+      {
+        "t": "Quando o período termina, a escolha é sua",
+        "d": "Pode continuar com a sua própria equipa a cuidar do sistema ou contratar o nosso suporte mensal. Ambas as opções ficam disponíveis, e o que cada modelo inclui fica escrito no contrato."
+      }
     ],
-    results: "[RESULTADO EM NÚMEROS a preencher]",
-    frameAlt: "Ecrã ilustrativo do SLZ Flow com o quadro Kanban do departamento Audiovisual",
-    menu: ["Painel", "Quadros", "Agenda", "Pedidos", "Contratos", "Relatórios"],
-    board: "Audiovisual",
-    cols: ["Por fazer", "Em curso", "Para aprovação", "Aprovado"],
-    client: "Cliente",
-    testimonial: "Testemunho",
-    team: "Equipa",
+    "sub": "O fim do desenvolvimento não é o fim do trabalho."
   },
-  steps: {
-    title: "Do levantamento de requisitos à entrega, acompanha cada passo.",
-    sub: "Muitas pessoas sabem o que querem, mas não sabem como transformar isso em software. Por isso, programar é só uma parte do trabalho.",
-    deliveryLabel: "Entrega",
-    items: [
-      { eyebrow: "Levantamento de requisitos", t: "Percebemos o seu negócio", d: "Falamos com quem vai utilizar o sistema e transformamos a ideia em requisitos claros.", e: "documento de requisitos" },
-      { eyebrow: "Âmbito e riscos", t: "Definimos o que entra e o que fica de fora", d: "Sabe exatamente o que vai ser construído antes de começarmos.", e: "âmbito definido e riscos mapeados" },
-      { eyebrow: "Construção", t: "Construímos por fases, com segurança em cada uma", d: "Testa versões reais durante o projeto, não só no fim.", e: "versões a funcionar para testar" },
-      { eyebrow: "Lançamento", t: "Publicamos com segurança", d: "Publicação revista, com acessos e dados verificados.", e: "sistema publicado" },
+  "security": {
+    "title": "Segurança em cada fase, da ideia à publicação",
+    "intro": "Hoje é fácil publicar um sistema depressa. O que nem sempre vem junto é alguém a olhar pela segurança: sem isso, deitar o sistema abaixo ou chegar aos dados dos seus clientes é mais simples do que parece. É para isso que existe a nossa equipa de cibersegurança.",
+    "year": "1994",
+    "yearText": "A nossa equipa trabalha em cibersegurança desde",
+    "practice": "[prática real da equipa]",
+    "stages": [
+      {
+        "t": "Planeamento",
+        "q": "Que dados entram no sistema e quem pode ver cada um?"
+      },
+      {
+        "t": "Código",
+        "q": "Uma pessoa reviu o que foi escrito?"
+      },
+      {
+        "t": "Acessos e dados",
+        "q": "Cada utilizador vê apenas o que é seu?"
+      },
+      {
+        "t": "Publicação",
+        "q": "As chaves e palavras-passe estão fora do código?"
+      },
+      {
+        "t": "Monitorização",
+        "q": "Alguém deteta o problema antes do cliente?"
+      }
     ],
-    postit: "Quero um sistema para controlar o meu stock.",
-    diagTitle: "Primeiro passo: uma conversa de diagnóstico",
-    diagText: "Conta-nos a ideia, mesmo incompleta, e ajudamos a organizar o que o software precisa de fazer.",
-    diagCta: "Conte-nos a ideia, mesmo incompleta",
+    "lgpd": "Privacidade pensada para a LGPD e o RGPD desde o desenho do produto.",
+    "stageLabel": "O que perguntamos em cada fase"
   },
-  after: {
-    docTitle: 'Tudo o que construímos fica documentado.',
-    docText: 'Do levantamento de requisitos à entrega, o que foi decidido e construído fica registado. Assim, o seu sistema não depende da memória de uma só pessoa.',
-    title: "Depois de publicado, não desaparecemos.",
-    items: [
-      { t: "Acompanhamos quem vai utilizar", d: "Depois da entrega, a equipa acompanha os utilizadores no dia a dia e confirma se o que está publicado corresponde ao âmbito desenhado." },
-      { t: "Suporte já incluído no valor", d: "O valor do projeto já inclui um período de suporte. [DEFINIR a duração]" },
-      { t: "Quando o período termina, a escolha é sua", d: "Continuar com a sua própria equipa a cuidar do sistema ou contratar o suporte mensal da SLZ. [CONFIRMAR o que cada modelo cobre]" },
-    ],
+  "global": {
+    "title": "Trabalhamos com empresas em qualquer parte do mundo.",
+    "sub": "Equipa e parceiros globais. A conversa pode ser em português do Brasil, português de Portugal, espanhol ou inglês.",
+    "mapLabel": "Mapa-múndi de pontos com o Brasil em destaque",
+    "legendBr": "Brasil",
+    "legendWorld": "Atendimento em qualquer parte do mundo",
+    "legendIe": "Irlanda",
+    "legendUy": "Uruguai"
   },
-  diff: {
-    title: "O que muda quando trabalha com a SLZ",
-    criterion: "Critério",
-    cols: ["SLZ Digital", "Freelancers e prestadores avulsos", "Outras empresas de software"],
-    yes: "Sim",
-    depends: "Depende",
-    notAlways: "Nem sempre",
-    rows: [
-      "Levantamento de requisitos antes de programar",
-      "Software feito à medida do seu negócio",
-      "Equipa sólida de programadores",
-      "Cibersegurança desde o planeamento",
-      "Privacidade e proteção de dados pensadas desde o desenho",
-      "Equipa e parceiros globais",
-      "Atendimento em 4 idiomas",
-    ],
+  "faq": {
+    "title": "Perguntas frequentes",
+    "draft": "Rascunho, rever",
+    "items": [
+      {
+        "q": "Quanto tempo demora um projeto?",
+        "a": "[Resposta da SLZ: intervalo de prazo por dimensão do projeto, sem prometer o que a equipa não cumpre]",
+        "draft": false
+      },
+      {
+        "q": "Como chegam ao orçamento?",
+        "a": "O orçamento é feito depois do levantamento de requisitos. Antes disso, qualquer número seria um palpite. Na conversa inicial percebemos o que o sistema precisa de fazer, definimos o âmbito e só então apresentamos o valor e o prazo.",
+        "draft": true
+      },
+      {
+        "q": "Só tenho uma ideia, ainda não sei do que preciso. Serve?",
+        "a": "Serve, e é o início mais comum. O levantamento de requisitos existe para isso: conversamos sobre a sua operação e transformamos a ideia num documento com o que o software vai fazer.",
+        "draft": true
+      },
+      {
+        "q": "O âmbito pode mudar a meio do projeto?",
+        "a": "Pode, porque os projetos de software evoluem. Quando surge uma alteração, avaliamos o impacto no prazo e no custo e apresentamo-lo antes de avançar. Nada entra sem saber o que muda.",
+        "draft": true
+      },
+      {
+        "q": "Usam IA para escrever o código?",
+        "a": "Usamos IA como ferramenta, como quase toda a gente hoje. A diferença está no que vem depois: cada trecho é revisto por programadores e passa pela nossa equipa de cibersegurança antes de ser publicado. A IA acelera, mas não assume a responsabilidade. O problema mais recorrente nos projetos feitos com ferramentas de IA é o acesso aos dados: quem consegue ver o quê. É o primeiro ponto que revemos.",
+        "draft": true
+      },
+      {
+        "q": "Há suporte depois da entrega?",
+        "a": "Há, e já está incluído no valor do projeto durante um período. Acompanhamos também a equipa que vai utilizar o sistema e confirmamos se o que está publicado corresponde ao âmbito definido. Quando o período termina, escolhe: a sua equipa assume ou contrata o nosso suporte mensal. [DEFINIR a duração do período incluído]",
+        "draft": false
+      },
+      {
+        "q": "Como tratam os dados pessoais e a LGPD?",
+        "a": "[Resposta da SLZ, revista por advogado. Sem prometer conformidade total]",
+        "draft": false
+      },
+      {
+        "q": "Se o sistema funciona, já está seguro?",
+        "a": "Funcionar e ser seguro são coisas diferentes. Num estudo apresentado no ICML 2026, mais de 70% do código gerado por agentes de IA que passava os testes ainda tinha falhas exploráveis. Por isso a revisão de segurança é uma etapa separada do teste de funcionamento.",
+        "draft": true
+      },
+      {
+        "q": "O meu sistema é pequeno. Alguém vai mesmo tentar atacá-lo?",
+        "a": "Os ataques automáticos percorrem a internet à procura de portas abertas, sem escolher o alvo. A dimensão da empresa não protege. Em 42 empresas brasileiras que sofreram uma fuga de dados, o custo médio foi de R$ 7,44 milhões.",
+        "draft": true
+      }
+    ]
   },
-  security: {
-    title: "Segurança em cada fase, da ideia à publicação",
-    intro:
-      "Hoje é fácil publicar um sistema depressa. O que nem sempre vem junto é alguém a olhar pela segurança: sem isso, deitar o sistema abaixo ou chegar aos dados dos seus clientes é mais simples do que parece. É para isso que existe a nossa equipa de cibersegurança.",
-    year: "1994",
-    yearText: "A nossa equipa trabalha em cibersegurança desde 1994.",
-    practice: "[prática real da equipa]",
-    stages: [
-      { t: "Planeamento", q: "Que dados o sistema guarda e quem pode ver cada um?" },
-      { t: "Código", q: "Cada utilizador vê apenas o que é seu?" },
-      { t: "Acessos e dados", q: "Palavras-passe, chaves e permissões estão protegidas?" },
-      { t: "Publicação", q: "O que está publicado foi revisto antes de sair?" },
-      { t: "Monitorização", q: "Se algo estranho acontecer, alguém fica a saber?" },
-    ],
-    codeLabel: "Exemplo ilustrativo",
-    bad: "Falha comum: devolve os clientes de toda a gente",
-    good: "Correção: filtra pelo dono",
-    lgpd: "Privacidade pensada para a LGPD e o RGPD desde o desenho do produto.",
+  "final": {
+    "title": "Diga-nos do que precisa.",
+    "sub": "A conversa começa no WhatsApp."
   },
-  tech: { title: "Tecnologias com que trabalhamos", note: "Indicar uma tecnologia não significa parceria ou certificação com quem a fabrica." },
-  global: {
-    title: "Trabalhamos com empresas em qualquer parte do mundo.",
-    sub: "Equipa e parceiros globais. A conversa pode ser em português do Brasil, português de Portugal, espanhol ou inglês.",
-    mapLabel: "Mapa-múndi de pontos com o Brasil em destaque",
-    legendBr: "Brasil",
-    legendWorld: "Atendimento em qualquer parte do mundo",
-    teamTitle: "Quem trabalha no seu projeto",
-    team: ["Desenvolvimento", "Cibersegurança", "Design de produto", "Dados e IA"],
-    partnersTitle: "Parceiros globais",
+  "footer": {
+    "location": "São Luís, Maranhão, Brasil · CNPJ 29.746.940/0001-06",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos",
+    "company": "[DENOMINAÇÃO SOCIAL]",
+    "rights": "Todos os direitos reservados.",
+    "dataLabel": "Proteção de dados",
+    "dataText": "A SLZ Digital trata dados pessoais de acordo com a LGPD (Lei 13.709/2018). Para pedir acesso, correção ou eliminação dos seus dados, contacte o nosso encarregado através do e-mail [E-MAIL DO ENCARREGADO].",
+    "preferences": "Preferências de cookies",
+    "brand": "SLZ Digital"
   },
-  faq: {
-    title: "Perguntas frequentes",
-    draft: "Rascunho a rever",
-    items: [
-      { q: "Quanto tempo demora a ficar pronto?", a: "[Resposta da SLZ]", draft: false },
-      { q: "Como chegam ao orçamento?", a: "O orçamento só é feito depois do levantamento de requisitos. Primeiro percebemos o que o software precisa de fazer; depois estimamos o trabalho com base nesse âmbito.", draft: true },
-      { q: "Só tenho uma ideia. Serve?", a: "Serve. A primeira conversa existe precisamente para ajudar a organizar a ideia e descobrir o que o sistema precisa de fazer.", draft: true },
-      { q: "O âmbito pode mudar a meio do projeto?", a: "Pode. Cada alteração é conversada, registada e avaliada quanto ao impacto no prazo e no valor antes de entrar.", draft: true },
-      { q: "Usam IA para escrever o código?", a: "Usamos ferramentas de IA quando ajudam, mas todo o código passa por revisão humana, incluindo de segurança, antes de ser publicado.", draft: true },
-      { q: "Há suporte depois da entrega?", a: "Há. O valor do projeto inclui um período de suporte. Depois disso, escolhe entre continuar com a sua equipa ou contratar o suporte mensal da SLZ.", draft: true },
-      { q: "Como tratam os dados pessoais e a proteção de dados?", a: "[Resposta da SLZ]", draft: false },
-    ],
+  "cookies": {
+    "text": "Só utilizamos cookies de medição se aceitar. Sem aceitação, nada é carregado.",
+    "accept": "Aceitar",
+    "reject": "Recusar",
+    "label": "Cookies"
   },
-  myth: {
-    title: "Mito ou facto?",
-    mythLabel: "Mito",
-    factLabel: "Facto",
-    items: [
-      { m: "Se funciona, está seguro.", f: "Funcionar e ser seguro são coisas diferentes. Um sistema pode passar em todos os testes e, ainda assim, deixar dados expostos." },
-      { m: "Se a IA fez a aplicação, não precisa de revisão.", f: "Num estudo académico, mais de 70% do código de agentes de IA que passava nos testes tinha falhas exploráveis.¹" },
-      { m: "O meu sistema é pequeno, ninguém o vai atacar.", f: "Grande parte dos ataques é automática: robôs percorrem a internet à procura de qualquer falha, sem escolher o tamanho da empresa." },
-    ],
-    source: "¹ Estudo “Is Vibe Coding Safe?”, ICML 2026. [CONFERIR O NÚMERO NO ORIGINAL ANTES DE PUBLICAR]",
-  },
-  final: { title: "Diga-nos do que precisa.", sub: "A conversa começa pelo seu negócio, não pelo código." },
-  footer: {
-    location: "São Luís, Maranhão, Brasil",
-    privacy: "Política de Privacidade",
-    terms: "Termos",
-    company: "[RAZÃO SOCIAL] · CNPJ [CNPJ]",
-    rights: "Todos os direitos reservados.",
-  },
-  cookies: {
-    text: "Só utilizamos cookies de medição se aceitar. Sem aceitação, nada é carregado.",
-    accept: "Aceitar",
-    reject: "Recusar",
-  },
-  legal: {
-    back: "Voltar ao site",
-    draft: "[TEXTO A SER REVISTO POR ADVOGADO ANTES DE PUBLICAR]",
-    privacyTitle: "Política de Privacidade",
-    privacy: [
+  "legal": {
+    "back": "Voltar ao site",
+    "draft": "[TEXTO A SER REVISTO POR ADVOGADO ANTES DE PUBLICAR]",
+    "privacyTitle": "Política de Privacidade",
+    "privacy": [
       "Este site não tem registo, início de sessão nem formulário: não recolhemos nome, e-mail ou telemóvel por aqui.",
       "Cookies de medição (como píxeis de anúncios ou analytics) só são carregados depois de os aceitar no aviso. Pode recusá-los com a mesma facilidade.",
       "Ao clicar num botão de WhatsApp, sai deste site e passa a ser atendido na plataforma do WhatsApp, sob os termos e a política de privacidade da mesma.",
-      "A mensagem enviada inclui um código de origem (ex.: [ref: hero]) apenas para sabermos de que botão veio o contacto.",
+      "A mensagem enviada inclui um código de origem (ex.: [ref: hero]) apenas para sabermos de que botão veio o contacto."
     ],
-    termsTitle: "Termos de utilização",
-    terms: [
+    "termsTitle": "Termos de utilização",
+    "terms": [
       "O conteúdo deste site é informativo e não constitui proposta comercial.",
       "As condições de cada projeto, incluindo âmbito, prazos, valores, suporte e propriedade do código, são definidas em contrato.",
-      "Os nomes de tecnologias e empresas referidas pertencem aos respetivos titulares.",
-    ],
+      "Os nomes de tecnologias e empresas referidas pertencem aos respetivos titulares."
+    ]
   },
+  "numbers": {
+    "items": [
+      {
+        "value": "9 anos",
+        "label": "à frente da SLZ Digital"
+      },
+      {
+        "value": "1994",
+        "label": "equipa em cibersegurança desde"
+      },
+      {
+        "value": "Confidencialidade",
+        "label": "e segurança, sob acordo de confidencialidade"
+      },
+      {
+        "value": "4 idiomas",
+        "label": "de atendimento"
+      }
+    ]
+  },
+  "services": {
+    "title": "Os nossos serviços",
+    "sub": "Tudo o que a SLZ constrói, mantém e protege, de ponta a ponta.",
+    "cta": "Falar sobre o meu projeto",
+    "message": "Olá! Vi a lista de serviços no site e gostaria de falar sobre o meu projeto.",
+    "groups": [
+      {
+        "label": "Desenvolvimento",
+        "items": [
+          "Sistemas à medida",
+          "Plataformas SaaS",
+          "Aplicações",
+          "APIs e microsserviços"
+        ]
+      },
+      {
+        "label": "Operação e dados",
+        "items": [
+          "CRM e atendimento no WhatsApp",
+          "Dashboards e métricas",
+          "Sistemas ERP",
+          "Automação de processos"
+        ]
+      },
+      {
+        "label": "Integrações",
+        "items": [
+          "Integração entre sistemas",
+          "Automações entre ferramentas",
+          "Introdução única de dados"
+        ]
+      },
+      {
+        "label": "Inteligência artificial",
+        "items": [
+          "Agentes e automações com IA",
+          "Revisão de código gerado por IA",
+          "Recuperação de sistemas feitos por IA"
+        ]
+      },
+      {
+        "label": "Segurança",
+        "items": [
+          "Testes de segurança de plataformas",
+          "Revisão de acessos e dados",
+          "Privacidade e LGPD desde o desenho"
+        ]
+      },
+      {
+        "label": "Antes de programar",
+        "items": [
+          "Levantamento de requisitos",
+          "Âmbito e prioridades",
+          "Documentação do projeto"
+        ]
+      },
+      {
+        "label": "Depois de publicado",
+        "items": [
+          "Acompanhamento da sua equipa",
+          "Suporte incluído no projeto",
+          "Suporte mensal"
+        ]
+      }
+    ]
+  },
+  "founder": {
+    "label": "Quem é o fundador",
+    "title": "Marketing e tecnologia conduzidos com",
+    "mark": "experiência internacional",
+    "market": "no mercado",
+    "abroad": "de experiência no estrangeiro",
+    "text": "Diego é licenciado em Gestão de Empresas, empresário e especialista em marketing e vendas. Viveu cinco anos no estrangeiro, onde adquiriu experiência internacional e trabalhou em empresas multinacionais. Há nove anos à frente da SLZ Digital, lidera uma equipa que trabalha com pequenas, médias e grandes empresas.",
+    "cta": "Falar com o Diego no WhatsApp",
+    "message": "Olá! Cheguei através do site e gostaria de falar com o Diego sobre um projeto.",
+    "photoAlt": "Fotografia do Diego",
+    "years": [
+      "9 anos",
+      "5 anos"
+    ]
+  },
+  "securityTest": {
+    "label": "Teste de segurança",
+    "title": "Descubra as falhas da sua plataforma antes de quem não devia.",
+    "sub": "Só descobre a falha quando o sistema cai ou os dados são expostos. Procuramos falhas de segurança antes de alguém as explorar e entregamos os resultados com prioridades de correção.",
+    "how": "Como funciona",
+    "limitsTitle": "O que o teste mostra, e o que não mostra",
+    "limits": "O teste mostra a situação da plataforma no momento em que foi realizado, com o ambiente, método e tempo acordados. Nenhum teste garante que não existe outra falha. Recomendamos repeti-lo após alterações importantes no sistema.",
+    "golden": "Regra de ouro",
+    "authorization": "Só testamos plataformas com autorização por escrito do titular.",
+    "cta": "Pedir um teste de segurança no WhatsApp",
+    "message": "Olá! Gostaria de falar sobre um teste de segurança da minha plataforma.",
+    "stat": "Em 42 empresas brasileiras que sofreram uma fuga de dados, o custo médio foi de R$ 7,44 milhões².",
+    "steps": [
+      {
+        "t": "Conversa e autorização por escrito",
+        "d": "Acordamos o que será testado, quando e como. Sem autorização do titular, não testamos."
+      },
+      {
+        "t": "Teste",
+        "d": "Procuramos falhas de segurança da plataforma dentro do âmbito acordado."
+      },
+      {
+        "t": "Relatório",
+        "d": "Recebe os resultados com a prioridade de correção."
+      },
+      {
+        "t": "Correção",
+        "d": "[CONFIRMAR se a SLZ também corrige ou apenas identifica, e se há um novo teste depois]"
+      }
+    ]
+  },
+  "sources": {
+    "label": "Fonte",
+    "study": "Is Vibe Coding Safe? (ICML 2026)",
+    "publisher": "Xataka Brasil",
+    "report": "² Xataka Brasil, IBM Cost of a Data Breach 2026 (42 organizações no Brasil).",
+    "law": "³ Lei Geral de Proteção de Dados (Lei 13.709/2018), art. 52."
+  },
+  "review": {
+    "numbers": "[CONFERIR CADA NÚMERO antes de publicar e guardar a prova: pelo CDC art. 38, o ónus da prova cabe a quem anuncia. Confirmar também o acordo de confidencialidade por defeito.]",
+    "fast": "[DEFINIR entrega rápida — prazo médio por tipo de projeto. Sem um número, a promessa é vaga; a publicidade vincula o contrato (CDC, arts. 30 e 37).]",
+    "publicSector": "[setor público apenas se a SLZ estiver preparada para concursos públicos (Lei 14.133/2021): registo, documentação e contacto para além do WhatsApp]",
+    "erp": "[CONFIRMAR se a SLZ desenvolve ERP de raiz ou implementa e integra um ERP existente]",
+    "rescue": "[CONFIRMAR o que inclui a recuperação: diagnóstico, correção ou reconstrução completa]",
+    "services": "[CONFERIR A LISTA ITEM A ITEM com a equipa: manter apenas o que a SLZ entrega hoje. A oferta vincula o contrato (CDC, arts. 30 e 37).]",
+    "mark": "[DESCREVER o MARK numa frase: o que faz e para quem é.]",
+    "video": "[GRAVAR O VÍDEO: ecrãs do Flow e do MARK com dados genéricos, 60 a 90 segundos, legendado. Sem dados reais de clientes.]",
+    "proofHidden": "[estes dois espaços ficam ocultos no site publicado até existir conteúdo real e autorizado]",
+    "photo": "[ANEXAR A FOTOGRAFIA do Diego. Nunca uma imagem de banco.]",
+    "founder": "[CONFERIR os números e decidir se menciona PwC e Tata Consultancy Services, sem sugerir parceria ou apoio.]",
+    "diagnostic": "[confirmar com a equipa: duração e se a conversa é gratuita]",
+    "supportDuration": "[DEFINIR a duração do período de suporte]",
+    "supportModels": "[CONFIRMAR o que cada modelo de suporte inclui]",
+    "documentation": "[CONFIRMAR o que inclui a documentação entregue ao cliente]",
+    "securityYear": "[CONFIRMAR quem é o profissional e como a SLZ comprova esta experiência]",
+    "testStages": "[CONFIRMAR as etapas e as entregas com a equipa]",
+    "testMethod": "[CONFIRMAR o método (análise automática, teste manual de intrusão ou ambos) e o conteúdo do relatório]",
+    "testPlatforms": "[CONFIRMAR se testa apenas plataformas da SLZ ou também de outras empresas]",
+    "report": "[CONFERIR O NÚMERO NO RELATÓRIO ORIGINAL ANTES DE PUBLICAR]",
+    "privacy": "[A LGPD exige política de privacidade publicada, encarregado com contacto (art. 41) e recusar cookies tão fácil como aceitar. Rever com advogado.]"
+  }
 };
 
 export default ptPT;

@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { whatsappUrl } from "@/config/site";
+import { SHOW_REVIEW_NOTES, whatsappUrl } from "@/config/site";
 import { cn } from "@/lib/utils";
 
 export function WaIcon({ className }: { className?: string }) {
@@ -14,14 +14,14 @@ type WaProps = {
   message: string;
   refCode: string;
   children: ReactNode;
-  variant?: "lime" | "limeOutline" | "chip" | "blue";
+  variant?: "lime" | "limeOutline" | "link" | "blue";
   className?: string;
 };
 
 const variants = {
   lime: "bg-lime text-ink hover:brightness-95 px-6 py-3.5 text-base font-semibold shadow-[0_10px_30px_-10px_rgb(226_247_71/0.6)]",
   limeOutline: "bg-lime/15 border border-lime/60 text-lime hover:bg-lime hover:text-ink px-4 py-2 text-sm font-medium",
-  chip: "border border-on-dark/20 bg-on-dark/5 text-on-dark hover:border-lime hover:text-lime px-4 py-2 text-sm",
+  link: "justify-start rounded-none text-lime underline underline-offset-4 py-2 text-sm",
   blue: "bg-blue-strong text-on-dark hover:brightness-110 px-6 py-3.5 text-base font-semibold",
 };
 
@@ -37,10 +37,15 @@ export function WaButton({ message, refCode, children, variant = "lime", classNa
         className,
       )}
     >
-      {variant !== "chip" && <WaIcon />}
+      {variant !== "link" && <WaIcon />}
       {children}
     </a>
   );
+}
+
+export function ReviewNote({ children, className }: { children: ReactNode; className?: string }) {
+  if (!SHOW_REVIEW_NOTES) return null;
+  return <p className={cn("review-note", className)}>{children}</p>;
 }
 
 export function Eyebrow({ children, className }: { children: ReactNode; className?: string }) {

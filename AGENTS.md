@@ -35,3 +35,6 @@ use the editor.
 - Language lives in the URL (`/$lang`, slugs pt-br/pt-pt/es/en); `/` redirects client-side using saved choice or browser language.
 - WhatsApp number, `[ref: …]` origin codes and content visibility flags live only in `src/config/site.ts`.
 - No measurement scripts load before cookie consent; consent hook is in `CookieBanner`.
+- Keep section order, navigation anchors, review visibility and optional founder/video media in site configuration so all four languages share the same page structure.
+- YouTube media must load only after an explicit click; use privacy-enhanced embeds and no player or thumbnail requests before that click.
+- Cookie preferences reopen the existing consent banner without loading any measurement scripts; no analytics are currently configured.

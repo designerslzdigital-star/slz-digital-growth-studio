@@ -2,8 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import type { LangSlug } from "@/i18n";
 import { langHead } from "@/i18n/head";
 import { Header } from "@/components/site/Header";
-import { Hero, Pain, Proof, Solutions } from "@/components/site/SectionsTop";
-import { After, CookieBanner, Diff, Faq, FinalCta, FloatingWa, Footer, Global, Myth, Security, Steps, Tech } from "@/components/site/SectionsBottom";
+import { Founder, Hero, Numbers, Pain, Proof, Services, Solutions } from "@/components/site/SectionsTop";
+import { After, CookieBanner, Faq, FinalCta, FloatingWa, Footer, Global, Security, Steps } from "@/components/site/SectionsBottom";
 
 export const Route = createFileRoute("/$lang/")({
   head: ({ params }) => langHead(params.lang),
@@ -17,17 +17,17 @@ function Home() {
       <Header slug={slug} />
       <main>
         <Hero slug={slug} />
+        <Numbers slug={slug} />
         <Pain slug={slug} />
         <Solutions slug={slug} />
+        <Services slug={slug} />
         <Proof slug={slug} />
+        <Founder slug={slug} />
         <Steps slug={slug} />
         <After slug={slug} />
-        <Diff slug={slug} />
         <Security slug={slug} />
-        <Tech slug={slug} />
         <Global slug={slug} />
         <Faq slug={slug} />
-        <Myth slug={slug} />
         <FinalCta slug={slug} />
       </main>
       <Footer slug={slug} />
