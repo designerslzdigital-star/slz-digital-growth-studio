@@ -243,12 +243,12 @@ export function Footer({ slug }: P) {
   const [city, ...legal] = d.footer.location.split("\n").map((t) => t.trim());
   const link = "inline-flex min-h-11 items-center hover:text-on-dark";
   return (
-    <footer id="rodape" className="bg-navy-deep px-5 pb-28 pt-14 text-sm text-on-dark-mute">
+    <footer id="rodape" className="bg-navy-deep px-5 pb-24 pt-10 text-sm text-on-dark-mute md:pb-28 md:pt-14">
       <div className="mx-auto max-w-6xl">
-        <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
+        <div className="grid gap-6 md:grid-cols-[1.4fr_1fr_1fr] md:gap-10">
           <div>
             <Logo />
-            <p className="mt-4 max-w-xs leading-relaxed">{[...legal, d.footer.company].filter(Boolean).join(" · ")}</p>
+            <p className="mt-3 max-w-xs leading-relaxed md:mt-4">{[...legal, d.footer.company].filter(Boolean).join(" · ")}</p>
           </div>
           <div>
             <Eyebrow className="text-on-dark">{d.footer.contactTitle}</Eyebrow>
@@ -267,7 +267,7 @@ export function Footer({ slug }: P) {
             </ul>
           </nav>
         </div>
-        <div className="mt-10 border-t border-doc-border pt-6">
+        <div className="mt-6 border-t border-doc-border pt-6 md:mt-10">
           <p className="max-w-4xl text-xs leading-relaxed"><span className="font-mono uppercase tracking-widest text-on-dark">{d.footer.dataLabel}</span> · {d.footer.dataText}</p>
           <ReviewNote>{d.review.privacy}</ReviewNote>
           <p className="mt-6 text-center text-xs">© {new Date().getFullYear()} {d.footer.brand}. {d.footer.rights}</p>
