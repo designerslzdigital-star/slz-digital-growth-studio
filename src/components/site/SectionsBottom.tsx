@@ -74,7 +74,7 @@ export function Steps({ slug }: P) {
                 </div>
                 <div className={`min-w-0 pt-1 transition-opacity duration-500 ${on ? "opacity-100" : "opacity-50"}`}>
                   <Eyebrow className="text-blue-ink">{s.eyebrow}</Eyebrow>
-                  <h3 className="mt-2 text-2xl font-semibold text-ink">{s.t}</h3>
+                  <h3 className="mt-2 text-2xl font-bold text-ink">{s.t}</h3>
                   <p className="mt-2 text-ink-soft">{s.d}</p>
                   {i === 0 && (
                     <p className="mt-4 inline-block -rotate-1 rounded-md bg-light px-4 py-3 font-mono text-sm text-ink shadow-md">
@@ -92,7 +92,7 @@ export function Steps({ slug }: P) {
         </ol>
 
         <div className="card-dark mt-10 rounded-[20px] p-6 md:p-8">
-          <h3 className="text-2xl font-semibold text-on-dark md:text-3xl">{d.steps.diagTitle}</h3>
+          <h3 className="text-2xl font-bold text-on-dark md:text-3xl">{d.steps.diagTitle}</h3>
           <p className="mt-3 max-w-2xl text-on-dark-soft">{d.steps.diagText}</p>
           <WaButton className="mt-6" message={d.steps.message} refCode={REFS.diagnostico}>{d.steps.diagCta}</WaButton>
           <ReviewNote>{d.review.diagnostic}</ReviewNote>
@@ -114,7 +114,7 @@ export function After({ slug }: P) {
             <article key={it.t} className="rounded-[44px] border-[3px] border-dotted border-ink-soft/60 p-3">
               <div className="h-full rounded-[36px] bg-card-ink p-6">
                 <span className="block text-center font-mono text-sm text-on-dark-mute">0{i + 1}</span>
-                <h3 className="mt-3 text-center font-subtitle text-2xl font-normal text-lime">{it.t}</h3>
+                <h3 className="mt-3 text-center font-subtitle text-2xl font-bold text-lime">{it.t}</h3>
                 <p className="mt-4 text-on-dark-mute">{it.d}</p>
               </div>
             </article>
@@ -125,7 +125,7 @@ export function After({ slug }: P) {
             <FileText className="h-7 w-7" aria-hidden="true" />
           </span>
           <div>
-            <h3 className="font-heading text-xl font-semibold text-on-dark md:text-2xl">{d.after.docTitle}</h3>
+            <h3 className="font-heading text-xl font-bold text-on-dark md:text-2xl">{d.after.docTitle}</h3>
             <p className="mt-2 max-w-3xl text-on-dark-soft">{d.after.docText}</p>
             <ReviewNote>{d.review.documentation}</ReviewNote>
           </div>
@@ -142,7 +142,7 @@ export function Security({ slug }: P) {
       <div className="mx-auto max-w-6xl px-5 py-10 xl:px-0">
         <div className="grid items-center gap-6 lg:grid-cols-[minmax(0,1fr)_260px]">
           <div>
-            <h2 className="max-w-3xl font-display text-3xl font-normal leading-[1.05] md:text-5xl">{d.security.title}</h2>
+            <h2 className="max-w-3xl font-display text-3xl font-bold leading-[1.05] md:text-5xl">{d.security.title}</h2>
             <p className="mt-4 max-w-2xl text-on-dark-soft">{d.security.intro}</p>
           </div>
           <div className="flex items-center gap-4 border-l-[3px] border-lime pl-4 lg:flex-col lg:items-start lg:gap-2">
@@ -156,7 +156,7 @@ export function Security({ slug }: P) {
           {d.security.stages.map((it, i) => (
             <li key={it.t} className="flex min-w-0 gap-3 border-t border-doc-border pt-3">
               <span className="pt-1 font-mono text-xs text-lime">{String(i + 1).padStart(2, "0")}</span>
-              <div><h3 className="text-lg font-semibold">{it.t}</h3><p className="mt-1 text-sm text-on-dark-soft">{it.q}</p></div>
+              <div><h3 className="text-lg font-bold">{it.t}</h3><p className="mt-1 text-sm text-on-dark-soft">{it.q}</p></div>
             </li>
           ))}
         </ol>
@@ -167,27 +167,27 @@ export function Security({ slug }: P) {
       <div id="teste-seguranca" className="border-y border-light-border bg-light text-ink">
         <div className="mx-auto max-w-6xl px-5 py-8 xl:px-0">
           <Eyebrow className="text-blue-ink">{d.securityTest.label}</Eyebrow>
-          <h3 className="mt-3 max-w-3xl font-display text-2xl font-normal leading-[1.05] md:text-4xl">{d.securityTest.title}</h3>
+          <h3 className="mt-3 max-w-3xl font-display text-2xl font-bold leading-[1.05] md:text-4xl">{d.securityTest.title}</h3>
           <p className="mt-3 max-w-3xl text-ink-soft">{d.securityTest.sub}</p>
-          <h4 className="mt-6 font-heading text-lg font-semibold">{d.securityTest.how}</h4>
+          <h4 className="mt-6 font-heading text-lg font-bold">{d.securityTest.how}</h4>
           <ol className="test-grid mt-3">
             {d.securityTest.steps.map((it, i) => (
               <li key={it.t} className="flex min-w-0 gap-3 border-t border-light-border pt-4">
                 <span className="font-result text-2xl font-bold text-blue-ink">{String(i + 1).padStart(2, "0")}</span>
-                <div><h4 className="font-heading text-lg font-semibold">{it.t}</h4><p className="mt-2 text-sm text-ink-soft">{it.d}</p></div>
+                <div><h4 className="font-heading text-lg font-bold">{it.t}</h4><p className="mt-2 text-sm text-ink-soft">{it.d}</p></div>
               </li>
             ))}
           </ol>
           <ReviewNote>{d.review.testStages}</ReviewNote>
           <div className="mt-6 border-l-2 border-blue-strong pl-4">
-            <h4 className="font-heading text-lg font-semibold">{d.securityTest.limitsTitle}</h4>
+            <h4 className="font-heading text-lg font-bold">{d.securityTest.limitsTitle}</h4>
             <p className="mt-2 max-w-4xl text-sm text-ink-soft">{d.securityTest.limits}</p>
           </div>
           <ReviewNote>{d.review.testMethod}</ReviewNote><ReviewNote>{d.review.testPlatforms}</ReviewNote>
           <div className="mt-6 flex flex-col gap-5 border-l-4 border-lime bg-navy px-5 py-5 lg:flex-row lg:items-center lg:justify-between">
             <div className="flex min-w-0 items-start gap-3">
               <ShieldCheck className="mt-1 h-6 w-6 shrink-0 text-lime" aria-hidden="true" />
-              <div><h4 className="font-mono text-xs uppercase text-lime">{d.securityTest.golden}</h4><p className="mt-2 max-w-xl font-heading text-lg text-on-dark">{d.securityTest.authorization}</p></div>
+              <div><h4 className="font-mono text-xs font-bold uppercase text-lime">{d.securityTest.golden}</h4><p className="mt-2 max-w-xl font-heading text-lg text-on-dark">{d.securityTest.authorization}</p></div>
             </div>
             <WaButton className="shrink-0 self-start lg:self-auto" message={d.securityTest.message} refCode={REFS.testeSeguranca}>{d.securityTest.cta}</WaButton>
           </div>
@@ -221,7 +221,7 @@ export function Faq({ slug }: P) {
         <div className="mt-6 divide-y divide-light-border border-y border-light-border">
           {d.faq.items.map((f) => (
             <details key={f.q} className="group py-2">
-              <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between gap-4 text-lg font-medium text-ink [&::-webkit-details-marker]:hidden">
+              <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between gap-4 text-lg font-bold text-ink [&::-webkit-details-marker]:hidden">
                 {f.q}
                 <Plus className="h-5 w-5 shrink-0 transition-transform group-open:rotate-45" aria-hidden="true" />
               </summary>
@@ -256,8 +256,8 @@ export function FinalCta({ slug }: P) {
 export function Footer({ slug }: P) {
   const { d } = useDict(slug);
   return <footer id="rodape" className="bg-navy-deep px-5 pb-28 pt-12 text-sm text-on-dark-mute"><div className="mx-auto max-w-6xl">
-    <div className="border-y border-doc-border py-7"><Eyebrow className="text-on-dark">{d.footer.dataLabel}</Eyebrow><p className="mt-4 max-w-4xl">{d.footer.dataText}</p><ReviewNote>{d.review.privacy}</ReviewNote></div>
-    <div className="mt-8 flex flex-col justify-between gap-6 md:flex-row"><div><Logo /><p className="mt-3">{d.footer.location} · {d.footer.company}</p></div><div><Eyebrow className="text-on-dark">{d.footer.contactTitle}</Eyebrow><ul className="mt-3 space-y-2">
+    <div className="border-y border-doc-border py-7"><Eyebrow className="font-bold text-on-dark">{d.footer.dataLabel}</Eyebrow><p className="mt-4 max-w-4xl">{d.footer.dataText}</p><ReviewNote>{d.review.privacy}</ReviewNote></div>
+    <div className="mt-8 flex flex-col justify-between gap-6 md:flex-row"><div><Logo /><p className="mt-3">{d.footer.location} · {d.footer.company}</p></div><div><Eyebrow className="font-bold text-on-dark">{d.footer.contactTitle}</Eyebrow><ul className="mt-3 space-y-2">
       <li className="flex items-center gap-2"><Mail className="h-4 w-4 shrink-0 text-lime" aria-hidden="true" /><span className="sr-only">{d.footer.emailLabel}: </span><a href={CONTACT.email.startsWith("[") ? undefined : `mailto:${CONTACT.email}`} className="inline-flex min-h-11 items-center hover:text-on-dark">{CONTACT.email}</a></li>
       {CONTACT.phones.map((ph) => <li key={ph} className="flex items-center gap-2"><Phone className="h-4 w-4 shrink-0 text-lime" aria-hidden="true" /><span className="sr-only">{d.footer.phoneLabel}: </span><a href={ph.startsWith("[") ? undefined : `tel:${ph.replace(/[^+\d]/g, "")}`} className="inline-flex min-h-11 items-center hover:text-on-dark">{ph}</a></li>)}
       <li className="flex items-center gap-2"><MapPin className="h-4 w-4 shrink-0 text-lime" aria-hidden="true" /><span>São Luís (MA) · São Paulo (SP)</span></li>
