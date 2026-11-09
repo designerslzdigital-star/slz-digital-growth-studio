@@ -8,7 +8,8 @@ export const Route = createFileRoute("/")({
   staticData: { sitemap: false },
   head: () => {
     const h = langHead("pt-br");
-    return { meta: h.meta, links: h.links.filter((l) => l.rel !== "canonical") };
+    // Root canonical points at the default language page.
+    return { meta: h.meta, links: h.links };
   },
   component: Index,
 });
