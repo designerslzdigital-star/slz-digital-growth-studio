@@ -82,7 +82,7 @@
   --blue: #3b82f6;
   --blue-strong: #2563eb;
   --blue-ink: #1d4ed8;
-  --lime: #e2f747;
+  --lime: #b8f24b;
   --lime-soft: #f6fbc8;
   --light: #f5f8fe;
   --paper: #fbfbfb;
@@ -130,7 +130,7 @@
   );
   --gradient-select: linear-gradient(90deg, #2563eb, #3b3ad9);
   --glow-blue: radial-gradient(120% 80% at 100% 0%, rgb(59 130 246 / 0.28), transparent 60%);
-  --glow-lime: radial-gradient(120% 80% at 100% 0%, rgb(226 247 71 / 0.18), transparent 60%);
+  --glow-lime: radial-gradient(120% 80% at 100% 0%, rgb(184 242 75 / 0.18), transparent 60%);
   --shadow-frame: 0 40px 80px -20px rgb(0 0 0 / 0.6);
 }
 
@@ -168,7 +168,7 @@
 }
 @utility card-dark-lime {
   background: var(--glow-lime), var(--navy);
-  border: 1px solid rgb(226 247 71 / 0.2);
+  border: 1px solid rgb(184 242 75 / 0.2);
 }
 @utility grid-mesh {
   background-image:
@@ -213,7 +213,7 @@
   box-shadow: 0 10px 30px -10px rgb(0 0 0 / 0.5);
 }
 @utility doc-band {
-  background: linear-gradient(90deg, rgb(226 247 71 / 0.08), transparent 40%), var(--navy);
+  background: linear-gradient(90deg, rgb(184 242 75 / 0.08), transparent 40%), var(--navy);
   border: 1px solid var(--doc-border);
   color: var(--on-dark-soft);
   & h3 { color: var(--on-dark) !important; }
