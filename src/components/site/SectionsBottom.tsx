@@ -263,7 +263,7 @@ export function Footer({ slug }: P) {
       <li className="flex items-center gap-2"><MapPin className="h-4 w-4 shrink-0 text-lime" aria-hidden="true" /><span>São Luís (MA) · São Paulo (SP)</span></li>
     </ul></div><nav className="flex flex-wrap items-start gap-x-6 gap-y-3">
       <Link to="/$lang/privacidade" params={{lang:slug}} className="inline-flex min-h-11 items-center hover:text-on-dark">{d.footer.privacy}</Link><Link to="/$lang/termos" params={{lang:slug}} className="inline-flex min-h-11 items-center hover:text-on-dark">{d.footer.terms}</Link><Button variant="ghost" onClick={() => window.dispatchEvent(new Event('slz-cookie-preferences'))} className="min-h-11 whitespace-normal p-0 text-on-dark-mute hover:text-on-dark">{d.footer.preferences}</Button>
-    </nav></div><p className="mt-8">© {new Date().getFullYear()} {d.footer.brand}. {d.footer.rights}</p>
+    </nav></div><p className="mt-8">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;© {new Date().getFullYear()} {d.footer.brand}. {d.footer.rights}</p>
   </div></footer>;
 }
 
