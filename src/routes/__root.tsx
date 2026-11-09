@@ -83,7 +83,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "SLZ Digital" },
       { name: "description", content: "Software sob medida, sistemas, SaaS e aplicativos." },
-      { property: "og:site_name", content: "SLZ Digital" },
+      { property: "og:site_name", content: "SLZ Digital Software" },
+      { name: "application-name", content: "SLZ Digital Software" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "referrer", content: "strict-origin-when-cross-origin" },
@@ -100,6 +101,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "SLZ Digital Software",
+          alternateName: ["SLZ Software", "SLZ Digital"],
+          url: "https://software.slzdigital.com.br/",
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,
