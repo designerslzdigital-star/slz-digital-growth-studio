@@ -7,7 +7,7 @@ import { SITE_URL } from "@/i18n/head";
 const BASE_URL = `${SITE_URL}/`;
 
 const LANG_ROUTES = [
-  { id: "/$lang/", to: "/$lang/" },
+  { id: "/$lang/", to: "/$lang" },
   { id: "/$lang/privacidade", to: "/$lang/privacidade" },
   { id: "/$lang/termos", to: "/$lang/termos" },
 ] as const;
