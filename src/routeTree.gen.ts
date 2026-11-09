@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LangRouteImport } from './routes/$lang'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as LangIndexRouteImport } from './routes/$lang.index'
 import { Route as LangPrivacidadeRouteImport } from './routes/$lang.privacidade'
 import { Route as LangTermosRouteImport } from './routes/$lang.termos'
@@ -23,6 +24,11 @@ const IndexRoute = IndexRouteImport.update({
 const LangRoute = LangRouteImport.update({
   id: '/$lang',
   path: '/$lang',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LangIndexRoute = LangIndexRouteImport.update({
@@ -44,12 +50,14 @@ const LangTermosRoute = LangTermosRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$lang': typeof LangRouteWithChildren
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/$lang/privacidade': typeof LangPrivacidadeRoute
   '/$lang/termos': typeof LangTermosRoute
   '/$lang/': typeof LangIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/$lang/privacidade': typeof LangPrivacidadeRoute
   '/$lang/termos': typeof LangTermosRoute
   '/$lang': typeof LangIndexRoute
@@ -58,19 +66,27 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/$lang': typeof LangRouteWithChildren
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/$lang/privacidade': typeof LangPrivacidadeRoute
   '/$lang/termos': typeof LangTermosRoute
   '/$lang/': typeof LangIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/$lang' | '/$lang/privacidade' | '/$lang/termos' | '/$lang/'
+  fullPaths:
+    | '/'
+    | '/$lang'
+    | '/sitemap.xml'
+    | '/$lang/privacidade'
+    | '/$lang/termos'
+    | '/$lang/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/$lang/privacidade' | '/$lang/termos' | '/$lang'
+  to: '/' | '/sitemap.xml' | '/$lang/privacidade' | '/$lang/termos' | '/$lang'
   id:
     | '__root__'
     | '/'
     | '/$lang'
+    | '/sitemap.xml'
     | '/$lang/privacidade'
     | '/$lang/termos'
     | '/$lang/'
@@ -79,6 +95,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   LangRoute: typeof LangRouteWithChildren
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -95,6 +112,13 @@ declare module '@tanstack/react-router' {
       path: '/$lang'
       fullPath: '/$lang'
       preLoaderRoute: typeof LangRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/$lang/': {
@@ -138,6 +162,7 @@ const LangRouteWithChildren = LangRoute._addFileChildren(LangRouteChildren)
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   LangRoute: LangRouteWithChildren,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

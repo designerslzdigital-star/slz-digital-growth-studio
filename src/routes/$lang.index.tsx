@@ -6,6 +6,7 @@ import { Founder, Hero, Numbers, Pain, Proof, Services, Solutions } from "@/comp
 import { After, CookieBanner, Faq, FinalCta, FloatingWa, Footer, Global, Security, Steps } from "@/components/site/SectionsBottom";
 
 export const Route = createFileRoute("/$lang/")({
+  staticData: { sitemap: true },
   head: ({ params }) => langHead(params.lang),
   component: Home,
 });

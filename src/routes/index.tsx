@@ -5,6 +5,7 @@ import { langHead } from "@/i18n/head";
 
 // "/" detects the browser language (or saved choice) and redirects; default pt-BR.
 export const Route = createFileRoute("/")({
+  staticData: { sitemap: false },
   head: () => {
     const h = langHead("pt-br");
     return { meta: h.meta, links: h.links.filter((l) => l.rel !== "canonical") };

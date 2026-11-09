@@ -4,6 +4,7 @@ import { langHead } from "@/i18n/head";
 import { LegalPage } from "@/components/site/LegalPage";
 
 export const Route = createFileRoute("/$lang/privacidade")({
+  staticData: { sitemap: true },
   head: ({ params }) =>
     langHead(params.lang, "/privacidade", isLangSlug(params.lang) ? dicts[langBySlug(params.lang).code].legal.privacyTitle : undefined),
   component: () => <LegalPage slug={Route.useParams().lang as LangSlug} kind="privacy" />,
