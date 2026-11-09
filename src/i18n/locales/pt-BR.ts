@@ -39,7 +39,7 @@ const ptBR = {
     "cards": [
       {
         "t": "Sumiram no meio do caminho.",
-        "d": "O projeto parou pela metade e o dinheiro já tinha saído."
+        "d": "O prazo passou, as respostas foram sumindo e o projeto parou pela metade — com a entrada já paga."
       },
       {
         "t": "Entregaram e nunca mais responderam.",
@@ -51,7 +51,7 @@ const ptBR = {
       }
     ],
     "close": "A gente desenhou o nosso jeito de trabalhar para que nada disso aconteça.",
-    "sub": "As três histórias que a gente mais escuta de quem já contratou software uma vez."
+    "sub": "As três histórias que mais escutamos de quem já contratou um projeto de software."
   },
   "solutions": {
     "title": "Soluções com entrega rápida",
@@ -386,8 +386,7 @@ const ptBR = {
         "label": "Depois no ar",
         "items": [
           "Acompanhamento da sua equipe",
-          "Suporte incluso no projeto",
-          "Suporte mensal"
+          "O valor do projeto já inclui o período de suporte de 60 a 90 dias conforme o porte do projeto, definido no contrato."
         ]
       }
     ]
