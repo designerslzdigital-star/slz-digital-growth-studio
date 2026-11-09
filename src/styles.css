@@ -308,3 +308,36 @@
   .service-grid ul { margin-top: 10px; gap: 6px; }
   .service-grid li { font-size: 15px; line-height: 1.45; }
 }
+
+/* Mobile rhythm: 12px title-to-copy, 24px content starts, 16px card gaps. */
+@media (max-width: 559px) {
+  main > section h2 { line-height: 1.12; }
+  main > section h2 + p { margin-top: 12px; line-height: 1.55; }
+
+  #dor .grid,
+  #solucoes .solution-grid,
+  #pos-entrega .grid { margin-top: 24px; gap: 16px; }
+  #dor .grid > article p,
+  #solucoes .solution-card > p,
+  #pos-entrega .grid > article p { margin-top: 12px; line-height: 1.55; }
+  #solucoes .solution-title { margin-top: 16px; }
+  #dor .grid + p,
+  #solucoes .solution-grid + div,
+  #pos-entrega .doc-band { margin-top: 24px; }
+  #solucoes .solution-grid ~ p { margin-top: 20px; }
+
+  #servicos .service-grid { margin-top: 20px; padding-top: 16px; }
+  #prova .grid { margin-top: 24px; gap: 24px; }
+
+  #fundador > div { gap: 32px; }
+  #fundador h2 { margin-top: 12px; }
+  #fundador .grid-cols-2 { margin-top: 24px; }
+  #fundador .grid-cols-2 + p { margin-top: 24px; }
+
+  #requisitos ol { margin-top: 24px; }
+  #requisitos ol > li + li { margin-top: 24px; }
+  #requisitos .card-dark { margin-top: 24px; }
+
+  #global .mt-8 { margin-top: 24px; }
+  #global .map-legend { margin-top: 20px; }
+}
