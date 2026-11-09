@@ -272,8 +272,9 @@ const en: Dict = {
     "sub": "The conversation starts on WhatsApp."
   },
   "footer": {
-    "location": "São Luís (MA) and São Paulo (SP), Brazil · CNPJ 29.746.940/0001-06",
+    "location": "São Luís (MA) and São Paulo (SP), Brazil\nCNPJ 29.746.940/0001-06",
     "contactTitle": "Contact",
+    "legalTitle": "Legal",
     "emailLabel": "Email",
     "phoneLabel": "Phone",
     "privacy": "Privacy Policy",

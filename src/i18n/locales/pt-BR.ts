@@ -272,6 +272,7 @@ const ptBR = {
   "footer": {
     "location": "São Luís (MA) e São Paulo (SP), Brasil \nCNPJ 29.746.940/0001-06 ",
     "contactTitle": "Contato",
+    "legalTitle": "Institucional",
     "emailLabel": "E-mail",
     "phoneLabel": "Telefone",
     "privacy": "Política de Privacidade",

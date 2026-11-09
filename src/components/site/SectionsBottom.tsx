@@ -240,16 +240,41 @@ export function Faq({ slug }: P) {
 
 export function Footer({ slug }: P) {
   const { d } = useDict(slug);
-  return <footer id="rodape" className="bg-navy-deep px-5 pb-28 pt-12 text-sm text-on-dark-mute"><div className="mx-auto max-w-6xl">
-    <div className="border-y border-doc-border py-7"><Eyebrow className="text-on-dark">{d.footer.dataLabel}</Eyebrow><p className="mt-4 max-w-4xl">{d.footer.dataText}</p><ReviewNote>{d.review.privacy}</ReviewNote></div>
-    <div className="mt-8 flex flex-col justify-between gap-6 md:flex-row"><div><Logo /><p className="mt-3">{d.footer.location} · {d.footer.company}</p></div><div><Eyebrow className="text-on-dark">{d.footer.contactTitle}</Eyebrow><ul className="mt-3 space-y-2">
-      <li className="flex items-center gap-2"><Mail className="h-4 w-4 shrink-0 text-lime" aria-hidden="true" /><span className="sr-only">{d.footer.emailLabel}: </span><a href={CONTACT.email.startsWith("[") ? undefined : `mailto:${CONTACT.email}`} className="inline-flex min-h-11 items-center hover:text-on-dark">{CONTACT.email}</a></li>
-      {CONTACT.phones.map((ph) => <li key={ph} className="flex items-center gap-2"><Phone className="h-4 w-4 shrink-0 text-lime" aria-hidden="true" /><span className="sr-only">{d.footer.phoneLabel}: </span><a href={ph.startsWith("[") ? undefined : `tel:${ph.replace(/[^+\d]/g, "")}`} className="inline-flex min-h-11 items-center hover:text-on-dark">{ph}</a></li>)}
-      <li className="flex items-center gap-2"><MapPin className="h-4 w-4 shrink-0 text-lime" aria-hidden="true" /><span>São Luís (MA) · São Paulo (SP)</span></li>
-    </ul></div><nav className="flex flex-wrap items-start gap-x-6 gap-y-3">
-      <Link to="/$lang/privacidade" params={{lang:slug}} className="inline-flex min-h-11 items-center hover:text-on-dark">{d.footer.privacy}</Link><Link to="/$lang/termos" params={{lang:slug}} className="inline-flex min-h-11 items-center hover:text-on-dark">{d.footer.terms}</Link><Button variant="ghost" onClick={() => window.dispatchEvent(new Event('slz-cookie-preferences'))} className="min-h-11 whitespace-normal p-0 text-on-dark-mute hover:text-on-dark">{d.footer.preferences}</Button>
-    </nav></div><p className="mt-8">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;© {new Date().getFullYear()} {d.footer.brand}. {d.footer.rights}</p>
-  </div></footer>;
+  const [city, ...legal] = d.footer.location.split("\n").map((t) => t.trim());
+  const link = "inline-flex min-h-11 items-center hover:text-on-dark";
+  return (
+    <footer id="rodape" className="bg-navy-deep px-5 pb-28 pt-14 text-sm text-on-dark-mute">
+      <div className="mx-auto max-w-6xl">
+        <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
+          <div>
+            <Logo />
+            <p className="mt-4 max-w-xs leading-relaxed">{[...legal, d.footer.company].filter(Boolean).join(" · ")}</p>
+          </div>
+          <div>
+            <Eyebrow className="text-on-dark">{d.footer.contactTitle}</Eyebrow>
+            <ul className="mt-3 space-y-1">
+              <li className="flex items-center gap-3"><Mail className="h-4 w-4 shrink-0 text-lime" aria-hidden="true" /><span className="sr-only">{d.footer.emailLabel}: </span><a href={CONTACT.email.startsWith("[") ? undefined : `mailto:${CONTACT.email}`} className={link}>{CONTACT.email}</a></li>
+              {CONTACT.phones.map((ph) => <li key={ph} className="flex items-center gap-3"><Phone className="h-4 w-4 shrink-0 text-lime" aria-hidden="true" /><span className="sr-only">{d.footer.phoneLabel}: </span><a href={ph.startsWith("[") ? undefined : `tel:${ph.replace(/[^+\d]/g, "")}`} className={link}>{ph}</a></li>)}
+              <li className="flex min-h-11 items-center gap-3"><MapPin className="h-4 w-4 shrink-0 text-lime" aria-hidden="true" /><span>{city}</span></li>
+            </ul>
+          </div>
+          <nav aria-label={d.footer.legalTitle}>
+            <Eyebrow className="text-on-dark">{d.footer.legalTitle}</Eyebrow>
+            <ul className="mt-3 space-y-1">
+              <li><Link to="/$lang/privacidade" params={{ lang: slug }} className={link}>{d.footer.privacy}</Link></li>
+              <li><Link to="/$lang/termos" params={{ lang: slug }} className={link}>{d.footer.terms}</Link></li>
+              <li><button type="button" onClick={() => window.dispatchEvent(new Event("slz-cookie-preferences"))} className={`${link} text-left`}>{d.footer.preferences}</button></li>
+            </ul>
+          </nav>
+        </div>
+        <div className="mt-10 border-t border-doc-border pt-6">
+          <p className="max-w-4xl text-xs leading-relaxed"><span className="font-mono uppercase tracking-widest text-on-dark">{d.footer.dataLabel}</span> · {d.footer.dataText}</p>
+          <ReviewNote>{d.review.privacy}</ReviewNote>
+          <p className="mt-6 text-center text-xs">© {new Date().getFullYear()} {d.footer.brand}. {d.footer.rights}</p>
+        </div>
+      </div>
+    </footer>
+  );
 }
 
 export function FloatingWa({ slug }: P) {
