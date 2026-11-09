@@ -44,7 +44,7 @@ export function Pain({ slug }: P) {
         <p className="mt-4 max-w-3xl text-ink-soft">{d.pain.sub}</p>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {d.pain.cards.map((c) => (
-            <article key={c.t} className="rounded-[44px] border-[3px] border-dotted border-ink-soft/60 p-3">
+            <article key={c.t} className="rounded-[36px] sm:rounded-[44px] sm:border-[3px] sm:border-dotted sm:border-ink-soft/60 sm:p-3">
               <div className="h-full rounded-[36px] bg-card-ink p-6">
                 <h3 className="text-center font-subtitle text-2xl font-normal text-on-dark">{c.t}</h3>
                 <p className="mt-4 whitespace-pre-line text-on-dark-mute">{c.d}</p>
@@ -52,7 +52,7 @@ export function Pain({ slug }: P) {
             </article>
           ))}
         </div>
-        <p className="mt-10 max-w-3xl font-heading text-3xl font-semibold leading-tight text-ink md:text-4xl">{d.pain.close}</p>
+        <p className="mt-10 max-w-3xl font-heading text-xl font-medium leading-snug text-ink-soft sm:text-3xl sm:font-semibold sm:leading-tight sm:text-ink md:text-4xl">{d.pain.close}</p>
       </div>
     </section>
   );
