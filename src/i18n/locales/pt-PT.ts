@@ -30,10 +30,10 @@ const ptPT: Dict = {
     ]
   },
   "hero": {
-    "before": "Construímos o seu sistema. E",
-    "mark": "protegemo-lo desde a primeira linha",
+    "before": "Construímos, protegemos e",
+    "mark": "não desaparecemos depois da entrega",
     "after": ".",
-    "sub": "Levantamento de requisitos antes do código, equipa de cibersegurança desde 1994 e o projeto documentado do início à entrega.",
+    "sub": "Equipa especializada em cibersegurança, com mais de 32 anos de experiência. A segurança é o nosso lema!",
     "note": "O primeiro passo é uma conversa para percebermos aquilo de que precisa."
   },
   "pain": {

@@ -28,10 +28,10 @@ const ptBR = {
     ]
   },
   "hero": {
-    "before": "A gente constrói o seu sistema. E",
-    "mark": "protege ele desde a primeira linha",
+    "before": "A gente constrói, protege e",
+    "mark": "não some depois da entrega",
     "after": ".",
-    "sub": "Levantamento de requisitos antes do código, equipe de cibersegurança desde 1994 e o projeto documentado do início à entrega.",
+    "sub": "Equipe especializada em cibersegurança, com mais de 32 anos de experiência. Segurança é o nosso lema!",
     "note": "O primeiro passo é uma conversa para entender o que você precisa."
   },
   "pain": {

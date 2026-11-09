@@ -30,10 +30,10 @@ const esES: Dict = {
     ]
   },
   "hero": {
-    "before": "Construimos tu sistema. Y",
-    "mark": "lo protegemos desde la primera línea",
+    "before": "Construimos, protegemos y",
+    "mark": "no desaparecemos después de la entrega",
     "after": ".",
-    "sub": "Análisis de requisitos antes del código, equipo de ciberseguridad desde 1994 y el proyecto documentado desde el inicio hasta la entrega.",
+    "sub": "Equipo especializado en ciberseguridad, con más de 32 años de experiencia. ¡La seguridad es nuestro lema!",
     "note": "El primer paso es una conversación para entender lo que necesitas."
   },
   "pain": {

@@ -30,10 +30,10 @@ const en: Dict = {
     ]
   },
   "hero": {
-    "before": "We build your system. And",
-    "mark": "we protect it from the first line",
+    "before": "We build, we protect, and",
+    "mark": "we don't disappear after delivery",
     "after": ".",
-    "sub": "Requirements before code, a cybersecurity team working since 1994, and your project documented from start to delivery.",
+    "sub": "A team specialized in cybersecurity, with more than 32 years of experience. Security is our motto!",
     "note": "The first step is a conversation to understand what you need."
   },
   "pain": {
