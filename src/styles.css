@@ -257,7 +257,7 @@
 .solution-third { grid-column: span 4; } .solution-half { grid-column: span 6; } .solution-wide { grid-column: span 12; }
 .solution-number { display: grid; place-items: center; height: 46px; width: 46px; flex-shrink: 0; border-radius: 12px; background: var(--lime); color: var(--ink); font-family: var(--font-result); font-size: 23px; font-weight: 700; }
 .solution-tag { border: 1px dashed color-mix(in srgb,var(--lime) 50%,transparent); border-radius: 999px; padding: 7px 10px; font: 12px var(--font-mono); text-transform: uppercase; color: var(--lime); }
-.solution-title { font: 700 30px/1.2 var(--font-result); }
+.solution-title { font: 600 30px/1.2 var(--font-result); }
 .service-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 24px 28px; }
 @media (max-width: 1023px) { .service-grid { grid-template-columns: repeat(3,minmax(0,1fr)); } }
 .numbers-grid > div { display: flex; min-width: 0; flex-direction: column; }
