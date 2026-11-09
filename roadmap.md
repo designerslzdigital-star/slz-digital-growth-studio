@@ -6,5 +6,7 @@
 - [x] Compact vertical spacing across the page, with Services fitting in one 1440×900 desktop view; verified desktop and mobile without horizontal overflow.
 - [x] Even out the visible gaps in the numbers band and remove the founder year-box borders; verified wide, medium and mobile layouts.
 - [x] Match the compact desktop proportions of the numbers band on mobile and reorganize Services into a readable small-screen layout; verified at 360/390px in all four languages without overflow.
+- [x] Recolor the numbers band to #254368 with light foregrounds; verified at 390px and 1440px.
+- [ ] Update the green accent after confirming the intended value: #B8F224B is not a valid CSS hex color.
 - [ ] Resolve dependency advisories before publication; npm audit and installed-lockfile scanner report high/moderate findings, not changed in this visual update.
 - [ ] Publication waits for real WhatsApp number, MARK description, video, founder photo, legal identity/contact, support terms, delivery definition and approval/proof of claims.

@@ -64,8 +64,9 @@
 
 :root {
   --catalog: #c9d4e6;
-  --proof-border: #b9cb2a;
-  --proof-label: #36400e;
+  --proof-bg: #254368;
+  --proof-border: #254368;
+  --proof-label: #b8c4da;
   --test-card: #14254a;
   --map-world: #d3dce9;
   --br-green: #1e9e43;
@@ -245,11 +246,11 @@
 /* Final-page additions use the existing palette and approved typography. */
 .hero-title { font-size: 76px; letter-spacing: 0; }
 .hero-section { min-height: 88svh; }
-.numbers-band { padding: 28px 20px; background: var(--lime); border-bottom: 1px solid var(--proof-border); color: var(--proof-label); }
+.numbers-band { padding: 28px 20px; background: var(--proof-bg); border-bottom: 1px solid var(--proof-border); color: var(--proof-label); }
 .numbers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 28px; }
-.proof-number { font-family: var(--font-result); font-size: 44px; font-weight: 700; line-height: 1.1; color: var(--ink); overflow-wrap: anywhere; }
-.proof-seal { display: flex; align-items: center; gap: 8px; font-family: var(--font-result); font-size: 26px; font-weight: 700; line-height: 1.1; color: var(--ink); overflow-wrap: anywhere; }
-.proof-seal svg { fill: var(--ink); stroke: var(--lime); }
+.proof-number { font-family: var(--font-result); font-size: 44px; font-weight: 700; line-height: 1.1; color: var(--on-dark); overflow-wrap: anywhere; }
+.proof-seal { display: flex; align-items: center; gap: 8px; font-family: var(--font-result); font-size: 26px; font-weight: 700; line-height: 1.1; color: var(--on-dark); overflow-wrap: anywhere; }
+.proof-seal svg { fill: var(--on-dark); stroke: var(--proof-bg); }
 .review-note { margin-top: 16px; padding: 10px 12px; border: 1px dashed currentColor; border-radius: 6px; font-family: var(--font-mono); font-size: 11px; line-height: 1.6; overflow-wrap: anywhere; opacity: .85; }
 .solution-grid { display: grid; grid-template-columns: repeat(12,minmax(0,1fr)); gap: 20px; }
 .solution-card { display: flex; min-width: 0; flex-direction: column; padding: 24px; border-radius: 20px; color: var(--on-dark-soft); }
