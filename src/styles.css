@@ -377,3 +377,8 @@
     mask-image: linear-gradient(to bottom, #000 62%, transparent);
   }
 }
+
+@media (max-width: 559px) {
+  #fundador { border-top: 4px solid var(--lime); }
+  #prova { background-color: var(--navy); }
+}
