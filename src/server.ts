@@ -44,19 +44,6 @@ function isH3SwallowedErrorBody(body: string): boolean {
   }
 }
 
-// O app é servido em /software. Qualquer caminho fora desse prefixo (a raiz
-// do endereço .lovable.app, o preview do editor) não casa com o roteador e
-// cairia em 404 — por isso é redirecionado para dentro do prefixo.
-function redirectIntoBasepath(request: Request): Response | undefined {
-  if (request.method !== "GET" && request.method !== "HEAD") return undefined;
-  const url = new URL(request.url);
-  if (url.pathname === "/software" || url.pathname.startsWith("/software/")) return undefined;
-  // As imagens do Lovable vivem na raiz (/__l5e/) e nao devem ser redirecionadas.
-  if (url.pathname.startsWith("/__l5e/")) return undefined;
-  url.pathname = `/software${url.pathname}`;
-  return Response.redirect(url.toString(), 302);
-}
-
 function withSecurityHeaders(response: Response): Response {
   const res = new Response(response.body, response);
   res.headers.set("X-Frame-Options", "DENY");
@@ -68,8 +55,6 @@ function withSecurityHeaders(response: Response): Response {
 
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
-    const redirect = redirectIntoBasepath(request);
-    if (redirect) return redirect;
     try {
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);

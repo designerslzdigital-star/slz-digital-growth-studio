@@ -214,7 +214,7 @@ const ptBR = {
     "legendIe": "Irlanda",
     "legendUy": "Uruguai"
   },
-  "faq": { "more": "Ver todas as perguntas", "less": "Ver menos",
+  "faq": {
     "title": "Perguntas frequentes",
     "draft": "Rascunho, revisar",
     "items": [
@@ -392,7 +392,7 @@ const ptBR = {
       }
     ]
   },
-  "founder": { "more": "Ler biografia completa", "less": "Ler menos",
+  "founder": {
     "label": "Quem é o fundador",
     "title": "Marketing e tecnologia conduzidos com",
     "mark": "experiência internacional",

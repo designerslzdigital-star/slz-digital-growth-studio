@@ -1,6 +1,6 @@
 import { LANGS, dicts, isLangSlug, langBySlug, DEFAULT_SLUG, type LangSlug } from "./index";
 
-export const SITE_URL = "https://www.slzdigital.com.br/software";
+export const SITE_URL = "https://software.slzdigital.com.br";
 
 export function langHead(raw: string, path = "", titleOverride?: string) {
   const slug: LangSlug = isLangSlug(raw) ? raw : DEFAULT_SLUG;

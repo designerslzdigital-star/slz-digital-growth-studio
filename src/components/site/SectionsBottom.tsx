@@ -169,8 +169,8 @@ export function Security({ slug }: P) {
           <Eyebrow className="text-blue-ink">{d.securityTest.label}</Eyebrow>
           <h3 className="mt-3 max-w-3xl font-display text-3xl font-normal leading-[1.05] text-ink md:text-5xl">{d.securityTest.title}</h3>
           <p className="mt-3 max-w-3xl text-ink-soft">{d.securityTest.sub}</p>
-          <h4 className="mt-6 font-heading text-lg font-semibold max-sm:hidden">{d.securityTest.how}</h4>
-          <ol className="test-grid mt-3 max-sm:hidden">
+          <h4 className="mt-6 font-heading text-lg font-semibold">{d.securityTest.how}</h4>
+          <ol className="test-grid mt-3">
             {d.securityTest.steps.map((it, i) => (
               <li key={it.t} className="flex min-w-0 gap-3 border-t border-light-border pt-4">
                 <span className="font-result text-2xl font-bold text-blue-ink">{String(i + 1).padStart(2, "0")}</span>
@@ -179,7 +179,7 @@ export function Security({ slug }: P) {
             ))}
           </ol>
           <ReviewNote>{d.review.testStages}</ReviewNote>
-          <div className="mt-6 border-l-2 border-blue-strong pl-4 max-sm:hidden">
+          <div className="mt-6 border-l-2 border-blue-strong pl-4">
             <h4 className="font-heading text-lg font-semibold">{d.securityTest.limitsTitle}</h4>
             <p className="mt-2 max-w-4xl text-sm text-ink-soft">{d.securityTest.limits}</p>
           </div>
@@ -207,21 +207,20 @@ export function Global({ slug }: P) {
   const { d } = useDict(slug);
   return <section id="global" className="bg-background px-5 py-10"><div className="mx-auto max-w-6xl">
     <h2 className="max-w-3xl text-3xl font-bold text-ink md:text-5xl">{d.global.title}</h2><p className="mt-4 max-w-3xl text-lg text-ink-soft">{d.global.sub}</p>
-    <div className="mt-8 max-sm:hidden"><WorldMap label={d.global.mapLabel} names={[d.global.legendBr,d.global.legendIe,d.global.legendUy]} /></div>
+    <div className="mt-8"><WorldMap label={d.global.mapLabel} names={[d.global.legendBr,d.global.legendIe,d.global.legendUy]} /></div>
     <div className="map-legend mt-6 flex flex-wrap gap-x-6 gap-y-4 text-sm text-ink-soft">{[d.global.legendBr,d.global.legendIe,d.global.legendUy,d.global.legendWorld].map((label,i) => <span key={label} className="flex items-center gap-2"><span className={`legend-dots country-${i}`} aria-hidden="true"><i /><i /></span>{label}</span>)}</div>
   </div></section>;
 }
 
 export function Faq({ slug }: P) {
   const { d } = useDict(slug);
-  const [all, setAll] = useState(false);
   return (
     <section id="faq" className="bg-light px-5 py-10">
       <div className="mx-auto max-w-3xl">
         <h2 className="text-3xl font-bold text-ink md:text-5xl">{d.faq.title}</h2>
         <div className="mt-6 divide-y divide-light-border border-y border-light-border">
-          {d.faq.items.map((f, i) => (
-            <details key={f.q} className={`group py-2 ${!all && i >= 4 ? "max-sm:hidden" : ""}`}>
+          {d.faq.items.map((f) => (
+            <details key={f.q} className="group py-2">
               <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between gap-4 text-lg font-medium text-ink [&::-webkit-details-marker]:hidden">
                 {f.q}
                 <Plus className="h-5 w-5 shrink-0 transition-transform group-open:rotate-45" aria-hidden="true" />
@@ -233,7 +232,6 @@ export function Faq({ slug }: P) {
             </details>
           ))}
         </div>
-        <button type="button" onClick={() => setAll((v) => !v)} className="mt-4 min-h-11 font-medium text-blue-ink underline underline-offset-4 sm:hidden">{all ? d.faq.less : d.faq.more}</button>
         <p className="mt-6 text-[13px] text-ink-soft">{d.sources.label}: <a href={SOURCE_URLS.study} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">{d.sources.study}</a> · <a href={SOURCE_URLS.report} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">{d.sources.publisher}</a></p>
       </div>
     </section>

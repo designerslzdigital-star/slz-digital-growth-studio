@@ -4,7 +4,7 @@ import { isSitemapRouteIncluded, sitemapPathForLocation, sitemapStaticPaths, sit
 import { LANGS } from "@/i18n";
 import { SITE_URL } from "@/i18n/head";
 
-const BASE_URL = `${new URL(SITE_URL).origin}/`;
+const BASE_URL = `${SITE_URL}/`;
 
 const LANG_ROUTES = [
   { id: "/$lang/", to: "/$lang" },

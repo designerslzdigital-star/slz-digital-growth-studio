@@ -91,7 +91,7 @@ export function Proof({ slug }: P) {
       <h2 className="text-3xl font-bold md:text-5xl">{d.proof.title}</h2><p className="mt-4 max-w-3xl text-lg text-on-dark-soft">{d.proof.sub}</p>
       <div className="mt-8 grid items-center gap-8 lg:grid-cols-[1fr_1.4fr]"><div><h3 className="text-3xl font-semibold text-lime md:text-[40px]">{d.proof.caseTitle}</h3>
       <ul className="mt-6 space-y-5">{d.proof.systems.map((s,i) => <li key={s.name} className="border-l-[3px] border-lime pl-5"><h4 className="font-heading text-xl font-semibold">{s.name}</h4>{i === 1 ? <ReviewNote>{s.text}</ReviewNote> : <p className="mt-2 text-on-dark-soft">{s.text}</p>}</li>)}</ul><ReviewNote>{d.review.video}</ReviewNote></div>
-      <div className="video-frame max-sm:hidden">{playing && SYSTEMS_VIDEO_ID ? <iframe title={d.proof.videoTitle} src={`https://www.youtube-nocookie.com/embed/${SYSTEMS_VIDEO_ID}?autoplay=1`} allow="autoplay; encrypted-media; picture-in-picture" allowFullScreen /> : <div className="flex h-full flex-col items-center justify-center gap-4"><Button variant="ghost" size="icon" aria-label={d.proof.play} disabled={!SYSTEMS_VIDEO_ID} onClick={() => setPlaying(true)} className="h-16 w-16 rounded-full bg-lime text-ink disabled:opacity-100"><Play className="h-7 w-7" /></Button><p className="text-sm text-on-dark-soft">{d.proof.videoTitle}</p></div>}</div></div>
+      <div className="video-frame">{playing && SYSTEMS_VIDEO_ID ? <iframe title={d.proof.videoTitle} src={`https://www.youtube-nocookie.com/embed/${SYSTEMS_VIDEO_ID}?autoplay=1`} allow="autoplay; encrypted-media; picture-in-picture" allowFullScreen /> : <div className="flex h-full flex-col items-center justify-center gap-4"><Button variant="ghost" size="icon" aria-label={d.proof.play} disabled={!SYSTEMS_VIDEO_ID} onClick={() => setPlaying(true)} className="h-16 w-16 rounded-full bg-lime text-ink disabled:opacity-100"><Play className="h-7 w-7" /></Button><p className="text-sm text-on-dark-soft">{d.proof.videoTitle}</p></div>}</div></div>
     </div></section>
     {(SHOW_TESTIMONIAL || SHOW_TEAM) && <div className="bg-background px-5 py-10"><div className="mx-auto max-w-6xl"><ReviewNote>{d.review.proofHidden}</ReviewNote><div className="grid gap-6 md:grid-cols-2">{SHOW_TESTIMONIAL && <p>{d.proof.testimonial}</p>}{SHOW_TEAM && <p>{d.proof.team}</p>}</div></div></div>}
   </>;
@@ -99,11 +99,10 @@ export function Proof({ slug }: P) {
 
 export function Founder({ slug }: P) {
   const { d } = useDict(slug);
-  const [bio, setBio] = useState(false);
   return <section id="fundador" className="bg-navy-deep px-5 py-10 text-on-dark"><div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-[0.8fr_1.2fr]">
     <div className="founder-photo">{FOUNDER_PHOTO_URL ? <img src={FOUNDER_PHOTO_URL} alt={d.founder.photoAlt} loading="lazy" /> : <div className="flex h-full flex-col items-center justify-center p-8 text-center"><UserRound className="h-16 w-16 text-on-dark-mute" aria-hidden="true" /><ReviewNote>{d.review.photo}</ReviewNote></div>}</div>
     <div><Eyebrow className="text-on-dark-mute">{d.founder.label}</Eyebrow><h2 className="mt-4 text-3xl font-semibold md:text-[42px]">{d.founder.title} <span className="text-lime">{d.founder.mark}</span></h2>
     <div className="mt-7 grid grid-cols-2 gap-4">{d.founder.years.map((year,i) => <div key={year} className="py-4 sm:px-5"><strong className="font-result text-3xl text-lime">{year}</strong><p className="mt-1 text-sm text-on-dark-soft">{i === 0 ? d.founder.market : d.founder.abroad}</p></div>)}</div>
-    <p className={`mt-7 whitespace-pre-line text-on-dark-soft ${bio ? "" : "max-sm:line-clamp-6"}`}>{d.founder.text}</p><button type="button" onClick={() => setBio((v) => !v)} className="mt-2 min-h-11 font-medium text-on-dark underline underline-offset-4 sm:hidden">{bio ? d.founder.less : d.founder.more}</button><ReviewNote>{d.review.founder}</ReviewNote></div>
+    <p className="mt-7 whitespace-pre-line text-on-dark-soft">{d.founder.text}</p><ReviewNote>{d.review.founder}</ReviewNote></div>
   </div></section>;
 }
