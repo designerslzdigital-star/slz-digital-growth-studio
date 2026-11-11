@@ -108,7 +108,7 @@ const ptBR = {
     "systems": [
       {
         "name": "SLZ Flow",
-        "text": "O sistema que a nossa equipe construiu e usa todos os dias para tocar a agência: demandas por setor, prazo, responsável e aprovação no mesmo lugar."
+        "text": "ERP feito para agência de marketing, construído pela nossa equipe e usado todos os dias: demandas por setor e por cliente, agenda, relatórios de desempenho, financeiro, assistente de IA econtratos no mesmo lugar."
       },
       {
         "name": "MARK",
