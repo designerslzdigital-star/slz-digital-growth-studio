@@ -382,3 +382,14 @@
   #fundador { border-top: 4px solid var(--lime); }
   #prova { background-color: var(--navy); }
 }
+
+/* Key phrases: emphasised only on phones; desktop reads as plain text */
+.kp { font-weight: inherit; color: inherit; }
+@media (max-width: 559px) {
+  .kp { font-weight: 700; color: var(--color-on-dark, currentColor); }
+  .bg-light .kp, .bg-background .kp { color: inherit; }
+  .step-more summary { list-style: none; }
+  .step-more summary::-webkit-details-marker { display: none; }
+  .step-more summary::after { content: "+"; margin-left: 6px; }
+  .step-more[open] summary::after { content: " −"; }
+}

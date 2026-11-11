@@ -41,15 +41,15 @@ const en: Dict = {
     "cards": [
       {
         "t": "They vanished halfway through.",
-        "d": "The project stopped halfway through, and the money was already gone."
+        "d": "The project stopped halfway through, and **the money was already gone**."
       },
       {
         "t": "They delivered and never answered again.",
-        "d": "The first problem appeared, and no one was on the other end."
+        "d": "The first problem appeared, and **no one was on the other end**."
       },
       {
         "t": "Only the vendor understood the system.",
-        "d": "Every change depended on the vendor, and switching became a bigger problem than the original one."
+        "d": "Every change depended on the vendor, and **switching became a bigger problem** than the original one."
       }
     ],
     "close": "We designed the way we work so none of this happens.",
@@ -66,37 +66,37 @@ const en: Dict = {
       {
         "tag": "CRM and AI customer service",
         "t": "AI handles the conversation. The CRM records it all.",
-        "d": "This is not a menu bot with “press 1”: AI talks, understands what the customer wants and responds. Every conversation becomes a record, with history, an owner and the sales stage. Stop losing business because a message stayed on someone’s phone.",
+        "d": "This is not a menu bot with “press 1”: **AI talks, understands what the customer wants and responds**. Every conversation becomes a record, with history, an owner and the sales stage. Stop losing business because a message stayed on someone’s phone.",
         "message": "Hi! I’d like to talk about CRM and AI customer service on WhatsApp."
       },
       {
         "tag": "Dashboards and metrics",
         "t": "Your numbers ready before you ask.",
-        "d": "Instead of someone building a report every Monday, the dashboard updates itself. Open it and decide.",
+        "d": "Instead of someone building a report every Monday, **the dashboard updates itself**. Open it and decide.",
         "message": "Hi! I’d like to talk about dashboards and metrics."
       },
       {
         "tag": "Process automation",
         "t": "Repetitive tasks leave your team’s hands.",
-        "d": "We automate what repeats. The hours spent on it go back to work that generates revenue.",
+        "d": "We automate what repeats. **The hours spent on it go back to work that generates revenue**.",
         "message": "Hi! I’d like to talk about automating processes."
       },
       {
         "tag": "ERP systems",
         "t": "One number everyone can trust.",
-        "d": "When each department keeps its own records, stock conflicts with finance. An ERP brings sales, inventory and finance into one database.",
+        "d": "When each department keeps its own records, stock conflicts with finance. An ERP brings sales, inventory and finance **into one database**.",
         "message": "Hi! I’d like to talk about an ERP."
       },
       {
         "tag": "System integration",
         "t": "Enter data once. See it where you need it.",
-        "d": "Stop entering the same sale in your system, spreadsheet and finance tools. We connect everything and end the duplicate work.",
+        "d": "Stop entering the same sale in your system, spreadsheet and finance tools. We connect everything and **end the duplicate work**.",
         "message": "Hi! I’d like to talk about integrating systems."
       },
       {
         "tag": "AI-built system rescue",
         "t": "Your AI-built system, reviewed by security specialists.",
-        "d": "Launched with flaws or stalled because nobody knows how to continue? We examine what exists, show the risks and deliver a correction plan in priority order.",
+        "d": "Launched with flaws or stalled because nobody knows how to continue? We examine what exists, show the risks and **deliver a correction plan in priority order**.",
         "message": "Hi! I’d like to talk about rescuing an AI-built system."
       }
     ]
@@ -123,6 +123,7 @@ const en: Dict = {
   "steps": {
     "title": "From requirements to delivery, you follow every step.",
     "sub": "Many people know what they want, but not how to turn it into software. Coding is only part of the job: before writing the first line, we understand your business and define what will be built.",
+    "detailsLabel": "See details",
     "deliveryLabel": "Deliverable",
     "items": [
       {
@@ -167,11 +168,11 @@ const en: Dict = {
       },
       {
         "t": "Support included in the price",
-        "d": "The project price includes 60 to 90 days of support, depending on the project. You do not pay extra to resolve issues that appear during that period."
+        "d": "The project price includes **60 to 90 days of support**, depending on the project. You do not pay extra to resolve issues that appear during that period."
       },
       {
         "t": "When the period ends, you choose",
-        "d": "You can keep your own team looking after the system or hire our monthly support. Both options remain open, and what each model includes is written in the contract."
+        "d": "You can keep your own team looking after the system or **hire our monthly support**. Both options remain open, and what each model includes is written in the contract."
       }
     ],
     "sub": "The end of development is not the end of the work."

@@ -41,15 +41,15 @@ const ptPT: Dict = {
     "cards": [
       {
         "t": "Desapareceram a meio do caminho.",
-        "d": "O projeto ficou a meio e o dinheiro já tinha sido pago."
+        "d": "O projeto ficou a meio e **o dinheiro já tinha sido pago**."
       },
       {
         "t": "Entregaram e nunca mais responderam.",
-        "d": "Surgiu o primeiro problema e não havia ninguém do outro lado."
+        "d": "Surgiu o primeiro problema e **não havia ninguém do outro lado**."
       },
       {
         "t": "Só o fornecedor percebia o sistema.",
-        "d": "Qualquer alteração dependia dele, e mudar de fornecedor tornou-se um problema maior do que o original."
+        "d": "Qualquer alteração dependia dele, e **mudar de fornecedor tornou-se um problema maior** do que o original."
       }
     ],
     "close": "Desenhámos a nossa forma de trabalhar para que nada disto aconteça.",
@@ -66,37 +66,37 @@ const ptPT: Dict = {
       {
         "tag": "CRM e atendimento com IA",
         "t": "A IA atende e o CRM regista tudo sozinho.",
-        "d": "Não é um bot de menu com “marque 1”: a IA conversa, percebe o que o cliente pretende e responde. Cada atendimento fica registado, com histórico, responsável e fase da venda. Deixa de perder negócios porque a mensagem ficou no telemóvel de alguém.",
+        "d": "Não é um bot de menu com “marque 1”: **a IA conversa, percebe o que o cliente pretende e responde**. Cada atendimento fica registado, com histórico, responsável e fase da venda. Deixa de perder negócios porque a mensagem ficou no telemóvel de alguém.",
         "message": "Olá! Gostaria de falar sobre CRM e atendimento com IA no WhatsApp."
       },
       {
         "tag": "Dashboards e métricas",
         "t": "Os seus números prontos antes de os pedir.",
-        "d": "Em vez de alguém preparar o relatório todas as segundas-feiras, o painel atualiza-se sozinho. Abre e decide.",
+        "d": "Em vez de alguém preparar o relatório todas as segundas-feiras, **o painel atualiza-se sozinho**. Abre e decide.",
         "message": "Olá! Gostaria de falar sobre dashboards e métricas."
       },
       {
         "tag": "Automação de processos",
         "t": "A tarefa repetitiva sai das mãos da sua equipa.",
-        "d": "Automatizamos o que se repete. As horas gastas nisso voltam para o que gera receita.",
+        "d": "Automatizamos o que se repete. **As horas gastas nisso voltam para o que gera receita**.",
         "message": "Olá! Gostaria de falar sobre automatizar processos."
       },
       {
         "tag": "Sistemas ERP",
         "t": "Um único número, em que todos confiam.",
-        "d": "Quando cada departamento controla à sua maneira, o stock não bate certo com as finanças. O ERP reúne vendas, stock e finanças na mesma base.",
+        "d": "Quando cada departamento controla à sua maneira, o stock não bate certo com as finanças. O ERP reúne vendas, stock e finanças **na mesma base**.",
         "message": "Olá! Gostaria de falar sobre um ERP."
       },
       {
         "tag": "Integração de sistemas",
         "t": "O dado entra uma vez e aparece onde é preciso.",
-        "d": "Chega de introduzir a mesma venda no sistema, na folha de cálculo e nas finanças. Ligamos tudo e acaba o trabalho duplicado.",
+        "d": "Chega de introduzir a mesma venda no sistema, na folha de cálculo e nas finanças. Ligamos tudo e **acaba o trabalho duplicado**.",
         "message": "Olá! Gostaria de falar sobre integrar sistemas."
       },
       {
         "tag": "Recuperação de sistemas feitos por IA",
         "t": "O seu sistema feito por IA, revisto por quem percebe de segurança.",
-        "d": "Foi publicado com falhas ou ficou a meio porque ninguém sabe como continuar? Analisamos o que existe, mostramos os riscos e entregamos um plano de correção por prioridade.",
+        "d": "Foi publicado com falhas ou ficou a meio porque ninguém sabe como continuar? Analisamos o que existe, mostramos os riscos e **entregamos um plano de correção por prioridade**.",
         "message": "Olá! Gostaria de falar sobre recuperar um sistema feito por IA."
       }
     ]
@@ -123,6 +123,7 @@ const ptPT: Dict = {
   "steps": {
     "title": "Do levantamento de requisitos à entrega, acompanha cada passo.",
     "sub": "Muitas pessoas sabem o que querem, mas não sabem como transformar isso em software. Por isso programar é apenas uma parte do trabalho: antes de escrever a primeira linha, percebemos o seu negócio e definimos o que será construído.",
+    "detailsLabel": "Ver detalhes",
     "deliveryLabel": "Entrega",
     "items": [
       {
@@ -167,11 +168,11 @@ const ptPT: Dict = {
       },
       {
         "t": "Suporte já incluído no valor",
-        "d": "O valor do projeto já inclui 60 a 90 dias de suporte, consoante o projeto. Não paga mais para resolver o que surgir nesse período."
+        "d": "O valor do projeto já inclui **60 a 90 dias de suporte**, consoante o projeto. Não paga mais para resolver o que surgir nesse período."
       },
       {
         "t": "Quando o período termina, a escolha é sua",
-        "d": "Pode continuar com a sua própria equipa a cuidar do sistema ou contratar o nosso suporte mensal. Ambas as opções ficam disponíveis, e o que cada modelo inclui fica escrito no contrato."
+        "d": "Pode continuar com a sua própria equipa a cuidar do sistema ou **contratar o nosso suporte mensal**. Ambas as opções ficam disponíveis, e o que cada modelo inclui fica escrito no contrato."
       }
     ],
     "sub": "O fim do desenvolvimento não é o fim do trabalho."

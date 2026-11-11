@@ -39,15 +39,15 @@ const ptBR = {
     "cards": [
       {
         "t": "Sumiram no meio do caminho.",
-        "d": "O prazo passou, as respostas foram sumindo e o projeto parou pela metade — com a entrada já paga."
+        "d": "O prazo passou, as respostas foram sumindo e o projeto parou pela metade — **com a entrada já paga**."
       },
       {
         "t": "Entregaram e nunca mais responderam.",
-        "d": "Deu o primeiro problema e não havia ninguém do outro lado."
+        "d": "Deu o primeiro problema e **não havia ninguém do outro lado**."
       },
       {
         "t": "Só o fornecedor entendia o sistema.",
-        "d": "Qualquer mudança dependia dele, e trocar de fornecedor virou um problema maior que o original."
+        "d": "Qualquer mudança dependia dele, e **trocar de fornecedor virou um problema maior** que o original."
       }
     ],
     "close": "A gente desenhou o nosso jeito de trabalhar para que nada disso aconteça.",
@@ -64,37 +64,37 @@ const ptBR = {
       {
         "tag": "CRM e atendimento com IA",
         "t": "A IA atende e o CRM registra tudo sozinho.",
-        "d": "Não é bot de menu com \"digite 1\": a IA conversa, entende o que o cliente quer e responde.  \nCada atendimento já vira registro, com histórico, responsável e o estágio da venda. Você para de perder negócio porque a mensagem ficou no celular de alguém.",
+        "d": "Não é bot de menu com \"digite 1\": **a IA conversa, entende o que o cliente quer e responde**.  \nCada atendimento já vira registro, com histórico, responsável e o estágio da venda. Você para de perder negócio porque a mensagem ficou no celular de alguém.",
         "message": "Olá! Quero conversar sobre CRM e atendimento com IA no WhatsApp."
       },
       {
         "tag": "Dashboard e métricas",
         "t": "Seus números prontos antes de você pedir.",
-        "d": "Em vez de alguém montar o relatório toda segunda, o painel se atualiza sozinho. Você abre e decide.",
+        "d": "Em vez de alguém montar o relatório toda segunda, **o painel se atualiza sozinho**. Você abre e decide.",
         "message": "Olá! Quero conversar sobre dashboard e métricas."
       },
       {
         "tag": "Automação de processos",
         "t": "A tarefa repetitiva sai da mão da sua equipe.",
-        "d": "O que é repetição a gente automatiza. As horas gastas nisso voltam para o que traz dinheiro.",
+        "d": "O que é repetição a gente automatiza. **As horas gastas nisso voltam para o que traz dinheiro**.",
         "message": "Olá! Quero conversar sobre automatizar processos."
       },
       {
         "tag": "Sistemas ERP",
         "t": "Um número só, em que todo mundo confia.",
-        "d": "Quando cada setor controla do seu jeito, o estoque briga com o financeiro.\nO ERP coloca vendas, estoque e financeiro na mesma base.",
+        "d": "Quando cada setor controla do seu jeito, o estoque briga com o financeiro.\nO ERP coloca vendas, estoque e financeiro **na mesma base**.",
         "message": "Olá! Quero conversar sobre um ERP."
       },
       {
         "tag": "Integração de sistemas",
         "t": "O dado entra uma vez e aparece onde precisa.",
-        "d": "Chega de digitar a mesma venda no sistema, na planilha e no financeiro. A gente liga tudo e o retrabalho acaba.",
+        "d": "Chega de digitar a mesma venda no sistema, na planilha e no financeiro. A gente liga tudo e **o retrabalho acaba**.",
         "message": "Olá! Quero conversar sobre integrar sistemas."
       },
       {
         "tag": "Resgate de sistemas feitos por IA",
         "t": "O seu sistema feito por IA, revisado por quem entende de segurança.",
-        "d": "Subiu com falha ou travou no meio porque ninguém sabe seguir? A gente abre o que existe, mostra onde está o risco e entrega o caminho de correção, por prioridade.",
+        "d": "Subiu com falha ou travou no meio porque ninguém sabe seguir? A gente abre o que existe, mostra onde está o risco e **entrega o caminho de correção, por prioridade**.",
         "message": "Olá! Quero conversar sobre resgatar um sistema feito por IA."
       }
     ]
@@ -121,6 +121,7 @@ const ptBR = {
   "steps": {
     "title": "Do levantamento de requisitos à entrega, você acompanha cada passo.",
     "sub": "Muita gente sabe o que quer, mas não sabe como transformar isso em software. Por isso programar é só uma parte do trabalho: antes de escrever a primeira linha, a gente entende o seu negócio e define o que será construído.",
+    "detailsLabel": "Ver detalhes",
     "deliveryLabel": "Entrega",
     "items": [
       {
@@ -165,11 +166,11 @@ const ptBR = {
       },
       {
         "t": "Suporte já incluso no valor",
-        "d": "O valor do projeto já inclui de 60 a 90 dias de suporte, conforme o projeto. Você não paga a mais para resolver o que aparecer nesse período."
+        "d": "O valor do projeto já inclui **de 60 a 90 dias de suporte**, conforme o projeto. Você não paga a mais para resolver o que aparecer nesse período."
       },
       {
         "t": "Quando o período acaba, a escolha é sua",
-        "d": "Você pode seguir com a sua própria equipe cuidando do sistema ou contratar o nosso suporte mensal. As duas portas ficam abertas, e o que entra em cada modelo fica escrito no contrato."
+        "d": "Você pode seguir com a sua própria equipe cuidando do sistema ou **contratar o nosso suporte mensal**. As duas portas ficam abertas, e o que entra em cada modelo fica escrito no contrato."
       }
     ],
     "sub": "O fim do desenvolvimento não é o fim do trabalho."

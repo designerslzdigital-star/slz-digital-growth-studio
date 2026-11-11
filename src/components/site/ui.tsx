@@ -60,3 +60,9 @@ export function Check({ className }: { className?: string }) {
     </svg>
   );
 }
+
+/** Renders **key phrases** as <strong class="kp">; bold only on phones via CSS. */
+export function Rich({ text }: { text: string }) {
+  const parts = text.split(/\*\*(.+?)\*\*/g);
+  return <>{parts.map((p, i) => (i % 2 ? <strong key={i} className="kp">{p}</strong> : p))}</>;
+}

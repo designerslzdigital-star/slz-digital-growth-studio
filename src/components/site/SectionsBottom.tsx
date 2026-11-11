@@ -4,7 +4,7 @@ import { FileText, Mail, MapPin, Phone, Plus, ShieldCheck } from "lucide-react";
 import { useDict, type LangSlug } from "@/i18n";
 import { CONTACT, REFS, SOURCE_URLS } from "@/config/site";
 import { Button } from "@/components/ui/button";
-import { Check, Eyebrow, ReviewNote, WaButton, WaIcon } from "./ui";
+import { Check, Eyebrow, ReviewNote, WaButton, WaIcon , Rich } from "./ui";
 import { WorldMap } from "./WorldMap";
 import { Logo } from "./Header";
 import { whatsappUrl } from "@/config/site";
@@ -75,7 +75,7 @@ export function Steps({ slug }: P) {
                 <div className={`min-w-0 pt-1 transition-opacity duration-500 ${on ? "opacity-100" : "opacity-50"}`}>
                   <Eyebrow className="text-blue-ink">{s.eyebrow}</Eyebrow>
                   <h3 className="mt-2 text-2xl font-semibold text-ink">{s.t}</h3>
-                  <p className="mt-2 text-ink-soft">{s.d}</p>
+                  <p className="mt-2 hidden text-ink-soft sm:block">{s.d}</p>
                   {i === 0 && (
                     <p className="mt-4 inline-block -rotate-1 rounded-md bg-light px-4 py-3 font-mono text-sm text-ink shadow-md">
                       “{d.steps.postit}”
@@ -85,6 +85,10 @@ export function Steps({ slug }: P) {
                     <Check className="h-4 w-4" />
                     <span><strong>{d.steps.deliveryLabel}:</strong> {s.e}</span>
                   </p>
+                  <details className="step-more mt-2 sm:hidden">
+                    <summary className="inline-flex min-h-11 cursor-pointer items-center text-sm font-semibold text-blue-ink">{d.steps.detailsLabel}</summary>
+                    <p className="mt-1 text-ink-soft">{s.d}</p>
+                  </details>
                 </div>
               </li>
             );
@@ -115,7 +119,7 @@ export function After({ slug }: P) {
               <div className="h-full rounded-[26px] bg-card-ink p-6 sm:rounded-[36px]">
                 <span className="block text-center font-mono text-sm text-lime">0{i + 1}</span>
                 <h3 className="mt-3 text-center font-subtitle text-2xl font-normal text-on-dark">{it.t}</h3>
-                <p className="mt-4 text-on-dark-mute">{it.d}</p>
+                <p className="mt-4 text-on-dark-mute"><Rich text={it.d} /></p>
               </div>
             </article>
           ))}

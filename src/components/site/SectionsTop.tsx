@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { ChevronDown, Play, ShieldCheck, UserRound } from "lucide-react";
 import { useDict, type LangSlug } from "@/i18n";
 import { FOUNDER_PHOTO_URL, REFS, SHOW_TEAM, SHOW_TESTIMONIAL, SYSTEMS_VIDEO_ID } from "@/config/site";
-import { Eyebrow, ReviewNote, WaButton } from "./ui";
+import { Eyebrow, ReviewNote, WaButton , Rich } from "./ui";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -48,7 +48,7 @@ export function Pain({ slug }: P) {
             <article key={c.t} className="rounded-[36px] sm:rounded-[44px] sm:border-[3px] sm:border-dotted sm:border-ink-soft/60 sm:p-3">
               <div className="h-full rounded-[36px] bg-card-ink p-6">
                 <h3 className="text-center font-subtitle text-2xl font-normal text-on-dark">{c.t}</h3>
-                <p className="mt-4 whitespace-pre-line text-on-dark-mute">{c.d}</p>
+                <p className="mt-4 whitespace-pre-line text-on-dark-mute"><Rich text={c.d} /></p>
               </div>
             </article>
           ))}
@@ -68,7 +68,7 @@ export function Solutions({ slug }: P) {
     <p className="mt-6 font-mono text-sm text-ink-soft">{d.solutions.who}</p><ReviewNote>{d.review.publicSector}</ReviewNote>
     <div className="solution-grid mt-8">{d.solutions.items.map((it,i) => <article key={it.tag} className={`solution-card card-dark ${i < 3 ? 'solution-third' : i < 5 ? 'solution-half' : 'solution-wide'}`}>
       <div className="flex flex-wrap items-center gap-3"><span className="solution-number">{String(i+1).padStart(2,'0')}</span><span className="solution-tag">{it.tag}</span></div>
-      <h3 className="solution-title mt-6 text-on-dark">{it.t}</h3><p className="mt-4 whitespace-pre-line text-on-dark-soft">{it.d}</p>
+      <h3 className="solution-title mt-6 text-on-dark">{it.t}</h3><p className="mt-4 whitespace-pre-line text-on-dark-soft"><Rich text={it.d} /></p>
       {i === 3 && <ReviewNote>{d.review.erp}</ReviewNote>}{i === 5 && <ReviewNote>{d.review.rescue}</ReviewNote>}
     </article>)}</div>
     <div className="mt-8 flex justify-center"><WaButton message={d.wa.message} refCode={REFS.solucoes}>{d.wa.cta}</WaButton></div>
