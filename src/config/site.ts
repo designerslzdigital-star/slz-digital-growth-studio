@@ -1,7 +1,8 @@
 import founderPhoto from "@/assets/diego-founder.jpg.asset.json";
 // Single source for contact config and WhatsApp origin codes.
 // [PLACEHOLDER] Replace with the real number: country code + digits only, e.g. 5598XXXXXXXXX.
-export const WHATSAPP_NUMBER = "5500000000000";
+export const WHATSAPP_NUMBER = "5511941113933";
+export const WHATSAPP_LINK = "https://api.whatsapp.com/send/?phone=5511941113933&text=Ol%C3%A1%2C+vim+pelo+site+da+SLZ+Digital+Softwares+e+desejo+mais+informa%C3%A7%C3%B5es.&type=phone_number&app_absent=0";
 
 export const REFS = {
   header: "header",
@@ -35,9 +36,9 @@ export const SECTION_ORDER = ["hero", "numeros", "dor", "solucoes", "servicos", 
 export const NAV_ANCHORS = ["solucoes", "servicos", "fundador", "requisitos", "pos-entrega", "seguranca", "global", "faq"] as const;
 export const HEADER_BREAKPOINTS = { languageName: 1400, whatsapp: 1220, desktopMenu: 1060 } as const;
 
-export function whatsappUrl(message: string, ref: string) {
-  const text = `${message} [ref: ${ref}]`;
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+// Every WhatsApp button uses the single approved link (fixed message).
+export function whatsappUrl(_message?: string, _ref?: string) {
+  return WHATSAPP_LINK;
 }
 
 // Contact details shown in the footer. Replace placeholders with real data before publishing.
