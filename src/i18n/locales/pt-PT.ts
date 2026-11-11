@@ -381,6 +381,8 @@ const ptPT: Dict = {
     "market": "no mercado",
     "abroad": "de experiência no estrangeiro",
     "text": "Diego é licenciado em Gestão de Empresas, empresário e especialista em marketing e vendas. Viveu cinco anos no estrangeiro, onde adquiriu experiência internacional e trabalhou em empresas multinacionais. Há nove anos à frente da SLZ Digital, lidera uma equipa que trabalha com pequenas, médias e grandes empresas.",
+    "readMore": "Ler biografia completa",
+    "readLess": "Fechar biografia",
     "cta": "Falar com o Diego no WhatsApp",
     "message": "Olá! Cheguei através do site e gostaria de falar com o Diego sobre um projeto.",
     "photoAlt": "Fotografia do Diego",

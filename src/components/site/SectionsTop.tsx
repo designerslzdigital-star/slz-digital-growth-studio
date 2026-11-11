@@ -1,9 +1,10 @@
-import { useState } from "react";
-import { Play, ShieldCheck, UserRound } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { ChevronDown, Play, ShieldCheck, UserRound } from "lucide-react";
 import { useDict, type LangSlug } from "@/i18n";
 import { FOUNDER_PHOTO_URL, REFS, SHOW_TEAM, SHOW_TESTIMONIAL, SYSTEMS_VIDEO_ID } from "@/config/site";
 import { Eyebrow, ReviewNote, WaButton } from "./ui";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 type P = { slug: LangSlug };
 
@@ -99,10 +100,24 @@ export function Proof({ slug }: P) {
 
 export function Founder({ slug }: P) {
   const { d } = useDict(slug);
+  const [open, setOpen] = useState(false);
+  const [clamped, setClamped] = useState(false);
+  const bioRef = useRef<HTMLParagraphElement>(null);
+  useEffect(() => {
+    if (open) return;
+    const el = bioRef.current;
+    if (!el) return;
+    const check = () => setClamped(el.scrollHeight - el.clientHeight > 32);
+    check();
+    const ro = new ResizeObserver(check);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [open, d.founder.text]);
   return <section id="fundador" className="bg-navy-deep px-5 py-10 text-on-dark"><div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-[0.8fr_1.2fr]">
     <div className="founder-photo">{FOUNDER_PHOTO_URL ? <img src={FOUNDER_PHOTO_URL} alt={d.founder.photoAlt} loading="lazy" /> : <div className="flex h-full flex-col items-center justify-center p-8 text-center"><UserRound className="h-16 w-16 text-on-dark-mute" aria-hidden="true" /><ReviewNote>{d.review.photo}</ReviewNote></div>}</div>
     <div><Eyebrow className="text-on-dark-mute">{d.founder.label}</Eyebrow><h2 className="mt-4 text-3xl font-semibold md:text-[42px]">{d.founder.title} <span className="text-lime">{d.founder.mark}</span></h2>
     <div className="mt-7 grid grid-cols-2 gap-4">{d.founder.years.map((year,i) => <div key={year} className="py-4 sm:px-5"><strong className="font-result text-3xl text-lime">{year}</strong><p className="mt-1 text-sm text-on-dark-soft">{i === 0 ? d.founder.market : d.founder.abroad}</p></div>)}</div>
-    <p className="mt-7 whitespace-pre-line text-on-dark-soft">{d.founder.text}</p><ReviewNote>{d.review.founder}</ReviewNote></div>
+    <p id="founder-bio" ref={bioRef} className={cn("founder-bio mt-7 whitespace-pre-line text-on-dark-soft", open && "is-open")}>{d.founder.text}</p>
+    {clamped && <button type="button" onClick={() => setOpen((v) => !v)} aria-expanded={open} aria-controls="founder-bio" className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-full border border-on-dark/25 px-5 text-sm font-semibold text-on-dark transition-colors hover:border-lime hover:text-lime focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime">{open ? d.founder.readLess : d.founder.readMore}<ChevronDown className={cn("h-4 w-4 transition-transform", open && "rotate-180")} aria-hidden="true" /></button>}<ReviewNote>{d.review.founder}</ReviewNote></div>
   </div></section>;
 }

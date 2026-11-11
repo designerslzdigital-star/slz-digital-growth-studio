@@ -365,3 +365,13 @@
   /* FAQ items compact and easy to tap */
   #faq summary { min-height: 44px; padding-top: 12px; padding-bottom: 12px; font-size: 16px; }
 }
+
+/* Founder bio: collapsed on phones/tablets, opened by "read full biography" */
+@media (max-width: 767px) {
+  .founder-bio:not(.is-open) {
+    max-height: 13em;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to bottom, #000 62%, transparent);
+    mask-image: linear-gradient(to bottom, #000 62%, transparent);
+  }
+}

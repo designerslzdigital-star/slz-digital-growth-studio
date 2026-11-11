@@ -381,6 +381,8 @@ const en: Dict = {
     "market": "in the market",
     "abroad": "of experience abroad",
     "text": "Diego is a business administrator, entrepreneur and marketing and sales specialist. He lived abroad for five years, gaining international experience and working at multinational companies. After nine years leading SLZ Digital, he heads a team serving small, medium and large businesses.",
+    "readMore": "Read the full biography",
+    "readLess": "Hide biography",
     "cta": "Talk to Diego on WhatsApp",
     "message": "Hi! I found your website and would like to talk to Diego about a project.",
     "photoAlt": "Photo of Diego",

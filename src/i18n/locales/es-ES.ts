@@ -381,6 +381,8 @@ const esES: Dict = {
     "market": "en el mercado",
     "abroad": "de experiencia en el extranjero",
     "text": "Diego es administrador de empresas, empresario y especialista en marketing y ventas. Vivió cinco años en el extranjero, donde adquirió experiencia internacional y trabajó en empresas multinacionales. Lleva nueve años al frente de SLZ Digital y lidera un equipo que atiende a pequeñas, medianas y grandes empresas.",
+    "readMore": "Leer la biografía completa",
+    "readLess": "Ocultar biografía",
     "cta": "Hablar con Diego por WhatsApp",
     "message": "¡Hola! Vengo desde la web y quisiera hablar con Diego sobre un proyecto.",
     "photoAlt": "Foto de Diego",
