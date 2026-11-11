@@ -42,6 +42,6 @@ export function whatsappUrl(message: string, ref: string) {
 
 // Contact details shown in the footer. Replace placeholders with real data before publishing.
 export const CONTACT = {
-  email: "[E-MAIL DE CONTATO]",
-  phones: ["[TELEFONE 1]", "[TELEFONE 2]"],
+  email: "INFO@SLZDIGITAL.COM.BR",
+  phones: ["11 94111-3933", "98 98299-0007"],
 };
