@@ -341,3 +341,21 @@
   #global .mt-8 { margin-top: 24px; }
   #global .map-legend { margin-top: 20px; }
 }
+
+/* Mobile package: one clear title per screen, swipeable solutions, compact services and steps. */
+@media (max-width: 559px) {
+  main > section h2 { font-size: 30px; }
+  #dor .grid h3, #pos-entrega .grid h3 { font-size: 19px; }
+  #requisitos ol h3 { font-size: 19px; margin-top: 4px; }
+  #requisitos ol > li > div:last-child > p.-rotate-1 { display: none; }
+  #solucoes .solution-title { font-size: 19px; }
+
+  #solucoes .solution-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 12px; margin-inline: -20px; padding: 0 20px 12px; scrollbar-width: none; }
+  #solucoes .solution-grid::-webkit-scrollbar { display: none; }
+  #solucoes .solution-card { flex: 0 0 84%; scroll-snap-align: center; }
+
+  #servicos .service-grid ul { display: flex; flex-wrap: wrap; gap: 6px; }
+  #servicos .service-grid ul > li { margin: 0; padding: 5px 10px; border: 1px solid color-mix(in srgb, var(--on-dark) 18%, transparent); border-radius: 999px; font-size: 13px; line-height: 1.3; }
+  #servicos .service-grid ul > li > span { display: none; }
+  #servicos .service-grid { gap: 16px; }
+}
