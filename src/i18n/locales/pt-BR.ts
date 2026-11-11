@@ -177,33 +177,7 @@ const ptBR = {
   "security": {
     "title": "Segurança em cada etapa, da ideia ao ar",
     "intro": "Hoje é fácil colocar um sistema no ar rápido. O que nem sempre vem junto é alguém olhando a segurança: sem isso, derrubar o sistema ou chegar nos dados dos seus clientes é mais simples do que parece. É para isso que existe a nossa equipe de cibersegurança.",
-    "year": "1994",
-    "yearText": "Nossa equipe trabalha com cibersegurança desde",
-    "practice": "[prática real da equipe]",
-    "stages": [
-      {
-        "t": "Planejamento",
-        "q": "Quais dados entram no sistema e quem pode ver cada um?"
-      },
-      {
-        "t": "Código",
-        "q": "Uma pessoa revisou o que foi escrito?"
-      },
-      {
-        "t": "Acessos e dados",
-        "q": "Cada usuário enxerga só o que é dele?"
-      },
-      {
-        "t": "Publicação",
-        "q": "Chaves e senhas estão fora do código?"
-      },
-      {
-        "t": "Monitoramento",
-        "q": "Alguém percebe o problema antes do cliente?"
-      }
-    ],
-    "lgpd": "Privacidade pensada para a LGPD desde o desenho do produto.",
-    "stageLabel": "O que a gente pergunta em cada etapa"
+    "lgpd": "Quem cuida da segurança na SLZ trabalha com cibersegurança desde 1994, e a privacidade é pensada para a LGPD desde o desenho do produto."
   },
   "global": {
     "title": "Atendemos empresas em qualquer lugar do mundo.",
@@ -261,6 +235,11 @@ const ptBR = {
       {
         "q": "Meu sistema é pequeno. Alguém vai mesmo tentar atacar?",
         "a": "Ataques automáticos varrem a internet atrás de portas abertas, sem escolher o alvo. O tamanho da empresa não protege. Em 42 empresas brasileiras que sofreram vazamento, o custo médio foi de R$ 7,44 milhões.",
+        "draft": false
+      },
+      {
+        "q": "O teste garante que meu sistema fica seguro?",
+        "a": "O teste mostra a situação da plataforma no momento em que foi feito, com o ambiente, o método e o tempo combinados. Nenhum teste garante que não existe outra falha. Por isso a gente recomenda repetir depois de mudanças importantes no sistema.",
         "draft": false
       }
     ]
@@ -412,7 +391,6 @@ const ptBR = {
     "title": "Descubra as falhas da sua plataforma antes de quem não devia.",
     "sub": "Você só descobre a falha quando o sistema cai ou os dados vazam. A gente procura as falhas de segurança antes que alguém as explore e entrega o que achou com a prioridade de correção.",
     "how": "Como funciona",
-    "limitsTitle": "O que o teste mostra, e o que não mostra",
     "limits": "O teste mostra a situação da plataforma no momento em que foi feito, com o ambiente, o método e o tempo combinados. Nenhum teste garante que não existe outra falha. Por isso a gente recomenda repetir depois de mudanças importantes no sistema.",
     "golden": "Regra de ouro",
     "authorization": "Só testamos plataformas com autorização por escrito do titular.",
@@ -420,10 +398,6 @@ const ptBR = {
     "message": "Olá! Quero conversar sobre um teste de segurança da minha plataforma.",
     "stat": "Em 42 empresas brasileiras que sofreram vazamento, o custo médio foi de R$ 7,44 milhões².",
     "steps": [
-      {
-        "t": "Conversa e autorização por escrito",
-        "d": "Combinamos o que será testado, quando e como. Sem autorização do titular, a gente não testa."
-      },
       {
         "t": "Teste",
         "d": "Procuramos as falhas de segurança da plataforma dentro do escopo combinado."

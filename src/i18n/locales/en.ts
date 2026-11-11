@@ -179,33 +179,7 @@ const en: Dict = {
   "security": {
     "title": "Security at every stage, from idea to launch",
     "intro": "Today it's easy to get a system live quickly. What doesn't always come with it is someone looking after security: without that, taking the system down or reaching your customers' data is simpler than it seems. That's why we have a cybersecurity team.",
-    "year": "1994",
-    "yearText": "Our team has worked in cybersecurity since",
-    "practice": "[team's actual practice]",
-    "stages": [
-      {
-        "t": "Planning",
-        "q": "What data enters the system, and who can see each piece?"
-      },
-      {
-        "t": "Code",
-        "q": "Has a person reviewed what was written?"
-      },
-      {
-        "t": "Access & data",
-        "q": "Does each user see only what belongs to them?"
-      },
-      {
-        "t": "Release",
-        "q": "Are keys and passwords kept outside the code?"
-      },
-      {
-        "t": "Monitoring",
-        "q": "Does someone notice the problem before the customer?"
-      }
-    ],
-    "lgpd": "Privacy designed with LGPD and GDPR in mind from the start.",
-    "stageLabel": "What we ask at every stage"
+    "lgpd": "The people looking after security at SLZ have worked in cybersecurity since 1994, and privacy is designed with LGPD and GDPR in mind from the start."
   },
   "global": {
     "title": "We work with companies anywhere in the world.",
@@ -263,6 +237,11 @@ const en: Dict = {
       {
         "q": "My system is small. Will someone really try to attack it?",
         "a": "Automated attacks scan the internet for open doors without choosing a target. Company size does not protect you. Among 42 Brazilian companies that suffered a breach, the average cost was R$ 7.44 million.",
+        "draft": false
+      },
+      {
+        "q": "Does the test guarantee my system is secure?",
+        "a": "The test shows the platform’s condition when it was performed, within the agreed environment, method and time. No test guarantees there is no other flaw. We recommend repeating it after important changes to the system.",
         "draft": false
       }
     ]
@@ -415,7 +394,6 @@ const en: Dict = {
     "title": "Find your platform’s flaws before the wrong people do.",
     "sub": "You only discover the flaw when the system fails or data leaks. We look for security flaws before someone exploits them and deliver our findings with correction priorities.",
     "how": "How it works",
-    "limitsTitle": "What the test shows — and what it does not",
     "limits": "The test shows the platform’s condition when it was performed, within the agreed environment, method and time. No test guarantees there is no other flaw. We recommend repeating it after important changes to the system.",
     "golden": "Golden rule",
     "authorization": "We only test platforms with the owner’s written authorization.",
@@ -423,10 +401,6 @@ const en: Dict = {
     "message": "Hi! I’d like to talk about a security test for my platform.",
     "stat": "Among 42 Brazilian companies that suffered a breach, the average cost was R$ 7.44 million².",
     "steps": [
-      {
-        "t": "Conversation and written authorization",
-        "d": "We agree on what will be tested, when and how. Without the owner’s authorization, we do not test."
-      },
       {
         "t": "Test",
         "d": "We look for platform security flaws within the agreed scope."

@@ -179,33 +179,7 @@ const esES: Dict = {
   "security": {
     "title": "Seguridad en cada etapa, de la idea al lanzamiento",
     "intro": "Hoy es fácil publicar un sistema rápido. Lo que no siempre viene incluido es alguien vigilando la seguridad: sin eso, tumbar el sistema o llegar a los datos de tus clientes es más sencillo de lo que parece. Para eso existe nuestro equipo de ciberseguridad.",
-    "year": "1994",
-    "yearText": "Nuestro equipo trabaja en ciberseguridad desde",
-    "practice": "[práctica real del equipo]",
-    "stages": [
-      {
-        "t": "Planificación",
-        "q": "¿Qué datos entran en el sistema y quién puede ver cada uno?"
-      },
-      {
-        "t": "Código",
-        "q": "¿Una persona revisó lo que se escribió?"
-      },
-      {
-        "t": "Accesos y datos",
-        "q": "¿Cada usuario ve solo lo suyo?"
-      },
-      {
-        "t": "Publicación",
-        "q": "¿Las claves y contraseñas están fuera del código?"
-      },
-      {
-        "t": "Monitorización",
-        "q": "¿Alguien detecta el problema antes que el cliente?"
-      }
-    ],
-    "lgpd": "Privacidad pensada para el RGPD y la LGPD desde el diseño del producto.",
-    "stageLabel": "Lo que preguntamos en cada etapa"
+    "lgpd": "Quien cuida de la seguridad en SLZ trabaja en ciberseguridad desde 1994, y la privacidad está pensada para el RGPD y la LGPD desde el diseño del producto."
   },
   "global": {
     "title": "Atendemos a empresas en cualquier lugar del mundo.",
@@ -263,6 +237,11 @@ const esES: Dict = {
       {
         "q": "Mi sistema es pequeño. ¿Alguien intentará atacarlo?",
         "a": "Los ataques automáticos recorren internet buscando puertas abiertas, sin elegir el objetivo. El tamaño de la empresa no protege. En 42 empresas brasileñas que sufrieron una filtración, el coste medio fue de R$ 7,44 millones.",
+        "draft": false
+      },
+      {
+        "q": "¿La prueba garantiza que mi sistema queda seguro?",
+        "a": "La prueba muestra la situación de la plataforma cuando se realizó, con el entorno, método y tiempo acordados. Ninguna prueba garantiza que no exista otro fallo. Recomendamos repetirla tras cambios importantes en el sistema.",
         "draft": false
       }
     ]
@@ -415,7 +394,6 @@ const esES: Dict = {
     "title": "Descubre los fallos de tu plataforma antes que quien no debería.",
     "sub": "Solo descubres el fallo cuando el sistema cae o los datos se filtran. Buscamos fallos de seguridad antes de que alguien los explote y entregamos los resultados con prioridades de corrección.",
     "how": "Cómo funciona",
-    "limitsTitle": "Lo que la prueba muestra y lo que no",
     "limits": "La prueba muestra la situación de la plataforma cuando se realizó, con el entorno, método y tiempo acordados. Ninguna prueba garantiza que no exista otro fallo. Recomendamos repetirla tras cambios importantes en el sistema.",
     "golden": "Regla de oro",
     "authorization": "Solo probamos plataformas con autorización escrita del titular.",
@@ -423,10 +401,6 @@ const esES: Dict = {
     "message": "¡Hola! Quiero hablar sobre una prueba de seguridad de mi plataforma.",
     "stat": "En 42 empresas brasileñas que sufrieron una filtración, el coste medio fue de R$ 7,44 millones².",
     "steps": [
-      {
-        "t": "Conversación y autorización escrita",
-        "d": "Acordamos qué se probará, cuándo y cómo. Sin autorización del titular, no probamos."
-      },
       {
         "t": "Prueba",
         "d": "Buscamos fallos de seguridad de la plataforma dentro del alcance acordado."

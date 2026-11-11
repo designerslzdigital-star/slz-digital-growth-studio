@@ -179,33 +179,7 @@ const ptPT: Dict = {
   "security": {
     "title": "Segurança em cada fase, da ideia à publicação",
     "intro": "Hoje é fácil publicar um sistema depressa. O que nem sempre vem junto é alguém a olhar pela segurança: sem isso, deitar o sistema abaixo ou chegar aos dados dos seus clientes é mais simples do que parece. É para isso que existe a nossa equipa de cibersegurança.",
-    "year": "1994",
-    "yearText": "A nossa equipa trabalha em cibersegurança desde",
-    "practice": "[prática real da equipa]",
-    "stages": [
-      {
-        "t": "Planeamento",
-        "q": "Que dados entram no sistema e quem pode ver cada um?"
-      },
-      {
-        "t": "Código",
-        "q": "Uma pessoa reviu o que foi escrito?"
-      },
-      {
-        "t": "Acessos e dados",
-        "q": "Cada utilizador vê apenas o que é seu?"
-      },
-      {
-        "t": "Publicação",
-        "q": "As chaves e palavras-passe estão fora do código?"
-      },
-      {
-        "t": "Monitorização",
-        "q": "Alguém deteta o problema antes do cliente?"
-      }
-    ],
-    "lgpd": "Privacidade pensada para a LGPD e o RGPD desde o desenho do produto.",
-    "stageLabel": "O que perguntamos em cada fase"
+    "lgpd": "Quem cuida da segurança na SLZ trabalha em cibersegurança desde 1994, e a privacidade é pensada para a LGPD e o RGPD desde o desenho do produto."
   },
   "global": {
     "title": "Trabalhamos com empresas em qualquer parte do mundo.",
@@ -263,6 +237,11 @@ const ptPT: Dict = {
       {
         "q": "O meu sistema é pequeno. Alguém vai mesmo tentar atacá-lo?",
         "a": "Os ataques automáticos percorrem a internet à procura de portas abertas, sem escolher o alvo. A dimensão da empresa não protege. Em 42 empresas brasileiras que sofreram uma fuga de dados, o custo médio foi de R$ 7,44 milhões.",
+        "draft": false
+      },
+      {
+        "q": "O teste garante que o meu sistema fica seguro?",
+        "a": "O teste mostra a situação da plataforma no momento em que foi realizado, com o ambiente, método e tempo acordados. Nenhum teste garante que não existe outra falha. Recomendamos repeti-lo após alterações importantes no sistema.",
         "draft": false
       }
     ]
@@ -415,7 +394,6 @@ const ptPT: Dict = {
     "title": "Descubra as falhas da sua plataforma antes de quem não devia.",
     "sub": "Só descobre a falha quando o sistema cai ou os dados são expostos. Procuramos falhas de segurança antes de alguém as explorar e entregamos os resultados com prioridades de correção.",
     "how": "Como funciona",
-    "limitsTitle": "O que o teste mostra, e o que não mostra",
     "limits": "O teste mostra a situação da plataforma no momento em que foi realizado, com o ambiente, método e tempo acordados. Nenhum teste garante que não existe outra falha. Recomendamos repeti-lo após alterações importantes no sistema.",
     "golden": "Regra de ouro",
     "authorization": "Só testamos plataformas com autorização por escrito do titular.",
@@ -423,10 +401,6 @@ const ptPT: Dict = {
     "message": "Olá! Gostaria de falar sobre um teste de segurança da minha plataforma.",
     "stat": "Em 42 empresas brasileiras que sofreram uma fuga de dados, o custo médio foi de R$ 7,44 milhões².",
     "steps": [
-      {
-        "t": "Conversa e autorização por escrito",
-        "d": "Acordamos o que será testado, quando e como. Sem autorização do titular, não testamos."
-      },
       {
         "t": "Teste",
         "d": "Procuramos falhas de segurança da plataforma dentro do âmbito acordado."
