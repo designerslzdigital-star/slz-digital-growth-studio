@@ -216,7 +216,7 @@ const ptPT: Dict = {
     "legendIe": "Irlanda",
     "legendUy": "Uruguai"
   },
-  "faq": {
+  "faq": { "more": "Ver todas as perguntas", "less": "Ver menos",
     "title": "Perguntas frequentes",
     "draft": "Rascunho, rever",
     "items": [
@@ -395,7 +395,7 @@ const ptPT: Dict = {
       }
     ]
   },
-  "founder": {
+  "founder": { "more": "Ler biografia completa", "less": "Ler menos",
     "label": "Quem é o fundador",
     "title": "Marketing e tecnologia conduzidos com",
     "mark": "experiência internacional",

@@ -216,7 +216,7 @@ const esES: Dict = {
     "legendIe": "Irlanda",
     "legendUy": "Uruguay"
   },
-  "faq": {
+  "faq": { "more": "Ver todas las preguntas", "less": "Ver menos",
     "title": "Preguntas frecuentes",
     "draft": "Borrador, revisar",
     "items": [
@@ -395,7 +395,7 @@ const esES: Dict = {
       }
     ]
   },
-  "founder": {
+  "founder": { "more": "Leer biografía completa", "less": "Leer menos",
     "label": "Quién es el fundador",
     "title": "Marketing y tecnología dirigidos con",
     "mark": "experiencia internacional",

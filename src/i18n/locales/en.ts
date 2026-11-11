@@ -216,7 +216,7 @@ const en: Dict = {
     "legendIe": "Ireland",
     "legendUy": "Uruguay"
   },
-  "faq": {
+  "faq": { "more": "See all questions", "less": "See less",
     "title": "Frequently asked questions",
     "draft": "Draft, review",
     "items": [
@@ -395,7 +395,7 @@ const en: Dict = {
       }
     ]
   },
-  "founder": {
+  "founder": { "more": "Read full bio", "less": "Read less",
     "label": "Meet the founder",
     "title": "Marketing and technology led with",
     "mark": "international experience",
