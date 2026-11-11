@@ -112,7 +112,7 @@ const ptBR = {
       },
       {
         "name": "MARK",
-        "text": "[DESCREVER o MARK em uma frase: o que faz e para quem é.]"
+        "text": "Quantos clientes você perde porque demorou a responder? O MARK avisa a sua equipe quem está esperando: o contato fica laranja indicando quem chegou e vermelho pulsando para quem já está esperando há mais de 10 min. E o follow-up deixa de depender da memória: o cliente pediu para chamar depois? É só agendar o retorno. E o dono acompanha tudo no celular: quantos chamaram, em quanto tempo foram respondidos e de onde vieram."
       }
     ],
     "play": "Reproduzir vídeo dos sistemas",

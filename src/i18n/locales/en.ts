@@ -114,7 +114,7 @@ const en: Dict = {
       },
       {
         "name": "MARK",
-        "text": "[DESCRIBE MARK in one sentence: what it does and who it is for.]"
+        "text": "How many clients do you lose because you took too long to reply? MARK shows your team who is waiting: the contact turns orange when it arrives and pulsing red once it has waited more than 10 minutes. Follow-ups no longer depend on memory: the client asked you to call back later? Just schedule it. And the owner tracks everything on their phone: how many reached out, how fast they were answered and where they came from."
       }
     ],
     "play": "Play systems video",

@@ -114,7 +114,7 @@ const ptPT: Dict = {
       },
       {
         "name": "MARK",
-        "text": "[DESCREVER o MARK numa frase: o que faz e para quem é.]"
+        "text": "Quantos clientes perde por demorar a responder? O MARK avisa a sua equipa de quem está à espera: o contacto fica laranja quando chega e vermelho a piscar quando já espera há mais de 10 min. E o follow-up deixa de depender da memória: o cliente pediu para ligar depois? Basta agendar o retorno. E o dono acompanha tudo no telemóvel: quantos contactaram, em quanto tempo foram respondidos e de onde vieram."
       }
     ],
     "play": "Reproduzir vídeo dos sistemas",

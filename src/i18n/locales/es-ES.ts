@@ -114,7 +114,7 @@ const esES: Dict = {
       },
       {
         "name": "MARK",
-        "text": "[DESCRIBIR MARK en una frase: qué hace y para quién es.]"
+        "text": "¿Cuántos clientes pierdes por tardar en responder? MARK avisa a tu equipo de quién está esperando: el contacto se pone naranja cuando llega y rojo parpadeante cuando ya lleva más de 10 min esperando. Y el seguimiento deja de depender de la memoria: ¿el cliente pidió que lo llamaran después? Solo hay que programar el retorno. Y el dueño lo sigue todo desde el móvil: cuántos escribieron, en cuánto tiempo se les respondió y de dónde vinieron."
       }
     ],
     "play": "Reproducir vídeo de los sistemas",
