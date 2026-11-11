@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://software.slzdigital.com.br/sitemap.xml
+Sitemap: https://www.slzdigital.com.br/software/sitemap.xml

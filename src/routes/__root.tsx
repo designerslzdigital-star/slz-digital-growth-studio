@@ -96,7 +96,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.png", type: "image/png" },
+      { rel: "icon", href: "/software/favicon.png", type: "image/png" },
     ],
     scripts: [
       {
@@ -106,7 +106,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@type": "WebSite",
           name: "SLZ Digital Software",
           alternateName: ["SLZ Software", "SLZ Digital"],
-          url: "https://software.slzdigital.com.br/",
+          url: "https://www.slzdigital.com.br/software/",
         }),
       },
     ],
