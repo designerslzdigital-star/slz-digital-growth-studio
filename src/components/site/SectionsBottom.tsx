@@ -185,7 +185,7 @@ export function Global({ slug }: P) {
   const { d } = useDict(slug);
   return <section id="global" className="bg-background px-5 py-10"><div className="mx-auto max-w-6xl">
     <h2 className="max-w-3xl text-3xl font-bold text-ink md:text-5xl">{d.global.title}</h2><p className="mt-4 max-w-3xl text-lg text-ink-soft">{d.global.sub}</p>
-    <div className="mt-8"><WorldMap label={d.global.mapLabel} names={[d.global.legendBr,d.global.legendIe,d.global.legendUy]} /></div>
+    <div className="mt-8 hidden sm:block"><WorldMap label={d.global.mapLabel} names={[d.global.legendBr,d.global.legendIe,d.global.legendUy]} /></div>
     <div className="map-legend mt-6 flex flex-wrap gap-x-6 gap-y-4 text-sm text-ink-soft">{[d.global.legendBr,d.global.legendIe,d.global.legendUy,d.global.legendWorld].map((label,i) => <span key={label} className="flex items-center gap-2"><span className={`legend-dots country-${i}`} aria-hidden="true"><i /><i /></span>{label}</span>)}</div>
   </div></section>;
 }

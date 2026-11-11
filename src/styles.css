@@ -363,7 +363,9 @@
   main > section p { max-width: 62ch; }
   #fundador p { font-size: 15px; line-height: 1.6; }
   /* FAQ items compact and easy to tap */
-  #faq summary { min-height: 44px; padding-top: 12px; padding-bottom: 12px; font-size: 16px; }
+  #faq details { padding-top: 0; padding-bottom: 0; }
+  #faq summary { min-height: 48px; padding-top: 10px; padding-bottom: 10px; font-size: 15px; line-height: 1.35; font-weight: 500; }
+  #faq details p { font-size: 14.5px; line-height: 1.55; padding-bottom: 12px; }
 }
 
 /* Founder bio: collapsed on phones/tablets, opened by "read full biography" */
