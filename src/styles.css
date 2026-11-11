@@ -350,3 +350,18 @@
   #servicos .service-grid ul > li > span { display: none; }
   #servicos .service-grid { gap: 16px; }
 }
+
+/* Mobile optimization pass: one clear CTA path, visible section boundaries, scannable long text */
+@media (max-width: 559px) {
+  /* Floating WhatsApp button stays; repeated mid-page CTAs are hidden to avoid equal-priority buttons */
+  #solucoes .mt-8.flex.justify-center, #servicos a[href*="wa.me"], #requisitos a[href*="wa.me"] { display: none !important; }
+  /* Consecutive dark sections get a clear boundary */
+  #servicos + #prova, #prova + #fundador { border-top: 1px solid color-mix(in oklab, var(--on-dark) 12%, transparent); }
+  #prova { background-color: color-mix(in oklab, var(--navy) 88%, var(--on-dark) 4%); }
+  /* Section intros read as short summaries */
+  main > section h2 + p { font-size: 15px; }
+  main > section p { max-width: 62ch; }
+  #fundador p { font-size: 15px; line-height: 1.6; }
+  /* FAQ items compact and easy to tap */
+  #faq summary { min-height: 44px; padding-top: 12px; padding-bottom: 12px; font-size: 16px; }
+}
