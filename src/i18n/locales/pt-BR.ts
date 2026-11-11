@@ -58,6 +58,8 @@ const ptBR = {
     "sub": "Escopo fechado e entrega em etapas: você vê o sistema funcionando antes do projeto acabar.",
     "seo": "SaaS, sistema e aplicativo: soluções para o seu negócio.",
     "who": "Para quem: Empresários · Empresas · Poder público",
+    "more": "Ver mais soluções",
+    "less": "Ver menos soluções",
     "link": "Falar sobre isso →",
     "testLink": "Ver como funciona →",
     "items": [

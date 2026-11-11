@@ -61,16 +61,18 @@ export function Pain({ slug }: P) {
 
 export function Solutions({ slug }: P) {
   const { d } = useDict(slug);
+  const [showAll, setShowAll] = useState(false);
   return <section id="solucoes" className="bg-light px-5 py-10"><div className="mx-auto max-w-6xl">
     <h2 className="text-3xl font-bold text-ink md:text-5xl">{d.solutions.title}<span className="sr-only"> — {d.solutions.seo}</span></h2>
     <p className="mt-4 max-w-3xl text-ink-soft">{d.solutions.sub}</p>
     <ReviewNote>{d.review.fast}</ReviewNote>
     <p className="mt-6 font-mono text-sm text-ink-soft">{d.solutions.who}</p><ReviewNote>{d.review.publicSector}</ReviewNote>
-    <div className="solution-grid mt-8">{d.solutions.items.map((it,i) => <article key={it.tag} className={`solution-card card-dark ${i < 3 ? 'solution-third' : i < 5 ? 'solution-half' : 'solution-wide'}`}>
+    <div className={cn("solution-grid mt-8", showAll && "solutions-open")}>{d.solutions.items.map((it,i) => <article key={it.tag} className={`solution-card card-dark ${i < 3 ? 'solution-third' : i < 5 ? 'solution-half' : 'solution-wide'}${i >= 3 ? ' solution-extra' : ''}`}>
       <div className="flex flex-wrap items-center gap-3"><span className="solution-number">{String(i+1).padStart(2,'0')}</span><span className="solution-tag">{it.tag}</span></div>
       <h3 className="solution-title mt-6 text-on-dark">{it.t}</h3><p className="mt-4 whitespace-pre-line text-on-dark-soft"><Rich text={it.d} /></p>
       {i === 3 && <ReviewNote>{d.review.erp}</ReviewNote>}{i === 5 && <ReviewNote>{d.review.rescue}</ReviewNote>}
     </article>)}</div>
+    <div className="mt-6 flex justify-center sm:hidden"><button type="button" onClick={() => setShowAll((v) => !v)} aria-expanded={showAll} className="inline-flex min-h-11 items-center gap-2 rounded-full border border-ink/25 px-5 text-sm font-semibold text-ink transition-colors hover:border-lime focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime">{showAll ? d.solutions.less : d.solutions.more}<ChevronDown className={cn("h-4 w-4 transition-transform", showAll && "rotate-180")} aria-hidden="true" /></button></div>
     <div className="mt-8 flex justify-center"><WaButton message={d.wa.message} refCode={REFS.solucoes}>{d.wa.cta}</WaButton></div>
   </div></section>;
 }

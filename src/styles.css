@@ -341,9 +341,9 @@
   #requisitos ol > li > div:last-child > p.-rotate-1 { display: none; }
   #solucoes .solution-title { font-size: 19px; }
 
-  #solucoes .solution-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 12px; margin-inline: -20px; padding: 0 20px 12px; scrollbar-width: none; }
-  #solucoes .solution-grid::-webkit-scrollbar { display: none; }
-  #solucoes .solution-card { flex: 0 0 84%; scroll-snap-align: center; }
+  #solucoes .solution-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+  #solucoes .solution-card.solution-extra { display: none; }
+  #solucoes .solution-grid.solutions-open .solution-card.solution-extra { display: flex; }
 
   #servicos .service-grid ul { display: flex; flex-wrap: wrap; gap: 6px; }
   #servicos .service-grid ul > li { margin: 0; padding: 5px 10px; border: 1px solid color-mix(in srgb, var(--on-dark) 18%, transparent); border-radius: 999px; font-size: 13px; line-height: 1.3; }

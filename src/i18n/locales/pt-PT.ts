@@ -60,6 +60,8 @@ const ptPT: Dict = {
     "sub": "Âmbito fechado e entrega por fases: vê o sistema a funcionar antes de o projeto terminar.",
     "seo": "SaaS, sistema e aplicação: soluções para o seu negócio.",
     "who": "Para quem: Empresários · Empresas · Setor público",
+    "more": "Ver mais soluções",
+    "less": "Ver menos soluções",
     "link": "Falar sobre isto →",
     "testLink": "Ver como funciona →",
     "items": [

@@ -60,6 +60,8 @@ const en: Dict = {
     "sub": "A defined scope and staged delivery: you see your system working before the project ends.",
     "seo": "SaaS, systems and apps: solutions for your business.",
     "who": "For: Business owners · Companies · Public sector",
+    "more": "See more solutions",
+    "less": "See fewer solutions",
     "link": "Talk about this →",
     "testLink": "See how it works →",
     "items": [

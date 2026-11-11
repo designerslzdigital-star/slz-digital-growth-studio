@@ -60,6 +60,8 @@ const esES: Dict = {
     "sub": "Alcance cerrado y entrega por etapas: ves el sistema funcionando antes de que termine el proyecto.",
     "seo": "SaaS, sistema y aplicación: soluciones para tu negocio.",
     "who": "Para quién: Empresarios · Empresas · Sector público",
+    "more": "Ver más soluciones",
+    "less": "Ver menos soluciones",
     "link": "Hablar sobre esto →",
     "testLink": "Ver cómo funciona →",
     "items": [
