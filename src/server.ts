@@ -51,6 +51,8 @@ function redirectIntoBasepath(request: Request): Response | undefined {
   if (request.method !== "GET" && request.method !== "HEAD") return undefined;
   const url = new URL(request.url);
   if (url.pathname === "/software" || url.pathname.startsWith("/software/")) return undefined;
+  // As imagens do Lovable vivem na raiz (/__l5e/) e nao devem ser redirecionadas.
+  if (url.pathname.startsWith("/__l5e/")) return undefined;
   url.pathname = `/software${url.pathname}`;
   return Response.redirect(url.toString(), 302);
 }
