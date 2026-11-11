@@ -257,7 +257,7 @@ const ptBR = {
     "phoneLabel": "Telefone",
     "privacy": "Política de Privacidade",
     "terms": "Termos",
-    "company": "[RAZÃO SOCIAL]",
+    "company": "",
     "rights": "Todos os direitos reservados.",
     "dataLabel": "Proteção de dados",
     "dataText": "A SLZ Digital trata dados pessoais de acordo com a LGPD (Lei 13.709/2018). Para pedir acesso, correção ou exclusão dos seus dados, fale com o nosso encarregado pelo e-mail [E-MAIL DO ENCARREGADO].",
