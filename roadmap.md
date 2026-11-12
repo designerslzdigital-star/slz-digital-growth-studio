@@ -14,6 +14,7 @@
 - [x] Align mobile footer spacing to the same visual rhythm and retain 44px touch targets; verified all four languages at 390px without overflow.
 - [x] Reorganize security into a compact method and a distinct test offer, with wider stages and written authorization highlighted beside WhatsApp; verified all four languages at 360/390/927/1440px without horizontal overflow, with 12 tests passing.
 - [x] Complete mobile optimization: hide repeated mid-page WhatsApp buttons on phones, separate consecutive dark sections, tighten intro/FAQ text; verified at 390px.
-- [ ] Add Meta Pixel 1505840871386062 and WhatsApp Contact conversions in all buttons, gated by advertising consent; securely connect the Conversions API token and verify browser/server deduplication.
+- [x] Add Meta Pixel 1505840871386062 and WhatsApp Contact conversions in all buttons, gated by advertising consent; token stored securely, browser/server event IDs deduplicated, and a real Conversions API event accepted; 14 tests pass.
+- [ ] After the next publish, verify Pixel PageView/Contact delivery in Meta Events Manager on the public domain; localhost loaded fbevents.js and processed calls, but Meta sent no facebook.com/tr requests during local checks.
 - [ ] Resolve dependency advisories before publication; npm audit and installed-lockfile scanner report high/moderate findings, not changed in this visual update.
 - [ ] Publication waits for real WhatsApp number, MARK description, video, founder photo, legal identity/contact, support terms, delivery definition and approval/proof of claims.

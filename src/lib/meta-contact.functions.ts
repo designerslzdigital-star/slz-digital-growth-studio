@@ -44,11 +44,11 @@ export const reportMetaContact = createServerFn({ method: "POST" })
   .inputValidator(validateContact)
   .handler(async ({ data }) => {
     const accessToken = process.env["META_ACCESS_TOKEN"];
-    if (!accessToken) return { sent: false as const, reason: "not_configured" as const };
+    if (!accessToken) return { sent: false as const, detail: "not_configured" as const };
 
     const ip = (getRequestHeader("cf-connecting-ip") ?? getRequestIP({ xForwardedFor: true }))?.slice(0, 64);
     const userAgent = getRequestHeader("user-agent")?.slice(0, 512);
-    if (!ip || !userAgent) return { sent: false as const, reason: "missing_client_data" as const };
+    if (!ip || !userAgent) return { sent: false as const, detail: "missing_client_data" as const };
 
     const userData: Record<string, string> = {
       client_ip_address: ip,
@@ -78,11 +78,11 @@ export const reportMetaContact = createServerFn({ method: "POST" })
       });
       if (!response.ok) {
         console.error(`Meta Conversions API returned ${response.status}`);
-        return { sent: false as const, reason: "provider_error" as const, status: response.status };
+        return { sent: false as const, detail: "provider_error" as const, httpStatus: response.status };
       }
       return { sent: true as const };
     } catch (error) {
       console.error("Meta Conversions API request failed", error);
-      return { sent: false as const, reason: "request_failed" as const };
+      return { sent: false as const, detail: "request_failed" as const };
     }
   });
