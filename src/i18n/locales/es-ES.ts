@@ -269,9 +269,20 @@ const esES: Dict = {
     "brand": "SLZ Digital"
   },
   "cookies": {
-    "text": "Solo usamos cookies de medición si las aceptas. Sin tu aceptación, no se carga nada.",
-    "accept": "Aceptar",
-    "reject": "Rechazar",
+    "text": "Contamos visitas sin cookies. Si aceptas, también medimos clics y otras acciones. Con tu permiso, usamos cookies publicitarias para medir conversiones.",
+    "accept": "Aceptar todo",
+    "reject": "Rechazar todo",
+    "settings": "Configurar cookies",
+    "settingsTitle": "Preferencias de cookies",
+    "necessary": "Necesarias",
+    "necessaryText": "Siempre activas para que el sitio funcione.",
+    "analytics": "Analítica, proporcionada por Lovable",
+    "analyticsText": "Mide visitas, clics y otras acciones.",
+    "advertising": "Publicidad y conversiones, proporcionadas por Meta",
+    "advertisingText": "Mide la eficacia de los anuncios y los contactos iniciados desde el sitio.",
+    "save": "Guardar preferencias",
+    "privacyLink": "Leer la Política de privacidad",
+    "gpc": "La señal de privacidad de tu navegador está activa e impide estas mediciones.",
     "label": "Cookies"
   },
   "legal": {
@@ -280,7 +291,7 @@ const esES: Dict = {
     "privacyTitle": "Política de privacidad",
     "privacy": [
       "Esta web no tiene registro, inicio de sesión ni formulario: no recogemos nombre, correo ni teléfono por aquí.",
-      "Las cookies de medición (como píxeles publicitarios o analítica) solo se cargan después de que las aceptes en el aviso. Puedes rechazarlas con la misma facilidad.",
+      "Las cookies de medición (como píxeles publicitarios o analítica) solo se cargan después de que las aceptes en el aviso. Con tu permiso, Meta recibe el evento del clic en WhatsApp y datos técnicos del navegador para medir la conversión. Puedes rechazarlas con la misma facilidad.",
       "Al pulsar un botón de WhatsApp, sales de esta web y pasas a ser atendido en la plataforma de WhatsApp, bajo sus términos y su política de privacidad.",
       "El mensaje enviado incluye un código de origen (p. ej.: [ref: hero]) solo para saber desde qué botón llegó el contacto."
     ],

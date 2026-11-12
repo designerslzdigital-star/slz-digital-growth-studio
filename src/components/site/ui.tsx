@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { SHOW_REVIEW_NOTES, whatsappUrl } from "@/config/site";
 import { cn } from "@/lib/utils";
+import { trackWhatsAppConversion } from "@/lib/meta-pixel";
 
 export function WaIcon({ className }: { className?: string }) {
   return (
@@ -31,6 +32,7 @@ export function WaButton({ message, refCode, children, variant = "lime", classNa
       href={whatsappUrl(message, refCode)}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => trackWhatsAppConversion(refCode)}
       className={cn(
         "inline-flex min-h-11 items-center justify-center gap-2 rounded-full transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime",
         variants[variant],

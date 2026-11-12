@@ -8,6 +8,8 @@ import { Check, Eyebrow, ReviewNote, WaButton, WaIcon , Rich } from "./ui";
 import { WorldMap } from "./WorldMap";
 import { Logo } from "./Header";
 import { whatsappUrl } from "@/config/site";
+import { needsAnswer, onConsentChange, readChoice, saveChoices, type Choice } from "@/lib/consent";
+import { trackWhatsAppConversion } from "@/lib/meta-pixel";
 
 type P = { slug: LangSlug };
 
@@ -266,6 +268,7 @@ export function FloatingWa({ slug }: P) {
       href={whatsappUrl(d.wa.message, REFS.flutuante)}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => trackWhatsAppConversion(REFS.flutuante)}
       aria-label={d.wa.floating}
       className="wa-pulse fixed bottom-5 right-5 z-40 grid h-14 w-14 place-items-center rounded-full bg-whatsapp text-ink shadow-frame transition-transform hover:scale-105"
     >
@@ -277,33 +280,109 @@ export function FloatingWa({ slug }: P) {
 export function CookieBanner({ slug }: P) {
   const { d } = useDict(slug);
   const [show, setShow] = useState(false);
+  const [settings, setSettings] = useState(false);
+  const [analytics, setAnalytics] = useState(false);
+  const [advertising, setAdvertising] = useState(false);
+  const [gpc, setGpc] = useState(false);
+  const panelRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    try {
-      setShow(!localStorage.getItem("slz-consent"));
-    } catch {
+    let active = true;
+    const syncChoices = () => {
+      setAnalytics(readChoice("analytics") === "granted");
+      setAdvertising(readChoice("advertising") === "granted");
+    };
+    const open = async () => {
+      const browserGpc = (navigator as unknown as { globalPrivacyControl?: boolean }).globalPrivacyControl === true;
+      syncChoices();
+      setGpc(browserGpc);
+      const required = await needsAnswer(["analytics", "advertising"]);
+      if (!active) return;
+      const unanswered = readChoice("analytics") === null || readChoice("advertising") === null;
+      setShow(!browserGpc && (required || unanswered));
+    };
+    const reopen = () => {
+      syncChoices();
+      setSettings(true);
       setShow(true);
-    }
-    const reopen = () => setShow(true);
+    };
+
+    void open();
+    const unsubscribe = onConsentChange(syncChoices);
     window.addEventListener("slz-cookie-preferences", reopen);
-    return () => window.removeEventListener("slz-cookie-preferences", reopen);
+    return () => {
+      active = false;
+      unsubscribe();
+      window.removeEventListener("slz-cookie-preferences", reopen);
+    };
   }, []);
-  const choose = (v: "accepted" | "rejected") => {
-    try {
-      localStorage.setItem("slz-consent", v);
-    } catch {
-      /* ignore */
-    }
-    // Measurement scripts (pixels/analytics) would be loaded here only when v === "accepted". None configured yet.
+
+  useEffect(() => {
+    if (show) panelRef.current?.focus();
+  }, [show, settings]);
+
+  const chooseAll = (choice: Choice) => {
+    saveChoices({ analytics: choice, advertising: choice });
+    setSettings(false);
     setShow(false);
   };
+  const save = () => {
+    saveChoices({
+      analytics: analytics ? "granted" : "denied",
+      advertising: advertising ? "granted" : "denied",
+    });
+    setSettings(false);
+    setShow(false);
+  };
+
   if (!show) return null;
+  const switchClass = "relative h-7 w-12 shrink-0 rounded-full border border-on-dark/30 transition-colors disabled:cursor-not-allowed disabled:opacity-50";
+  const thumbClass = "absolute left-0.5 top-0.5 h-5 w-5 rounded-full transition-transform";
+
   return (
-    <div role="region" aria-label={d.cookies.label} className="fixed bottom-5 left-5 right-24 z-40 max-w-md rounded-2xl border border-on-dark/15 bg-navy p-4 text-sm text-on-dark-soft shadow-frame">
-      <p>{d.cookies.text}</p>
-      <div className="mt-3 flex flex-wrap gap-2">
-        <Button variant="ghost" type="button" onClick={() => choose("rejected")} className="min-h-11 h-auto flex-1 whitespace-normal rounded-full border border-on-dark/30 px-4 text-on-dark hover:bg-on-dark/10">{d.cookies.reject}</Button>
-        <Button variant="ghost" type="button" onClick={() => choose("accepted")} className="min-h-11 h-auto flex-1 whitespace-normal rounded-full border border-on-dark/30 px-4 text-on-dark hover:bg-on-dark/10">{d.cookies.accept}</Button>
-      </div>
+    <div
+      ref={panelRef}
+      tabIndex={-1}
+      role="region"
+      aria-label={settings ? d.cookies.settingsTitle : d.cookies.label}
+      className="fixed bottom-5 left-5 right-24 z-50 max-h-[85vh] max-w-md overflow-y-auto rounded-2xl border border-on-dark/15 bg-navy p-4 text-sm text-on-dark-soft shadow-frame outline-none"
+    >
+      {!settings ? (
+        <>
+          <p>{d.cookies.text}</p>
+          <Link to="/$lang/privacidade" params={{ lang: slug }} className="mt-2 inline-block text-on-dark underline underline-offset-4">{d.cookies.privacyLink}</Link>
+          <div className="mt-4 flex flex-wrap gap-2">
+            <Button variant="ghost" type="button" onClick={() => chooseAll("denied")} className="h-auto min-h-11 flex-1 whitespace-normal rounded-full border border-on-dark/30 px-4 text-on-dark hover:bg-on-dark/10">{d.cookies.reject}</Button>
+            <Button variant="ghost" type="button" onClick={() => chooseAll("granted")} className="h-auto min-h-11 flex-1 whitespace-normal rounded-full border border-on-dark/30 px-4 text-on-dark hover:bg-on-dark/10">{d.cookies.accept}</Button>
+          </div>
+          <Button variant="ghost" type="button" onClick={() => setSettings(true)} className="mt-2 h-auto min-h-11 w-full whitespace-normal rounded-full px-4 text-on-dark hover:bg-on-dark/10">{d.cookies.settings}</Button>
+        </>
+      ) : (
+        <>
+          <h2 className="font-heading text-lg font-semibold text-on-dark">{d.cookies.settingsTitle}</h2>
+          {gpc && <p className="mt-2">{d.cookies.gpc}</p>}
+          <div className="mt-4 space-y-3">
+            <div className="flex items-center justify-between gap-4 border-b border-on-dark/15 pb-3">
+              <div><p className="font-semibold text-on-dark">{d.cookies.necessary}</p><p className="mt-1 text-xs">{d.cookies.necessaryText}</p></div>
+              <ShieldCheck className="h-5 w-5 shrink-0 text-lime" aria-hidden="true" />
+            </div>
+            <div className="flex items-center justify-between gap-4">
+              <div><p className="font-semibold text-on-dark">{d.cookies.analytics}</p><p className="mt-1 text-xs">{d.cookies.analyticsText}</p></div>
+              <button type="button" role="switch" aria-label={d.cookies.analytics} aria-checked={analytics} disabled={gpc} onClick={() => setAnalytics((value) => !value)} className={`${switchClass} ${analytics ? "bg-lime" : "bg-on-dark/10"}`}>
+                <span className={`${thumbClass} ${analytics ? "translate-x-5 bg-navy" : "bg-on-dark"}`} />
+              </button>
+            </div>
+            <div className="flex items-center justify-between gap-4">
+              <div><p className="font-semibold text-on-dark">{d.cookies.advertising}</p><p className="mt-1 text-xs">{d.cookies.advertisingText}</p></div>
+              <button type="button" role="switch" aria-label={d.cookies.advertising} aria-checked={advertising} disabled={gpc} onClick={() => setAdvertising((value) => !value)} className={`${switchClass} ${advertising ? "bg-lime" : "bg-on-dark/10"}`}>
+                <span className={`${thumbClass} ${advertising ? "translate-x-5 bg-navy" : "bg-on-dark"}`} />
+              </button>
+            </div>
+          </div>
+          <Button variant="ghost" type="button" onClick={save} className="mt-4 h-auto min-h-11 w-full whitespace-normal rounded-full border border-on-dark/30 px-4 text-on-dark hover:bg-on-dark/10">{d.cookies.save}</Button>
+          <Link to="/$lang/privacidade" params={{ lang: slug }} className="mt-2 inline-block text-on-dark underline underline-offset-4">{d.cookies.privacyLink}</Link>
+        </>
+      )}
     </div>
   );
 }

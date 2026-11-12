@@ -269,9 +269,20 @@ const en: Dict = {
     "brand": "SLZ Digital"
   },
   "cookies": {
-    "text": "We only use measurement cookies if you accept. Without consent, nothing is loaded.",
-    "accept": "Accept",
-    "reject": "Reject",
+    "text": "We count visits without cookies. If you accept, we also measure clicks and other actions. With your permission, we use advertising cookies to measure conversions.",
+    "accept": "Accept all",
+    "reject": "Reject all",
+    "settings": "Cookie settings",
+    "settingsTitle": "Cookie preferences",
+    "necessary": "Necessary",
+    "necessaryText": "Always on so the site works.",
+    "analytics": "Analytics, provided by Lovable",
+    "analyticsText": "Measures visits, clicks and other actions.",
+    "advertising": "Advertising and conversions, provided by Meta",
+    "advertisingText": "Measures ad effectiveness and contacts started on the site.",
+    "save": "Save preferences",
+    "privacyLink": "Read the Privacy Policy",
+    "gpc": "Your browser's privacy signal is on and prevents this measurement.",
     "label": "Cookies"
   },
   "legal": {
@@ -280,7 +291,7 @@ const en: Dict = {
     "privacyTitle": "Privacy Policy",
     "privacy": [
       "This site has no sign-up, login or forms: we don't collect your name, email or phone here.",
-      "Measurement cookies (such as ad pixels or analytics) are only loaded after you accept them in the banner. You can reject them just as easily.",
+      "Measurement cookies (such as ad pixels or analytics) are only loaded after you accept them in the banner. With your permission, Meta receives the WhatsApp click event and technical browser data to measure the conversion. You can reject them just as easily.",
       "When you click a WhatsApp button, you leave this site and are served on the WhatsApp platform, under its own terms and privacy policy.",
       "The message sent includes an origin code (e.g. [ref: hero]) only so we know which button the contact came from."
     ],

@@ -12,7 +12,9 @@ import {
 import { type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import consentDefaults from "../lib/consent-defaults.js?raw";
 import { isLangSlug, langBySlug } from "../i18n";
+import { MetaPixel } from "@/components/site/MetaPixel";
 
 function NotFoundComponent() {
   return (
@@ -99,6 +101,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "icon", href: "/favicon.png", type: "image/png" },
     ],
     scripts: [
+      { children: consentDefaults },
       {
         type: "application/ld+json",
         children: JSON.stringify({
@@ -139,6 +142,7 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <MetaPixel />
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
     </QueryClientProvider>

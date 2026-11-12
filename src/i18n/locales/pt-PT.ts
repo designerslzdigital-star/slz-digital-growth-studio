@@ -269,9 +269,20 @@ const ptPT: Dict = {
     "brand": "SLZ Digital"
   },
   "cookies": {
-    "text": "Só utilizamos cookies de medição se aceitar. Sem aceitação, nada é carregado.",
-    "accept": "Aceitar",
-    "reject": "Recusar",
+    "text": "Contamos visitas sem cookies. Se aceitar, também medimos cliques e outras ações. Com a sua permissão, utilizamos cookies de publicidade para medir conversões.",
+    "accept": "Aceitar tudo",
+    "reject": "Recusar tudo",
+    "settings": "Configurar cookies",
+    "settingsTitle": "Preferências de cookies",
+    "necessary": "Necessários",
+    "necessaryText": "Sempre ativos para o funcionamento do site.",
+    "analytics": "Analytics, fornecido pela Lovable",
+    "analyticsText": "Mede visitas, cliques e outras ações.",
+    "advertising": "Publicidade e conversões, fornecidas pela Meta",
+    "advertisingText": "Mede a eficácia dos anúncios e os contactos iniciados pelo site.",
+    "save": "Guardar preferências",
+    "privacyLink": "Ler a Política de Privacidade",
+    "gpc": "O sinal de privacidade do seu navegador está ativo e impede estas medições.",
     "label": "Cookies"
   },
   "legal": {
@@ -280,7 +291,7 @@ const ptPT: Dict = {
     "privacyTitle": "Política de Privacidade",
     "privacy": [
       "Este site não tem registo, início de sessão nem formulário: não recolhemos nome, e-mail ou telemóvel por aqui.",
-      "Cookies de medição (como píxeis de anúncios ou analytics) só são carregados depois de os aceitar no aviso. Pode recusá-los com a mesma facilidade.",
+      "Cookies de medição (como píxeis de anúncios ou analytics) só são carregados depois de os aceitar no aviso. Com a sua permissão, a Meta recebe o evento do clique no WhatsApp e dados técnicos do navegador para medir a conversão. Pode recusá-los com a mesma facilidade.",
       "Ao clicar num botão de WhatsApp, sai deste site e passa a ser atendido na plataforma do WhatsApp, sob os termos e a política de privacidade da mesma.",
       "A mensagem enviada inclui um código de origem (ex.: [ref: hero]) apenas para sabermos de que botão veio o contacto."
     ],

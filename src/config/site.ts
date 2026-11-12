@@ -3,6 +3,9 @@ import founderPhoto from "@/assets/diego-founder.jpg.asset.json";
 // [PLACEHOLDER] Replace with the real number: country code + digits only, e.g. 5598XXXXXXXXX.
 export const WHATSAPP_NUMBER = "5500000000000";
 
+// Public Meta Pixel identifier. The Conversions API token stays server-only.
+export const META_PIXEL_ID = "1505840871386062";
+
 export const REFS = {
   header: "header",
   hero: "hero",
