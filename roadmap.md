@@ -1,4 +1,5 @@
 # SLZ Digital update
+- [x] Add GTM-WLNNQZFL with explicit per-purpose consent; verified no request before consent or after refusal, one load after analytics grant and denied signals after revocation; six focused tests pass. Container tags still require purpose-specific consent checks in GTM and must not duplicate the existing Meta Pixel.
 - [x] Remove the final CTA band, founder WhatsApp button and solution-card links; show the numbers band only from 1024px; verified all four languages at 390/927/1024/1440px, with 12 tests passing.
 - [x] Update four-language copy, WhatsApp messages, navigation and metadata.
 - [x] Reorganize the page, preserve approved designs, remove superseded sections and add services, proof, founder and security test.

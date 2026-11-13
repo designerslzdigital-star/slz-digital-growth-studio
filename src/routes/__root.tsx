@@ -15,6 +15,7 @@ import appCss from "../styles.css?url";
 import consentDefaults from "../lib/consent-defaults.js?raw";
 import { isLangSlug, langBySlug } from "../i18n";
 import { MetaPixel } from "@/components/site/MetaPixel";
+import { TagManager } from "@/components/site/TagManager";
 
 function NotFoundComponent() {
   return (
@@ -143,6 +144,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <MetaPixel />
+      <TagManager />
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
     </QueryClientProvider>

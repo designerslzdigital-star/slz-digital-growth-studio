@@ -33,7 +33,8 @@ use the editor.
 - Static marketing site with no DB or forms; one narrow server function sends Meta conversions, and WhatsApp remains the only conversion point.
 - All copy lives in `src/i18n/locales/*.ts` (one file per language, typed by pt-BR); components never hardcode text.
 - Language lives in the URL (`/$lang`, slugs pt-br/pt-pt/es/en); `/` redirects client-side using saved choice or browser language.
-- WhatsApp number, Meta Pixel ID, `[ref: …]` origin codes and content visibility flags live only in `src/config/site.ts`; the Meta access token is server-only.
+- WhatsApp number, public measurement IDs, `[ref: …]` origin codes and content visibility flags live only in `src/config/site.ts`; the Meta access token is server-only.
+- Mount GTM once in the root and load it only after an explicit analytics or advertising grant; sync each purpose independently with unanswered purposes denied, and omit the noscript iframe because it bypasses consent. Container tags must enforce their own purpose consent checks; do not duplicate the existing Meta Pixel in GTM.
 - No measurement scripts load before cookie consent; per-purpose consent lives in `src/lib/consent.ts`, and Meta requires an explicit advertising grant.
 - Keep section order, navigation anchors, review visibility and optional founder/video media in site configuration so all four languages share the same page structure.
 - YouTube media must load only after an explicit click; use privacy-enhanced embeds and no player or thumbnail requests before that click.
