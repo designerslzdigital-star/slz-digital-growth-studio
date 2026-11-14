@@ -1,9 +1,32 @@
 import type { LangSlug } from "@/i18n";
 
+/** Language slugs plus the country codes used outside the language switcher. */
+export type FlagCode = LangSlug | "ie" | "uy";
+
 /** SVG flags: emoji flags don't render on Windows (shows "BR"). Official flag colours are content, not theme. */
-export function Flag({ slug, className = "h-4 w-6" }: { slug: LangSlug; className?: string }) {
+export function Flag({ slug, className = "h-4 w-6" }: { slug: FlagCode; className?: string }) {
   const common = { className: `${className} shrink-0 rounded-[3px]`, "aria-hidden": true as const, viewBox: "0 0 30 20" };
   switch (slug) {
+    case "ie":
+      return (
+        <svg {...common}>
+          <rect width="30" height="20" fill="#169B62" />
+          <rect x="10" width="10" height="20" fill="#FFFFFF" />
+          <rect x="20" width="10" height="20" fill="#FF883E" />
+        </svg>
+      );
+    case "uy":
+      return (
+        <svg {...common}>
+          <rect width="30" height="20" fill="#FFFFFF" />
+          <rect y="2.22" width="30" height="2.22" fill="#0038A8" />
+          <rect y="6.67" width="30" height="2.22" fill="#0038A8" />
+          <rect y="11.11" width="30" height="2.22" fill="#0038A8" />
+          <rect y="15.56" width="30" height="2.22" fill="#0038A8" />
+          <rect width="11.11" height="11.11" fill="#FFFFFF" />
+          <circle cx="5.56" cy="5.56" r="2.4" fill="#FCD116" />
+        </svg>
+      );
     case "pt-br":
       return (
         <svg {...common}>
