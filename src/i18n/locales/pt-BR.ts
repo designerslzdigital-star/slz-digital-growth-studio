@@ -404,7 +404,7 @@ const ptBR = {
   },
   "securityTest": {
     "label": "Teste de segurança",
-    "title": "Descubra as falhas da sua plataforma antes de quem não devia.",
+    "title": "Descubra as falhas da sua plataforma antes que caiam nas mãos erradas.",
     "sub": "Você só descobre a falha quando o sistema cai ou os dados vazam. A gente procura as falhas de segurança antes que alguém as explore e entrega o que achou com a prioridade de correção.",
     "how": "Como funciona",
     "limits": "O teste mostra a situação da plataforma no momento em que foi feito, com o ambiente, o método e o tempo combinados. Nenhum teste garante que não existe outra falha. Por isso a gente recomenda repetir depois de mudanças importantes no sistema.",
