@@ -222,12 +222,12 @@ const ptBR = {
       },
       {
         "q": "Depois da entrega, tem suporte?",
-        "a": "Tem, e ele já vem incluso no valor do projeto por 60 a 90 dias, conforme o projeto. Nesse tempo a gente também acompanha a equipe que vai usar o sistema e confere se o que está no ar é o que foi desenhado no escopo. Depois, você pode contratar o suporte mensal, com acesso remoto, ajustes do dia a dia, reunião mensal por videochamada e pequenas melhorias.",
+        "a": "O projeto inclui até 30 dias de suporte após a entrega, conforme o escopo contratado. Mudanças maiores e novas funcionalidades são cobradas à parte.\n\nApós esse período, você pode contratar um plano de suporte mensal, conforme as necessidades do seu negócio.",
         "draft": false
       },
       {
         "q": "Como vocês tratam dados pessoais e a LGPD?",
-        "a": "Tratamos os dados pessoais dos projetos seguindo as boas práticas da LGPD: levantamos quais dados o sistema coleta, quem pode acessar cada um e por quanto tempo ficam guardados. Essas decisões entram no documento do projeto. A adequação completa da sua empresa à lei depende também dos seus processos internos e da orientação do seu jurídico.",
+        "a": "Tratamos os dados pessoais dos projetos seguindo as boas práticas da LGPD: levantamos quais dados o sistema coleta, quem pode acessar cada um e por quanto tempo ficam guardados. \nA adequação completa da sua empresa à lei depende também dos seus processos internos e da orientação do seu jurídico.",
         "draft": false
       },
       {
