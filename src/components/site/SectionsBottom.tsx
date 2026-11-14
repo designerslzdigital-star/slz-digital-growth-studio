@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { FileText, Mail, MapPin, Phone, Plus, ShieldCheck } from "lucide-react";
+import { Mail, MapPin, Phone, Plus, ShieldCheck } from "lucide-react";
 import { useDict, type LangSlug } from "@/i18n";
 import { CONTACT, REFS, SOURCE_URLS } from "@/config/site";
 import { Button } from "@/components/ui/button";
@@ -120,16 +120,6 @@ export function After({ slug }: P) {
             </article>
           ))}
         </div>
-        <div className="doc-band mt-8 flex flex-col gap-4 rounded-[28px] p-6 sm:flex-row sm:items-center md:p-7">
-          <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-lime/10 text-lime">
-            <FileText className="h-7 w-7" aria-hidden="true" />
-          </span>
-          <div>
-            <h3 className="font-heading text-xl font-semibold text-on-dark md:text-2xl">{d.after.docTitle}</h3>
-            <p className="mt-2 max-w-3xl text-on-dark-soft">{d.after.docText}</p>
-            <ReviewNote>{d.review.documentation}</ReviewNote>
-          </div>
-        </div>
       </div>
     </section>
   );
@@ -139,17 +129,10 @@ export function Security({ slug }: P) {
   const { d } = useDict(slug);
   return (
     <section id="seguranca" className="bg-navy text-on-dark">
-      <div className="mx-auto max-w-6xl px-5 py-10 xl:px-0">
-        <h2 className="max-w-3xl font-display text-3xl font-normal leading-[1.05] md:text-5xl">{d.security.title}</h2>
-        <p className="mt-4 max-w-2xl whitespace-pre-line text-on-dark-soft">{d.security.intro}</p>
-        <ReviewNote>{d.review.securityYear}</ReviewNote>
-        <p className="mt-6 border-l-2 border-lime pl-4 font-heading text-lg text-on-dark-soft">{d.security.lgpd}</p>
-      </div>
-
       <div id="teste-seguranca" className="border-y border-light-border bg-light text-ink">
         <div className="mx-auto max-w-6xl px-5 py-8 xl:px-0">
           <Eyebrow className="text-blue-ink">{d.securityTest.label}</Eyebrow>
-          <h3 className="mt-3 max-w-3xl font-display text-3xl font-normal leading-[1.05] text-ink md:text-5xl">{d.securityTest.title}</h3>
+          <h2 className="mt-3 max-w-3xl font-display text-3xl font-normal leading-[1.05] text-ink md:text-5xl">{d.securityTest.title}</h2>
           <p className="mt-3 max-w-3xl text-ink-soft">{d.securityTest.sub}</p>
           <p className="mt-5 max-w-3xl text-sm text-ink-soft">{d.securityTest.stat}</p>
           <h4 className="mt-6 font-heading text-lg font-semibold">{d.securityTest.how}</h4>
