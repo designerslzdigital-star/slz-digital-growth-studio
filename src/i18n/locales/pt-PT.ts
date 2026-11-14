@@ -232,21 +232,6 @@ const ptPT: Dict = {
         "a": "Tratamos os dados pessoais dos projetos seguindo as boas práticas da LGPD e do RGPD: identificamos que dados o sistema recolhe, quem pode aceder a cada um e durante quanto tempo ficam guardados. Essas decisões entram no documento do projeto. A conformidade total da sua empresa depende também dos seus processos internos e do seu apoio jurídico.",
         "draft": false
       },
-      {
-        "q": "Se o sistema funciona, já está seguro?",
-        "a": "Funcionar e ser seguro são coisas diferentes. Num estudo apresentado no ICML 2026, mais de 70% do código gerado por agentes de IA que passava os testes ainda tinha falhas exploráveis. Por isso a revisão de segurança é uma etapa separada do teste de funcionamento.",
-        "draft": false
-      },
-      {
-        "q": "O meu sistema é pequeno. Alguém vai mesmo tentar atacá-lo?",
-        "a": "Os ataques automáticos percorrem a internet à procura de portas abertas, sem escolher o alvo. A dimensão da empresa não protege. Em 42 empresas brasileiras que sofreram uma fuga de dados, o custo médio foi de R$ 7,44 milhões.",
-        "draft": false
-      },
-      {
-        "q": "O teste garante que o meu sistema fica seguro?",
-        "a": "O teste mostra a situação da plataforma no momento em que foi realizado, com o ambiente, método e tempo acordados. Nenhum teste garante que não existe outra falha. Recomendamos repeti-lo após alterações importantes no sistema.",
-        "draft": false
-      }
     ]
   },
   "final": {

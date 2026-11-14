@@ -193,7 +193,6 @@ export function Faq({ slug }: P) {
             </details>
           ))}
         </div>
-        <p className="mt-6 text-[13px] text-ink-soft">{d.sources.label}: <a href={SOURCE_URLS.study} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">{d.sources.study}</a> · <a href={SOURCE_URLS.report} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">{d.sources.publisher}</a></p>
       </div>
     </section>
   );

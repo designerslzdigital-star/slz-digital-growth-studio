@@ -230,21 +230,6 @@ const ptBR = {
         "a": "Tratamos os dados pessoais dos projetos seguindo as boas práticas da LGPD: levantamos quais dados o sistema coleta, quem pode acessar cada um e por quanto tempo ficam guardados. \nA adequação completa da sua empresa à lei depende também dos seus processos internos e da orientação do seu jurídico.",
         "draft": false
       },
-      {
-        "q": "Se o sistema funciona, ele já está seguro?",
-        "a": "Funcionar e ser seguro são coisas diferentes. Em um estudo apresentado no ICML 2026, mais de 70% do código gerado por agentes de IA que passava nos testes ainda tinha falhas exploráveis. Por isso a revisão de segurança é uma etapa separada do teste de funcionamento.",
-        "draft": false
-      },
-      {
-        "q": "Meu sistema é pequeno. Alguém vai mesmo tentar atacar?",
-        "a": "Ataques automáticos varrem a internet atrás de portas abertas, sem escolher o alvo. O tamanho da empresa não protege. Em 42 empresas brasileiras que sofreram vazamento, o custo médio foi de R$ 7,44 milhões.",
-        "draft": false
-      },
-      {
-        "q": "O teste garante que meu sistema fica seguro?",
-        "a": "O teste mostra a situação da plataforma no momento em que foi feito, com o ambiente, o método e o tempo combinados. Nenhum teste garante que não existe outra falha. Por isso a gente recomenda repetir depois de mudanças importantes no sistema.",
-        "draft": false
-      }
     ]
   },
   "final": {

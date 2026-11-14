@@ -232,21 +232,6 @@ const en: Dict = {
         "a": "We handle personal data in our projects following LGPD and GDPR good practices: we map which data the system collects, who can access each item and how long it is kept. These decisions go into the project document. Full compliance for your company also depends on your internal processes and your legal counsel.",
         "draft": false
       },
-      {
-        "q": "If the system works, is it already secure?",
-        "a": "Working and being secure are different things. In a study presented at ICML 2026, over 70% of AI-agent-generated code that passed functional tests still had exploitable flaws. That is why security review is separate from functional testing.",
-        "draft": false
-      },
-      {
-        "q": "My system is small. Will someone really try to attack it?",
-        "a": "Automated attacks scan the internet for open doors without choosing a target. Company size does not protect you. Among 42 Brazilian companies that suffered a breach, the average cost was R$ 7.44 million.",
-        "draft": false
-      },
-      {
-        "q": "Does the test guarantee my system is secure?",
-        "a": "The test shows the platform’s condition when it was performed, within the agreed environment, method and time. No test guarantees there is no other flaw. We recommend repeating it after important changes to the system.",
-        "draft": false
-      }
     ]
   },
   "final": {

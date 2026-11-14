@@ -232,21 +232,6 @@ const esES: Dict = {
         "a": "Tratamos los datos personales de los proyectos siguiendo las buenas prácticas de la LGPD y el RGPD: definimos qué datos recoge el sistema, quién puede acceder a cada uno y durante cuánto tiempo se guardan. Esas decisiones quedan en el documento del proyecto. El cumplimiento total de tu empresa depende también de tus procesos internos y de tu asesoría jurídica.",
         "draft": false
       },
-      {
-        "q": "Si el sistema funciona, ¿ya es seguro?",
-        "a": "Funcionar y ser seguro son cosas diferentes. En un estudio presentado en ICML 2026, más del 70% del código generado por agentes de IA que superaba las pruebas aún tenía fallos explotables. Por eso la revisión de seguridad es una etapa separada de la prueba funcional.",
-        "draft": false
-      },
-      {
-        "q": "Mi sistema es pequeño. ¿Alguien intentará atacarlo?",
-        "a": "Los ataques automáticos recorren internet buscando puertas abiertas, sin elegir el objetivo. El tamaño de la empresa no protege. En 42 empresas brasileñas que sufrieron una filtración, el coste medio fue de R$ 7,44 millones.",
-        "draft": false
-      },
-      {
-        "q": "¿La prueba garantiza que mi sistema queda seguro?",
-        "a": "La prueba muestra la situación de la plataforma cuando se realizó, con el entorno, método y tiempo acordados. Ninguna prueba garantiza que no exista otro fallo. Recomendamos repetirla tras cambios importantes en el sistema.",
-        "draft": false
-      }
     ]
   },
   "final": {
