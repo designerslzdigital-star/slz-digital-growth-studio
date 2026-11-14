@@ -17,7 +17,7 @@ export function Hero({ slug }: P) {
         <h1 className="hero-title font-display font-normal leading-[1.3] text-balance text-hero-ink">
           {d.hero.before} <span className="select-mark">{d.hero.mark}{d.hero.after}</span>
         </h1>
-        <p className="mx-auto mt-7 max-w-2xl font-subtitle text-lg text-on-dark-soft">{d.hero.sub}</p>
+        <p className="hero-sub mx-auto mt-7 max-w-2xl font-subtitle text-lg text-on-dark-soft"><Rich text={d.hero.sub} /></p>
         <div className="mt-9 flex flex-col items-center gap-3">
           <WaButton message={d.wa.message} refCode={REFS.hero}>{d.wa.cta}</WaButton>
           <p className="text-sm text-on-dark-mute">{d.hero.note}</p>
@@ -105,7 +105,7 @@ export function Founder({ slug }: P) {
   const { d } = useDict(slug);
   const [open, setOpen] = useState(false);
   const [clamped, setClamped] = useState(false);
-  const bioRef = useRef<HTMLParagraphElement>(null);
+  const bioRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (open) return;
     const el = bioRef.current;
@@ -120,7 +120,7 @@ export function Founder({ slug }: P) {
     <div className="founder-photo">{FOUNDER_PHOTO_URL ? <img src={FOUNDER_PHOTO_URL} alt={d.founder.photoAlt} loading="lazy" /> : <div className="flex h-full flex-col items-center justify-center p-8 text-center"><UserRound className="h-16 w-16 text-on-dark-mute" aria-hidden="true" /><ReviewNote>{d.review.photo}</ReviewNote></div>}</div>
     <div><Eyebrow className="text-on-dark-mute">{d.founder.label}</Eyebrow><h2 className="mt-4 text-3xl font-semibold md:text-[42px]">{d.founder.title} <span className="text-lime">{d.founder.mark}</span></h2>
     <div className="mt-7 grid grid-cols-2 gap-4">{d.founder.years.map((year,i) => <div key={year} className="py-4 sm:px-5"><div className="flex flex-wrap items-center gap-3"><strong className="font-result text-3xl text-lime">{year}</strong>{i === 1 && <span className="flex items-center gap-1.5" role="img" aria-label={`${d.global.legendIe}, ${d.global.legendUy}`}><Flag slug="ie" /><Flag slug="uy" /></span>}</div><p className="mt-1 text-sm text-on-dark-soft">{i === 0 ? d.founder.market : d.founder.abroad}</p></div>)}</div>
-    <p id="founder-bio" ref={bioRef} className={cn("founder-bio mt-7 whitespace-pre-line text-on-dark-soft", open && "is-open")}>{d.founder.text}</p>
+    <div id="founder-bio" ref={bioRef} className={cn("founder-bio mt-7 text-on-dark-soft", open && "is-open")}>{d.founder.text.split(/\n\s*\n/).map((paragraph, i) => <p key={i} className="whitespace-pre-line">{paragraph.trim()}</p>)}</div>
     {clamped && <button type="button" onClick={() => setOpen((v) => !v)} aria-expanded={open} aria-controls="founder-bio" className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-full border border-on-dark/25 px-5 text-sm font-semibold text-on-dark transition-colors hover:border-lime hover:text-lime focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime">{open ? d.founder.readLess : d.founder.readMore}<ChevronDown className={cn("h-4 w-4 transition-transform", open && "rotate-180")} aria-hidden="true" /></button>}<ReviewNote>{d.review.founder}</ReviewNote></div>
   </div></section>;
 }

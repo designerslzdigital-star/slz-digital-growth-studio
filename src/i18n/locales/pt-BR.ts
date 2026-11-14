@@ -1,6 +1,6 @@
 const ptBR = {
   "meta": {
-    "title": "SLZ Digital — Software sob medida, sistemas, SaaS e aplicativos",
+    "title": "SLZ Digital: Software sob medida, sistemas, SaaS e aplicativos",
     "description": "SaaS, sistema e aplicativo sob medida: requisitos antes do código, segurança desde o projeto e documentação do início à entrega. Fale com a SLZ Digital."
   },
   "wa": {
@@ -31,7 +31,7 @@ const ptBR = {
     "before": "A gente constrói, protege e",
     "mark": "não some depois da entrega",
     "after": ".",
-    "sub": "Equipe especializada em cibersegurança, com mais de 32 anos de experiência. Segurança é o nosso lema!",
+    "sub": "Equipe especializada em cibersegurança, com mais de 32 anos de experiência.\n**Segurança é o nosso lema!**",
     "note": "O primeiro passo é uma conversa para entender o que você precisa."
   },
   "pain": {
@@ -39,7 +39,7 @@ const ptBR = {
     "cards": [
       {
         "t": "Sumiram no meio do caminho.",
-        "d": "O prazo passou, as respostas foram sumindo e o projeto parou pela metade — **com a entrada já paga**."
+        "d": "O prazo passou, as respostas foram sumindo e o projeto parou pela metade, **com a entrada já paga**."
       },
       {
         "t": "Entregaram e nunca mais responderam.",
@@ -90,7 +90,7 @@ const ptBR = {
       {
         "tag": "Integração de sistemas",
         "t": "O dado entra uma vez e aparece onde precisa.",
-        "d": "Chega de digitar a mesma venda no sistema, na planilha e no financeiro. A gente liga tudo e **o retrabalho acaba**.",
+        "d": "Chega de digitar a mesma venda no sistema, na planilha e no financeiro.\nA gente liga tudo e **o retrabalho acaba**.",
         "message": "Olá! Quero conversar sobre integrar sistemas."
       },
       {
@@ -122,7 +122,7 @@ const ptBR = {
   },
   "steps": {
     "title": "Do levantamento de requisitos à entrega, você acompanha cada passo.",
-    "sub": "Muita gente sabe o que quer, mas não sabe como transformar isso em software. Por isso programar é só uma parte do trabalho: antes de escrever a primeira linha, a gente entende o seu negócio e define o que será construído.",
+    "sub": "Muita gente sabe o que quer, mas não sabe como transformar isso em software, por isso programar é só uma parte do trabalho: antes de escrever a primeira linha, a gente entende o seu negócio e define o que será construído.",
     "detailsLabel": "Ver detalhes",
     "deliveryLabel": "Entrega",
     "items": [
@@ -179,7 +179,7 @@ const ptBR = {
   },
   "security": {
     "title": "Segurança em cada etapa, da ideia ao ar",
-    "intro": "Hoje é fácil colocar um sistema no ar rápido. O que nem sempre vem junto é alguém olhando a segurança: sem isso, derrubar o sistema ou chegar nos dados dos seus clientes é mais simples do que parece. É para isso que existe a nossa equipe de cibersegurança.",
+    "intro": "Hoje é fácil colocar um sistema no ar rápido. O que nem sempre vem junto é alguém olhando a segurança: sem isso, derrubar o sistema ou chegar nos dados dos seus clientes é mais simples do que parece.\nÉ para isso que existe a nossa equipe de cibersegurança.",
     "lgpd": "Quem cuida da segurança na SLZ trabalha com cibersegurança desde 1994, e a privacidade é pensada para a LGPD desde o desenho do produto."
   },
   "global": {
@@ -391,7 +391,7 @@ const ptBR = {
     "mark": "experiência internacional",
     "market": "de mercado",
     "abroad": "de experiência no exterior",
-    "text": "Diego Brasil é empresário, formado em administração de empresas com especialização em marketing.\n\nConta com experiência internacional na área de TI em grandes multinacionais como: a PwC e a Tata Consultancy Services, uma das maiores companhias de tecnologia do mundo. É dessa vivência que vem o método de condução de projeto adotado na SLZ: levantamento de requisitos antes do código, decisões registradas em documento e segurança tratada como etapa do processo, não como correção posterior.\n   \nA SLZ Digital nasceu no marketing digital. Ao longo de nove anos atendendo empresas de pequeno, médio e grande porte, um padrão se repetiu: a campanha gerava demanda, mas a operação do cliente não tinha estrutura para absorvê-la. Faltavam processos definidos, faltava equipe qualificada para assumir a rotina, e os empresários concentravam todas as decisões, sem tempo para profissionalizar a gestão. O desenvolvimento de software surgiu como resposta a esse cenário — aplicado primeiro na própria operação da SLZ e, em seguida, nos clientes que enfrentavam o mesmo problema.",
+    "text": "Diego Brasil é empresário, formado em administração de empresas com especialização em marketing.\n\nConta com experiência internacional na área de TI em grandes multinacionais como: a PwC (PricewaterhouseCoopers) e a Tata Consultancy Services, uma das maiores companhias de tecnologia do mundo. É dessa vivência que vem o método de condução de projeto adotado na SLZ: levantamento de requisitos antes do código, decisões registradas em documento e segurança tratada como etapa do processo, não como correção posterior.\n\nA SLZ Digital nasceu no marketing digital. Ao longo de nove anos atendendo empresas de pequeno, médio e grande porte, um padrão se repetiu: a campanha gerava demanda, mas a operação do cliente não tinha estrutura para absorvê-la.\n\nFaltavam processos definidos, faltava equipe qualificada para assumir a rotina, e os empresários concentravam todas as decisões, sem tempo para profissionalizar a gestão.\n\nO desenvolvimento de software surgiu como resposta a esse cenário, aplicado primeiro na própria operação da SLZ e, em seguida, nos clientes que enfrentavam o mesmo problema.",
     "readMore": "Ler biografia completa",
     "readLess": "Recolher biografia",
     "cta": "Falar com o Diego Brasil no WhatsApp",
@@ -437,7 +437,7 @@ const ptBR = {
   },
   "review": {
     "numbers": "[CONFERIR CADA NÚMERO antes de publicar e guardar como comprovar: pelo CDC art. 38, o ônus da prova é de quem anuncia. Confirmar também o contrato de sigilo por padrão.]",
-    "fast": "[DEFINIR o que a SLZ chama de entrega rápida — prazo médio por tipo de projeto. Sem um número, “rápida” vira promessa vaga; a promessa publicitária vincula o contrato (CDC, arts. 30 e 37).]",
+    "fast": "[DEFINIR o que a SLZ chama de entrega rápida: prazo médio por tipo de projeto. Sem um número, “rápida” vira promessa vaga; a promessa publicitária vincula o contrato (CDC, arts. 30 e 37).]",
     "publicSector": "[poder público só entra se a SLZ estiver preparada para licitação (Lei 14.133/2021): cadastro, documentação e um caminho de contato que não seja só WhatsApp]",
     "erp": "[CONFIRMAR se a SLZ desenvolve ERP do zero ou implanta e integra um ERP existente]",
     "rescue": "[CONFIRMAR o que entra no resgate: só diagnóstico, correção, ou reconstrução completa]",

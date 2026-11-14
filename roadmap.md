@@ -1,4 +1,5 @@
 # SLZ Digital update
+- [x] Adjust requested Portuguese line breaks, mobile hero emphasis and biography paragraph rhythm (1.5 line-height and 0.5em paragraph gaps); remove diagnosis card on desktop/mobile; verified at 393px and 1280px, with 12 tests passing.
 - [x] Add GTM-WLNNQZFL with explicit per-purpose consent; verified no request before consent or after refusal, one load after analytics grant and denied signals after revocation; six focused tests pass. Container tags still require purpose-specific consent checks in GTM and must not duplicate the existing Meta Pixel.
 - [x] Remove the final CTA band, founder WhatsApp button and solution-card links; show the numbers band only from 1024px; verified all four languages at 390/927/1024/1440px, with 12 tests passing.
 - [x] Update four-language copy, WhatsApp messages, navigation and metadata.

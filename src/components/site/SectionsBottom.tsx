@@ -97,12 +97,6 @@ export function Steps({ slug }: P) {
           })}
         </ol>
 
-        <div className="card-dark mt-10 rounded-[20px] p-6 md:p-8">
-          <h3 className="text-2xl font-semibold text-on-dark md:text-3xl">{d.steps.diagTitle}</h3>
-          <p className="mt-3 max-w-2xl text-on-dark-soft">{d.steps.diagText}</p>
-          <WaButton className="mt-6" message={d.steps.message} refCode={REFS.diagnostico}>{d.steps.diagCta}</WaButton>
-          <ReviewNote>{d.review.diagnostic}</ReviewNote>
-        </div>
       </div>
     </section>
   );
@@ -147,7 +141,7 @@ export function Security({ slug }: P) {
     <section id="seguranca" className="bg-navy text-on-dark">
       <div className="mx-auto max-w-6xl px-5 py-10 xl:px-0">
         <h2 className="max-w-3xl font-display text-3xl font-normal leading-[1.05] md:text-5xl">{d.security.title}</h2>
-        <p className="mt-4 max-w-2xl text-on-dark-soft">{d.security.intro}</p>
+        <p className="mt-4 max-w-2xl whitespace-pre-line text-on-dark-soft">{d.security.intro}</p>
         <ReviewNote>{d.review.securityYear}</ReviewNote>
         <p className="mt-6 border-l-2 border-lime pl-4 font-heading text-lg text-on-dark-soft">{d.security.lgpd}</p>
       </div>

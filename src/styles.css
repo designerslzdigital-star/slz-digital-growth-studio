@@ -368,6 +368,13 @@
   #faq details p { font-size: 14.5px; line-height: 1.55; padding-bottom: 12px; }
 }
 
+.founder-bio > p { line-height: 1.5; }
+.founder-bio > p + p { margin-top: 0.5em; }
+@media (max-width: 559px) {
+  .hero-sub { white-space: pre-line; }
+  #fundador .founder-bio > p { line-height: 1.5; }
+}
+
 /* Founder bio: collapsed on phones/tablets, opened by "read full biography" */
 @media (max-width: 767px) {
   .founder-bio:not(.is-open) {
