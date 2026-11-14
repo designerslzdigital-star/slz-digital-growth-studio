@@ -168,7 +168,7 @@ const ptBR = {
       },
       {
         "t": "Suporte já incluso no valor",
-        "d": "O valor do projeto já inclui **de 60 a 90 dias de suporte**, conforme o projeto. Você não paga a mais para resolver o que aparecer nesse período."
+        "d": "Até 30 dias de suporte após a entrega. Mudanças maiores e novas funcionalidades são cobradas à parte."
       },
       {
         "t": "Quando o período acaba, a escolha é sua",
