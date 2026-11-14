@@ -163,8 +163,8 @@ const ptBR = {
     "title": "Depois que entra no ar, a gente não some.",
     "items": [
       {
-        "t": "Acompanhamos quem vai usar",
-        "d": "Depois da entrega, a gente acompanha a equipe que vai usar o sistema no dia a dia e confere se o que está no ar é o que foi desenhado no escopo."
+        "t": "Cada projeto tem suas particularidades",
+        "d": "Desenvolvemos soluções considerando as necessidades de cada negócio. Por isso, as etapas de entrega, orientação e suporte são definidas de acordo com o tipo de projeto e o que foi estabelecido no escopo."
       },
       {
         "t": "Suporte já incluso no valor",
